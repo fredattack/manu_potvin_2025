@@ -118,7 +118,7 @@
                 &::after{
                     background-image: none;
                     content: '\f078';
-                    font-family:"Font Awesome 5 Pro" !important; 
+                    font-family:"Font Awesome 5 Pro" !important;
                     transition: .3s;
                     color: var(--color-primary);
                 }
@@ -138,7 +138,7 @@
                     background-image: none;
                     content: '\f077';
                     font-family:"Font Awesome 5 Pro" !important;
-                    transform: rotate(0); 
+                    transform: rotate(0);
                     transition: .3s;
                 }
             }
@@ -172,7 +172,7 @@
                     background-image: none;
                     content: '\f077';
                     font-family:"Font Awesome 5 Pro" !important;
-                    transform: rotate(0); 
+                    transform: rotate(0);
                     transition: .3s;
                 }
             }
@@ -201,7 +201,7 @@
                     &::after{
                         background-image: none;
                         content: '\f078';
-                        font-family:"Font Awesome 5 Pro" !important; 
+                        font-family:"Font Awesome 5 Pro" !important;
                         transition: .3s;
                         color: var(--color-primary);
                     }
@@ -223,7 +223,7 @@
                         background-image: none;
                         content: '\f077';
                         font-family:"Font Awesome 5 Pro" !important;
-                        transform: rotate(0); 
+                        transform: rotate(0);
                         transition: .3s;
                         color: #fff;
                     }
@@ -370,7 +370,7 @@
     padding-left: 30px;
 }
 
-.home-yellow{
+.manu-potvin-color{
     .faq-two-inner .title-area-faq .sub,
     .faq-two-inner .title-area-faq span.sm-title span,
     .faq-two-inner .faq-accordion-area .accordion .accordion-item .accordion-header button span,

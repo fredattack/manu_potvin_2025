@@ -14,7 +14,7 @@
     backdrop-filter: blur(7px);
     z-index: 1900;
     transition: all 600ms ease;
-    box-shadow: -5px 0 20px -5px rgb(149 22 22 / 12%);    
+    box-shadow: -5px 0 20px -5px rgb(149 22 22 / 12%);
     display: flex;
     flex-direction: column;
     overflow-y: auto;
@@ -28,7 +28,7 @@
 }
 
 .side-bar{
-    button{        
+    button{
         max-width: max-content;
         i{
             color: #fff;
@@ -167,7 +167,7 @@
         }
     }
 }
-.home-yellow{
+.manu-potvin-color{
     #menu-btn{
         &:hover{
             background: var(--color-primary-3) !important;
@@ -514,9 +514,9 @@
                     }
                 }
             }
-        } 
+        }
 }
-    
+
 }
 .home-blue2{
     .side-bar button i{
@@ -559,7 +559,7 @@
         color: var(--color-primary-2) !important;
     }
 }
-.home-yellow .rts-sidebar-menu-desktop .body-mobile .menu-item:hover .menu-link{
+.manu-potvin-color .rts-sidebar-menu-desktop .body-mobile .menu-item:hover .menu-link{
     color: var(--color-primary-3) !important;
 }
 .home-violet .rts-sidebar-menu-desktop .body-mobile .menu-item:hover .menu-link{
@@ -577,7 +577,7 @@
         color: var(--color-primary-2) !important;
     }
 }
-.home-yellow .rts-sidebar-menu-desktop .body-mobile .mainmenu li.has-droupdown .submenu.active .mobile-menu-link:hover a{
+.manu-potvin-color .rts-sidebar-menu-desktop .body-mobile .mainmenu li.has-droupdown .submenu.active .mobile-menu-link:hover a{
     color: var(--color-primary-3) !important;
 }
 .home-violet .rts-sidebar-menu-desktop .body-mobile .mainmenu li.has-droupdown .submenu.active .mobile-menu-link:hover a{
@@ -595,7 +595,7 @@
         color: var(--color-primary-2) !important;
     }
 }
-.home-yellow .rts-sidebar-menu-desktop .body-mobile .mainmenu-nav .mainmenu li a.open{
+.manu-potvin-color .rts-sidebar-menu-desktop .body-mobile .mainmenu-nav .mainmenu li a.open{
     color: var(--color-primary-3) !important;
 }
 .home-violet .rts-sidebar-menu-desktop .body-mobile .mainmenu-nav .mainmenu li a.open{
@@ -614,7 +614,7 @@
         color: var(--color-primary-2);
     }
 }
-.home-yellow .rts-sidebar-menu-desktop .body-mobile .mainmenu li.has-droupdown .submenu.third-lvl.mobile-menu li:hover a{
+.manu-potvin-color .rts-sidebar-menu-desktop .body-mobile .mainmenu li.has-droupdown .submenu.third-lvl.mobile-menu li:hover a{
     color: var(--color-primary-3);
 }
 .home-violet .rts-sidebar-menu-desktop .body-mobile .mainmenu li.has-droupdown .submenu.third-lvl.mobile-menu li:hover a{

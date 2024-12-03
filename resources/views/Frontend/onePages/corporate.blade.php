@@ -1,6 +1,6 @@
 @extends('Frontend.Layouts.appSecond')
 @section('content')
-<body class="home-yellow onepage three">
+<body class="manu-potvin-color onepage three">
 
     <header class="header-three header--sticky">
         <div class="container">
@@ -26,7 +26,7 @@
             <div class="row main-header main-header-three">
                 <div class="col-lg-3 col-md-4 col-sm-5 col-5">
                     <a href="#!" class="thumbnail-logo">
-                        <img src="{{ asset('assets/images/logo/logo-3.svg') }}" alt="Logo_three">
+                        <img src="{{ asset('assets/images/custom/logo_full.png') }}" alt="Logo_three">
                     </a>
                 </div>
                 <div class="col-lg-6 d-none d-xl-block">

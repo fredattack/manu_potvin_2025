@@ -9,7 +9,7 @@ use App\Http\Controllers\Pages\ElementController;
 
 
 
-Route::get('/', [HomeController::class, 'main'])->name('home');
+Route::get('/', HomeController::class)->name('home');
 // Route::prefix('finbiz/')->group(function () {
 // Home pages
 Route::prefix('homes/')->group(function () {

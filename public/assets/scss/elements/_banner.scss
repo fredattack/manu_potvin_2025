@@ -304,7 +304,7 @@
                     font-size: 24px;
                     color: #fff;
                 }
-                
+
             }
             .swiper-button-next{
                 background: rgba(0,0,0,.1);
@@ -745,7 +745,7 @@
 
     &::after {
         position: absolute;
-        content: "Solution Model";
+        content: "Manu Potvin";
         left: 15%;
         line-height: 198px;
         width: 100%;
@@ -1057,7 +1057,7 @@
     &::before {
         position: absolute;
         content: "";
-        background-image: url(../images/banner/shape/04.png);
+        //background-image: url(../images/banner/shape/04.png);
         height: 100%;
         width: 650px;
         background-size: cover;
@@ -1190,7 +1190,7 @@ p {
         font-weight: 400;
         font-size: 20px;
         line-height: 26px;
-        color: #74787C; 
+        color: #74787C;
         margin-left: 90px;
         @media #{$md-layout} {
             margin-left: 60px;
@@ -1219,10 +1219,10 @@ p {
                 text-transform: uppercase;
                 font-weight: 500;
                 font-size: 16px;
-                line-height: 21px;   
-                color: #B00F0F;   
+                line-height: 21px;
+                color: #B00F0F;
                 margin-left: 10px;
-                margin-right: 10px;        
+                margin-right: 10px;
             }
         }
     }
@@ -1246,7 +1246,7 @@ p {
         @media #{$smlg-device} {
             font-size: 36px;
             line-height: 50px;
-        } 
+        }
         @media #{$sm-layout} {
             font-size: 22px;
             line-height: 30px;
@@ -1254,11 +1254,11 @@ p {
         @media #{$large-mobile} {
             font-size: 22px;
             line-height: 32px;
-        }   
+        }
         @media #{$md-layout} {
             font-size: 24px;
             line-height: 32px;
-        }    
+        }
     }
 }
 
@@ -2198,7 +2198,7 @@ header.header-home-nine{
         border-radius: 30px;
         border: 1px solid #999999;
         max-width: max-content;
-    }   
+    }
     .title-main{
         text-transform: uppercase;
         font-size: 70px;
@@ -2271,7 +2271,7 @@ body{
             background-size: contain;
         }
     }
-    
+
 }
 
 
