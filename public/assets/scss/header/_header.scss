@@ -150,19 +150,19 @@
         &.header-top-five{
             .top-left{
                 a{
-                    color: var(--color-primary-2);
+                    color: var(--color-primary-0);
                 }
             }
             .right-h-three{
                 .header-top-right{
                     .email{
                         i{
-                            color: var(--color-primary-2);
+                            color: var(--color-primary-0);
                         }
                     }
                     .call{
                         i{
-                            color: var(--color-primary-2);
+                            color: var(--color-primary-0);
                         }
                     }
                 }
@@ -322,12 +322,12 @@
                         height: 2px;
                         width: 0%;
                         border-radius: 1px;
-                        background: var(--color-primary);
+                        background: var(--color-primary-0);
                         transition: var(--transition);
                     }
 
                     &:hover {
-                        color: var(--color-primary);
+                        color: var(--color-primary-0);
 
                         &::after {
                             width: 100%;
@@ -412,28 +412,28 @@
                     li {
                         a {
                             &:hover {
-                                color: var(--color-primary-2);
+                                color: var(--color-primary-0);
                             }
-    
+
                             &::after {
-                                background: var(--color-primary-2);
+                                background: var(--color-primary-0);
                             }
                         }
-    
+
                         .submenu {
-                            border-color: var(--color-primary-2);
+                            border-color: var(--color-primary-0);
                             border-width: 4px 0 0 0;
-    
+
                             &::after {
-                                border-bottom-color: var(--color-primary-2);
+                                border-bottom-color: var(--color-primary-0);
                             }
                         }
                     }
                 }
-            } 
+            }
             .button-area{
                 .btn-primary-4{
-                    background: var(--color-primary-2);
+                    background: var(--color-primary-0);
                     border-radius: 30px;
                     &:hover{
                         background: var(--color-gray);
@@ -442,7 +442,7 @@
                 .btn-primary-alta-four{
                     border-radius: 30px;
                     &:hover{
-                        background: var(--color-primary-2) !important;
+                        background: var(--color-primary-0) !important;
                     }
                 }
             }
@@ -479,7 +479,7 @@
 
             &:hover {
                 i {
-                    color: var(--color-primary);
+                    color: var(--color-primary-0);
                 }
             }
         }
@@ -732,7 +732,7 @@
             top: 0;
             width: 40%;
             height: 100%;
-            background: var(--color-primary-2);
+            background: var(--color-primary-0);
             z-index: -1;
             transform: skew(-20deg);
         }
@@ -826,7 +826,7 @@
 
                                 &:hover {
                                     i {
-                                        color: var(--color-primary-2);
+                                        color: var(--color-primary-0);
                                     }
                                 }
                             }
@@ -987,7 +987,7 @@
                     }
 
                     &:hover {
-                        background: var(--color-primary-2);
+                        background: var(--color-primary-0);
 
                         .menu-dark {
                             display: none;
@@ -1099,7 +1099,7 @@
                 }
 
                 &:hover {
-                    background: var(--color-primary-2);
+                    background: var(--color-primary-0);
 
                     .menu-dark {
                         display: none;
@@ -1117,15 +1117,15 @@
 
 .home-blue {
     .main-header .nav-main ul li a:hover {
-        color: var(--color-primary-2);
+        color: var(--color-primary-0);
     }
 
     .main-header .nav-main ul li a::after {
-        background: var(--color-primary-2);
+        background: var(--color-primary-0);
     }
 
     .mainmenu li.has-droupdown .submenu {
-        border-top-color: var(--color-primary-2);
+        border-top-color: var(--color-primary-0);
 
         &::after {
             top: -20px;
@@ -1134,7 +1134,7 @@
             position: absolute;
             content: "";
             border: 8px solid transparent;
-            border-bottom-color: var(--color-primary-2);
+            border-bottom-color: var(--color-primary-0);
         }
     }
     &.medium-blue{
@@ -1145,17 +1145,17 @@
             color: #fff;
         }
         .main-header .nav-main ul li a:hover {
-            color: var(--color-primary-2) !important;
+            color: var(--color-primary-0) !important;
         }
-    
+
         .main-header .nav-main ul li a::after {
-            background: var(--color-primary-2);
+            background: var(--color-primary-0);
         }
-    
+
         .mainmenu li.has-droupdown .submenu {
-            border-top-color: var(--color-primary-2);
-            
-    
+            border-top-color: var(--color-primary-0);
+
+
             &::after {
                 top: -20px;
                 left: 16%;
@@ -1163,7 +1163,7 @@
                 position: absolute;
                 content: "";
                 border: 8px solid transparent;
-                border-bottom-color: var(--color-primary-2);
+                border-bottom-color: var(--color-primary-0);
             }
         }
     }
@@ -1245,7 +1245,7 @@
             button {
                 max-width: max-content;
                 padding: 17.5px;
-                background: var(--color-primary);
+                background: var(--color-primary-0);
                 display: flex;
                 color: #fff;
                 align-items: center;
@@ -1268,7 +1268,7 @@
         i {
             position: relative;
             z-index: 1;
-            color: var(--color-primary);
+            color: var(--color-primary-0);
             transition: .3s;
             font-size: 18px;
 
@@ -1289,7 +1289,7 @@
 
         &:hover {
             i {
-                color: var(--color-primary);
+                color: var(--color-primary-0);
 
                 &::after {
                     background: var(--color-primary-alta);
@@ -1436,7 +1436,7 @@ li.has-droupdown {
 
 .header-top-one.header-top-four.header-top-five.seven .right-h-three .header-top-right .call i{
     color: var(--color-primary-6);
-}   
+}
 .header-top-one.header-top-four.header-top-five.seven .right-h-three .header-top-right .email i{
     color: var(--color-primary-6);
 }
@@ -1459,7 +1459,7 @@ li.has-droupdown {
 
 .main-header.main-header-four.main-header-five.main-header-six.seven .button-area .btn-primary-alta-four:hover{
     background: var(--color-primary-6) !important;
-}   
+}
 
 .header-top-one.header-top-four.seven .right-h-three .header-top-right .email a:hover{
     color: var(--color-primary-6) !important;
@@ -1588,7 +1588,7 @@ body.home-eleven{
 
 .header-thirteen{
     .rts-btn.btn-primary{
-        background: var(--color-primary-9) !important; 
+        background: var(--color-primary-9) !important;
     }
 }
 

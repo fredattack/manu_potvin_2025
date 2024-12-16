@@ -276,7 +276,7 @@ p {
         font-size: var(--font-size-b3);
         line-height: var(--line-height-b3);
     }
-    
+
     &.has-large-font-size {
         line-height: 1.5;
         font-size: 36px;
@@ -364,7 +364,7 @@ var {
 }
 
 /*---------------------------
-	List Style 
+	List Style
 ---------------------------*/
 ul,
 ol {
@@ -420,7 +420,7 @@ ul {
             color: var(--color-gray);
 
             &:hover {
-                color: var(--color-primary);
+                color: var(--color-primary-0);
             }
         }
     }
@@ -445,7 +445,7 @@ ol {
             text-decoration: none;
 
             &:hover {
-                color: var(--color-primary);
+                color: var(--color-primary-0);
             }
         }
     }

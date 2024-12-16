@@ -3,7 +3,7 @@
         <div class="row g-0">
             <div class="col-lg-7">
                 <!-- project area left wrapper -->
-                <div class="title-area-project-w-in">
+                <div class="title-area-project-w-in z-50">
                         <span class="sub">
                             Prenez rendez-vous
                         </span>
@@ -42,13 +42,28 @@
                         </div>
                     </div>
                 </div>
-                <!-- project area left wrapper end -->
+
             </div>
+                <!--#region  project area left wrapper end -->
             <div class="col-lg-5">
                 <div class="bg-input-project">
                     <div class="product-form">
-                        <div id="form-messages"></div>
-                        <form id="contact-form" action="mailer.php" method="post">
+
+                        @if(session('success'))
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                {{ session('success') }}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        @endif
+
+                        @if(session('error'))
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                {{ session('error') }}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        @endif
+                        <form id="contact-form" action="{{route('contact.send-form')}}" method="POST">
+                            @csrf
                             <div class="row">
                                 <div class="col-12 ">
                                     <input type="text" placeholder="Votre Nom" name="name">
@@ -69,9 +84,30 @@
                                 </div>
                             </div>
                         </form>
+
                     </div>
                 </div>
             </div>
+            <!--#endregion -->
         </div>
     </div>
 </div>
+<script>
+    $('#contact-form').on('submit', function(e) {
+        e.preventDefault();
+        console.log("submit")
+        $.ajax({
+            url: $(this).attr('action'),
+            method: $(this).attr('method'),
+            data: $(this).serialize(),
+            success: function(response) {
+                alert('Message envoyé avec succès!');
+                $('#contact-form')[0].reset();
+            },
+            error: function(xhr) {
+                alert('Une erreur est survenue.');
+            }
+        });
+    });
+
+</script>

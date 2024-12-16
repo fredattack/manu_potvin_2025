@@ -144,7 +144,7 @@
                 <nav class="nav-main mainmenu-nav">
                     <ul class="mainmenu">
                         <a href="#">Home</a>
-                        
+
                         <li class="has-droupdown">
                             <ul class="submenu">
                                 <ul>
@@ -247,9 +247,9 @@
 
                         <div class="title-area-style-six text-start">
                             <div class="pre-title">
-                                <img src="{{ asset('assets/images/banner/shape/pre-title.png') }}" alt="pre-title">
+                                <img src="{{ asset('assets/images/custom/shape/pre-title.png') }}" alt="pre-title">
                                 <span class="pre">Business Progress</span>
-                                <img class="two" src="{{ asset('assets/images/banner/shape/pre-title.png') }}" alt="pre-title">
+                                <img class="two" src="{{ asset('assets/images/custom/shape/pre-title.png') }}" alt="pre-title">
                             </div>
                             <h2 class="title">
                                 Together we can envision <br>
@@ -317,9 +317,9 @@
                     <div class="col-lg-6 pr--70">
                         <div class="title-area-style-six text-start">
                             <div class="pre-title">
-                                <img src="{{ asset('assets/images/banner/shape/pre-title.png') }}" alt="pre-title">
+                                <img src="{{ asset('assets/images/custom/shape/pre-title.png') }}" alt="pre-title">
                                 <span class="pre">More ABOUT US</span>
-                                <img class="two" src="{{ asset('assets/images/banner/shape/pre-title.png') }}" alt="pre-title">
+                                <img class="two" src="{{ asset('assets/images/custom/shape/pre-title.png') }}" alt="pre-title">
                             </div>
                             <h2 class="title">
                                 Here is your perfect <br>
@@ -482,9 +482,9 @@
                     <div class="col-lg-12">
                         <div class="title-area-style-six text-center">
                             <div class="pre-title">
-                                <img src="{{ asset('assets/images/banner/shape/pre-title.png') }}" alt="pre-title">
+                                <img src="{{ asset('assets/images/custom/shape/pre-title.png') }}" alt="pre-title">
                                 <span class="pre">Work Process</span>
-                                <img class="two" src="{{ asset('assets/images/banner/shape/pre-title.png') }}" alt="pre-title">
+                                <img class="two" src="{{ asset('assets/images/custom/shape/pre-title.png') }}" alt="pre-title">
                             </div>
                             <h2 class="title">
                                 Why Choose us?
@@ -605,9 +605,9 @@
 
                     <div class="title-area-style-six text-center">
                         <div class="pre-title">
-                            <img src="{{ asset('assets/images/banner/shape/pre-title.png') }}" alt="pre-title">
+                            <img src="{{ asset('assets/images/custom/shape/pre-title.png') }}" alt="pre-title">
                             <span class="pre">Team Members</span>
-                            <img class="two" src="{{ asset('assets/images/banner/shape/pre-title.png') }}" alt="pre-title">
+                            <img class="two" src="{{ asset('assets/images/custom/shape/pre-title.png') }}" alt="pre-title">
                         </div>
                         <h2 class="title color-white">
                             Finbiz Professionals
@@ -787,9 +787,9 @@
 
                         <div class="title-area-style-six text-start">
                             <div class="pre-title">
-                                <img src="{{ asset('assets/images/banner/shape/pre-title.png') }}" alt="pre-title">
+                                <img src="{{ asset('assets/images/custom/shape/pre-title.png') }}" alt="pre-title">
                                 <span class="pre">Business Progress</span>
-                                <img class="two" src="{{ asset('assets/images/banner/shape/pre-title.png') }}" alt="pre-title">
+                                <img class="two" src="{{ asset('assets/images/custom/shape/pre-title.png') }}" alt="pre-title">
                             </div>
                             <h2 class="title">
                                 Together we can envision <br>
@@ -1185,9 +1185,9 @@
                     <div class="col-12">
                         <div class="title-area-style-six text-center">
                             <div class="pre-title">
-                                <img src="{{ asset('assets/images/banner/shape/pre-title.png') }}" alt="pre-title">
+                                <img src="{{ asset('assets/images/custom/shape/pre-title.png') }}" alt="pre-title">
                                 <span class="pre">Business Progress</span>
-                                <img class="two" src="{{ asset('assets/images/banner/shape/pre-title.png') }}" alt="pre-title">
+                                <img class="two" src="{{ asset('assets/images/custom/shape/pre-title.png') }}" alt="pre-title">
                             </div>
                             <h2 class="title">
                                 Customer Testimonials
@@ -1443,9 +1443,9 @@
                     <div class="col-lg-6">
                         <div class="title-area-style-six text-start">
                             <div class="pre-title">
-                                <img src="{{ asset('assets/images/banner/shape/pre-title.png') }}" alt="pre-title">
+                                <img src="{{ asset('assets/images/custom/shape/pre-title.png') }}" alt="pre-title">
                                 <span class="pre">Business Progress</span>
-                                <img class="two" src="{{ asset('assets/images/banner/shape/pre-title.png') }}" alt="pre-title">
+                                <img class="two" src="{{ asset('assets/images/custom/shape/pre-title.png') }}" alt="pre-title">
                             </div>
                             <h2 class="title">
                                 We’re Solve Revolutionary for your Company
@@ -1504,9 +1504,9 @@
                     <div class="col-12">
                         <div class="title-area-style-six text-center">
                             <div class="pre-title">
-                                <img src="{{ asset('assets/images/banner/shape/pre-title.png') }}" alt="pre-title">
+                                <img src="{{ asset('assets/images/custom/shape/pre-title.png') }}" alt="pre-title">
                                 <span class="pre">Business Progress</span>
-                                <img class="two" src="{{ asset('assets/images/banner/shape/pre-title.png') }}" alt="pre-title">
+                                <img class="two" src="{{ asset('assets/images/custom/shape/pre-title.png') }}" alt="pre-title">
                             </div>
                             <h2 class="title">
                                 Latest Blog Posts

@@ -200,7 +200,7 @@
         &.disc{
             font-size: 16px;
             line-height: 26px;
-            color: #5D666F; 
+            color: #5D666F;
         }
     }
     &:hover{
@@ -267,14 +267,14 @@
         a{
             &:hover{
                 .title{
-                    color: var(--color-primary-2);
+                    color: var(--color-primary-0);
                 }
             }
 
         }
         span{
             color: #5D666F;
-            font-size: 16px;            
+            font-size: 16px;
             position: relative;
             &::after{
                 position: absolute;
@@ -398,7 +398,7 @@
             }
             .title-area{
                 .sub{
-                    color: var(--color-primary-2);
+                    color: var(--color-primary-0);
                     font-weight: 400;
                     letter-spacing: 1px;
                 }
@@ -431,7 +431,7 @@
                 }
                 .single-business-solution-2{
                     margin: 0 40px 0 0;
-                    border-left: 8px solid var(--color-primary-2);
+                    border-left: 8px solid var(--color-primary-0);
                     @media(max-width:1200px) and (min-width:991px){
                         .content{
                             padding-left: 10px;
@@ -526,7 +526,7 @@
         .title-area{
             margin-bottom: 80px;
             .sub{
-                color: var(--color-primary-2);
+                color: var(--color-primary-0);
                 letter-spacing: 1px;
             }
             .title{
@@ -636,7 +636,7 @@
 
 .business-case5{
     span{
-        color: var(--color-primary-2);
+        color: var(--color-primary-0);
         text-transform: uppercase;
         letter-spacing: 1px;
     }
@@ -679,7 +679,7 @@
         margin-left: 50px;
         @media #{$large-mobile} {
             margin-left: 30px;
-            padding-top: 104px; 
+            padding-top: 104px;
         }
         .video-play-button span{
             border-left: 14px solid var(--color-primary-5);
@@ -848,7 +848,7 @@
 
 .rts-business-case-s-2.style-home-7S:hover .inner span::after{
     bottom: -61px;
-    left: -124px;    
+    left: -124px;
 }
 
 .tab-buttons-portfolio{

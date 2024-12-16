@@ -15,7 +15,7 @@
         font-weight: 400;
         font-size: 20px;
         line-height: 20px;
-        color: var(--color-primary);
+        color: var(--color-primary-0);
     }
     .support-innner{
         margin-left: 20px;
@@ -35,7 +35,7 @@
             }
             &:hover{
                 .title{
-                    color: var(--color-primary);
+                    color: var(--color-primary-0);
                 }
             }
         }
@@ -106,7 +106,7 @@ p.disc {
     margin-bottom: 10px;
     // padding: 8px;
     position: relative;
-  
+
   > span {
     display: block;
     height: 100%;
@@ -168,7 +168,7 @@ p.disc {
         position: absolute;
         height: 60px;
         width: 60px;
-        background: var(--color-primary);
+        background: var(--color-primary-0);
         border-radius: 50%;
         left: -4%;
         top: -10%;
@@ -181,7 +181,7 @@ p.disc {
             margin-left: auto;
             margin-top: auto;
             margin-right: 12px;
-            margin-bottom: 8px;        
+            margin-bottom: 8px;
             span{
                 font-size: 12px;
                 color: #fff;
@@ -212,7 +212,7 @@ p.disc {
         }
         .date{
             span{
-                color: var(--color-primary);
+                color: var(--color-primary-0);
             }
         }
         &:hover{
@@ -255,7 +255,7 @@ p.disc {
         .info{
             span{
                 margin-bottom: 0;
-                color: var(--color-primary);
+                color: var(--color-primary-0);
                 font-weight: 500;
             }
             a{
@@ -271,7 +271,7 @@ p.disc {
                 }
                 &:hover{
                     h5{
-                        color: var(--color-primary);
+                        color: var(--color-primary-0);
                     }
                 }
             }

@@ -6,8 +6,12 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
+        "filament/filament": "^3.2",
         "laravel/framework": "^11.0",
-        "laravel/tinker": "^2.9"
+        "laravel/tinker": "^2.9",
+        "league/csv": "^9.18",
+        "spatie/laravel-medialibrary": "^11.10",
+        "spatie/ray": "^1.41"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^3.1",
@@ -37,7 +41,8 @@
             "@php artisan package:discover --ansi",
             "@php artisan ide-helper:generate",
             "@php artisan ide-helper:meta",
-            "@php artisan ide-helper:models"
+            "@php artisan ide-helper:models",
+            "@php artisan filament:upgrade"
         ],
         "post-update-cmd": [
             "@php artisan vendor:publish --tag=laravel-assets --ansi --force"

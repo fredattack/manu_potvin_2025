@@ -35,7 +35,7 @@
             height: 50px;
             width: 50px;
             border-radius: 5px;
-            background: var(--color-primary);
+            background: var(--color-primary-0);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -63,7 +63,7 @@
         .wrapper{
             .single{
                 i{
-                    color: var(--color-primary);
+                    color: var(--color-primary-0);
                     margin-right: 10px;
                     margin-bottom: 15px;
                     &:last-child{
@@ -100,7 +100,7 @@
             border-radius: 50%;
             content: '';
             z-index: -1;
-            background: var(--color-primary);
+            background: var(--color-primary-0);
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
@@ -108,7 +108,7 @@
         }
         &:hover{
             i{
-                color: var(--color-primary);
+                color: var(--color-primary-0);
             }
             &::after{
                 background: #ffecec;
@@ -134,7 +134,7 @@
 // dextop menu
 .home-blue{
     .side-bar button i{
-        background: var(--color-primary-2);
+        background: var(--color-primary-0);
     }
     .logo-1{
         display: none;
@@ -143,27 +143,27 @@
         display: block;
     }
     .rts-sidebar-menu-desktop .get-in-touch .wrapper .single i{
-        color: var(--color-primary-2);
+        color: var(--color-primary-0);
     }
     .social-wrapper-two a::after{
-        background: var(--color-primary-2);
+        background: var(--color-primary-0);
         color: #fff;
     }
     .social-wrapper-two a{
         &:hover{
-            color: var(--color-primary-2);
+            color: var(--color-primary-0);
             i{
-                color: var(--color-primary-2);
+                color: var(--color-primary-0);
             }
             &::after{
                 background: #8e8f9314;
-                color: var(--color-primary-2);
+                color: var(--color-primary-0);
             }
         }
     }
     .rts-sidebar-menu-desktop .get-in-touch .wrapper .single a{
         &:hover{
-            color: var(--color-primary-2);
+            color: var(--color-primary-0);
         }
     }
 }
@@ -343,7 +343,7 @@
                         color: #000;
                         display: block;
                         &.open{
-                            color: var(--color-primary);
+                            color: var(--color-primary-0);
                         }
                     }
                 }
@@ -388,7 +388,7 @@
                 margin: 0;
                 &:hover{
                     a{
-                        color: var(--color-primary) !important;
+                        color: var(--color-primary-0) !important;
                     }
                 }
             }
@@ -396,7 +396,7 @@
                 li{
                     &:hover{
                         a{
-                            color: var(--color-primary);
+                            color: var(--color-primary-0);
                         }
                     }
                 }
@@ -415,7 +415,7 @@
         .menu-item{
             &:hover{
                 .menu-link{
-                    color: var(--color-primary) !important;
+                    color: var(--color-primary-0) !important;
                 }
             }
         }
@@ -520,7 +520,7 @@
 }
 .home-blue2{
     .side-bar button i{
-        background: var(--color-primary-2);
+        background: var(--color-primary-0);
     }
     .logo-1{
         display: none;
@@ -529,34 +529,34 @@
         display: block;
     }
     .rts-sidebar-menu-desktop .get-in-touch .wrapper .single i{
-        color: var(--color-primary-2);
+        color: var(--color-primary-0);
     }
     .social-wrapper-two a::after{
-        background: var(--color-primary-2);
+        background: var(--color-primary-0);
         color: #fff;
     }
     .social-wrapper-two a{
         &:hover{
-            color: var(--color-primary-2);
+            color: var(--color-primary-0);
             i{
-                color: var(--color-primary-2);
+                color: var(--color-primary-0);
             }
             &::after{
                 background: #8e8f9314;
-                color: var(--color-primary-2);
+                color: var(--color-primary-0);
             }
         }
     }
     .rts-sidebar-menu-desktop .get-in-touch .wrapper .single a{
         &:hover{
-            color: var(--color-primary-2);
+            color: var(--color-primary-0);
         }
     }
 }
 .home-blue,
 .home-blue2{
     .rts-sidebar-menu-desktop .body-mobile .menu-item:hover .menu-link{
-        color: var(--color-primary-2) !important;
+        color: var(--color-primary-0) !important;
     }
 }
 .manu-potvin-color .rts-sidebar-menu-desktop .body-mobile .menu-item:hover .menu-link{
@@ -574,7 +574,7 @@
 .home-blue,
 .home-blue2{
     .rts-sidebar-menu-desktop .body-mobile .mainmenu li.has-droupdown .submenu.active .mobile-menu-link:hover a{
-        color: var(--color-primary-2) !important;
+        color: var(--color-primary-0) !important;
     }
 }
 .manu-potvin-color .rts-sidebar-menu-desktop .body-mobile .mainmenu li.has-droupdown .submenu.active .mobile-menu-link:hover a{
@@ -592,7 +592,7 @@
 .home-blue,
 .home-blue2{
     .rts-sidebar-menu-desktop .body-mobile .mainmenu-nav .mainmenu li a.open{
-        color: var(--color-primary-2) !important;
+        color: var(--color-primary-0) !important;
     }
 }
 .manu-potvin-color .rts-sidebar-menu-desktop .body-mobile .mainmenu-nav .mainmenu li a.open{
@@ -611,7 +611,7 @@
 .home-blue,
 .home-blue2{
     .rts-sidebar-menu-desktop .body-mobile .mainmenu li.has-droupdown .submenu.third-lvl.mobile-menu li:hover a{
-        color: var(--color-primary-2);
+        color: var(--color-primary-0);
     }
 }
 .manu-potvin-color .rts-sidebar-menu-desktop .body-mobile .mainmenu li.has-droupdown .submenu.third-lvl.mobile-menu li:hover a{

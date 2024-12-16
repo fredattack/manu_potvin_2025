@@ -3,7 +3,7 @@ body {
     background: #FFFFFF;
 }
 /*------------------------
-    Header Sticky 
+    Header Sticky
 --------------------------*/
 
 // custom column
@@ -57,12 +57,12 @@ body {
     opacity: 1 !important; /* Firefox */
     font-size: 16px;
 }
-  
+
   :-ms-input-placeholder { /* Internet Explorer 10-11 */
     color: #5D666F  !important;
     font-size: 16px;
   }
-  
+
   ::-ms-input-placeholder { /* Microsoft Edge */
     color: #5D666F !important;
     font-size: 16px;
@@ -103,13 +103,13 @@ body {
         right: -3%;
         background-repeat: no-repeat;
         bottom: -5%;
-        @media #{$laptop-device} {   
+        @media #{$laptop-device} {
             right: -15%;
         }
-        @media #{$smlg-device} {   
+        @media #{$smlg-device} {
             right: -15%;
         }
-        @media #{$md-layout} {   
+        @media #{$md-layout} {
             left: 53%;
         }
     }
@@ -200,7 +200,7 @@ body {
         }
     }
     p.pre-title{
-        color: var(--color-primary);
+        color: var(--color-primary-0);
         margin-bottom: 0;
         font-family: var(--font-secondary);
         font-size: 16px;
@@ -296,7 +296,7 @@ body {
             transform: translateX(-50%);
             z-index: -1;
             height: 109px;
-            top: 2%;        
+            top: 2%;
         }
     }
     &.contact{
@@ -306,7 +306,7 @@ body {
             transform: translateX(-50%);
             z-index: -1;
             height: 109px;
-            top: -41%;     
+            top: -41%;
         }
     }
     &.contact-appoinment{
@@ -329,7 +329,7 @@ body {
             display: flex;
             align-items: center;
             opacity: 0.35;
-            font-family: var(--font-secondary);  
+            font-family: var(--font-secondary);
             @media #{$large-mobile} {
                 font-size: 100px;
             }
@@ -380,7 +380,7 @@ body {
             }
             span{
                 font-size: 14px;
-                color: var(--color-primary);
+                color: var(--color-primary-0);
                 font-weight: 400;
             }
         }
@@ -406,7 +406,7 @@ body {
         align-items: center;
         img{
             padding: 12px;
-            background: var(--color-primary);
+            background: var(--color-primary-0);
             border-radius: 14px;
             margin-right: 16px;
         }
@@ -419,7 +419,7 @@ body {
             transition: .3s;
             min-width: max-content;
             &:hover{
-                color: var(--color-primary);
+                color: var(--color-primary-0);
             }
         }
     }
@@ -448,7 +448,7 @@ body {
             color: #ffff;
         }
         &:hover{
-            background: var(--color-primary);
+            background: var(--color-primary-0);
             color: #fff;
         }
         &:last-child{
@@ -541,7 +541,7 @@ body {
             }
             &:hover{
                 .title{
-                    color: var(--color-primary);
+                    color: var(--color-primary-0);
                 }
             }
         }
@@ -736,7 +736,7 @@ body {
 
 .home-blue{
     .single-feature-one i{
-        background: var(--color-primary-2);
+        background: var(--color-primary-0);
     }
 }
 

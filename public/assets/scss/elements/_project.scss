@@ -24,7 +24,7 @@
                     font-size: 14px;
                 }
                 &.active{
-                    background: var(--color-primary);
+                    background: var(--color-primary-0);
                     color: #fff;
                 }
             }
@@ -110,7 +110,7 @@
         .product-contact-wrapper{
             a{
                 .title{
-                    color: var(--color-primary);
+                    color: var(--color-primary-0);
                 }
             }
         }
@@ -150,7 +150,7 @@
         }
         .info-head{
             padding: 24px 40px;
-            background: var(--color-primary);
+            background: var(--color-primary-0);
             border-radius: 15px 0 0 0;
             @media #{$md-layout} {
                 border-radius: 15px 15px 0 0;
@@ -190,7 +190,7 @@
                         height: 50px;
                         width: 50px;
                         background: var(--color-primary-alta);
-                        color: var(--color-primary);
+                        color: var(--color-primary-0);
                         font-size: 18px;
                         display: flex;
                         align-items: center;
@@ -221,7 +221,7 @@
 // detaols
 .product-details-main-inner{
     span{
-        color: var(--color-primary);
+        color: var(--color-primary-0);
         font-weight: 500;
     }
     .title{
@@ -260,7 +260,7 @@
         i{
             width: max-content;
             border-radius: 50%;
-            color: var(--color-primary);
+            color: var(--color-primary-0);
             font-size: 19px;
             margin-top: 4px;
         }
@@ -358,7 +358,7 @@
             span{
                 font-size: 16px;
                 font-weight: 400;
-                color: #5D666F; 
+                color: #5D666F;
             }
             .content-wrap{
                 position: relative;
@@ -460,10 +460,10 @@
                     margin-left: 15px;
                 }
                 span{
-                    color: #fff; 
+                    color: #fff;
                     font-weight: 500;
                     font-size: 14px;
-                    line-height: 18px;   
+                    line-height: 18px;
                 }
                 .title-sm{
                     color: #fff;
@@ -599,7 +599,7 @@
                         transform: scale(1.5);
                     }
                 }
-                
+
                 .portfolio-text {
                     .p-title {
                         a {
@@ -608,18 +608,18 @@
                     }
                 }
             }
-            
+
             &::before {
                 background: #0000007A;
             }
-            
+
             .img-fluid{
                 position: relative;
                 transition: all .3s;
                 &::before{
                     content: '';
                     position: absolute;
-                    background-color: var(--color-primary);
+                    background-color: var(--color-primary-0);
                     opacity: .8;
                     width: 100%;
                     height: 0;
@@ -704,7 +704,7 @@
             &::before{
                 content: "";
                 position: absolute;
-                background: var(--color-primary);
+                background: var(--color-primary-0);
                 opacity: .9;
                 width: 100%;
                 height: 0;
@@ -852,7 +852,7 @@
                 z-index: 9;
             }
         }
-      }  
+      }
     }
 }
 
@@ -864,11 +864,11 @@
                 padding: 150px 0 0 0;
             }
             .sub{
-                color: var(--color-primary-2);
+                color: var(--color-primary-0);
             }
             .title{
                 span{
-                    color: var(--color-primary-2);
+                    color: var(--color-primary-0);
                 }
             }
         }
@@ -885,16 +885,16 @@
                 }
                 form{
                     .rts-btn{
-                        background: var(--color-primary-2);
+                        background: var(--color-primary-0);
                     }
                     input{
                         &:focus{
-                            border: 1px solid var(--color-primary-2);
+                            border: 1px solid var(--color-primary-0);
                         }
                     }
                     textarea{
                         &:focus{
-                            border: 1px solid var(--color-primary-2);
+                            border: 1px solid var(--color-primary-0);
                         }
                     }
                 }

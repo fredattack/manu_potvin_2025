@@ -30,7 +30,7 @@
     }
 
     &.btn-primary {
-        background: var(--color-primary);
+        background: var(--color-primary-0);
         &.six{
             background: var(--color-primary-6);
             border-radius: 30px;
@@ -43,12 +43,12 @@
     }
 
     &.btn-primary-2 {
-        background: var(--color-primary-2);
+        background: var(--color-primary-0);
         color: #fff;
 
         &:hover {
             background: #F7F7F7;
-            color: var(--color-primary-2);
+            color: var(--color-primary-0);
         }
     }
 
@@ -83,7 +83,7 @@
     }
 
     &.btn-primary-5 {
-        background: var(--color-primary-5);
+        background: var(--color-primary-0);
         color: #fff;
         &.six{
             background: var(--color-primary-6);
@@ -135,7 +135,7 @@
         padding: 17px;
 
         &:hover {
-            background: var(--color-primary);
+            background: var(--color-primary-0);
 
             i {
                 color: #fff;
@@ -174,14 +174,14 @@
 
     &.btn-white {
         background: #fff;
-        color: var(--color-primary);
+        color: var(--color-primary-0);
         padding: 17px 35px;
         font-weight: 700;
         font-size: 16px;
         line-height: 21px;
 
         &:hover {
-            background: var(--color-primary);
+            background: var(--color-primary-0);
             color: #fff;
         }
     }
@@ -269,10 +269,10 @@ button {
     }
 
     &:hover {
-        color: var(--color-primary);
+        color: var(--color-primary-0);
 
         i {
-            background: var(--color-primary);
+            background: var(--color-primary-0);
             color: var(--color-white);
         }
     }
@@ -319,7 +319,7 @@ button {
             margin-left: 75px;
             position: relative;
             margin-top: -12px;
-            color: var(--color-primary);
+            color: var(--color-primary-0);
             font-weight: 500;
         }
     }
@@ -464,7 +464,7 @@ button {
     }
 
     &:hover {
-        background: var(--color-primary);
+        background: var(--color-primary-0);
     }
 }
 
@@ -477,7 +477,7 @@ button {
         }
 
         &:hover {
-            background: var(--color-primary-2);
+            background: var(--color-primary-0);
         }
     }
 }
@@ -485,7 +485,7 @@ button {
 .manu-potvin-color {
     #menu-btn {
         &:hover {
-            background: var(--color-primary-2);
+            background: var(--color-primary-0);
         }
     }
 }
@@ -524,7 +524,7 @@ button {
 
             a {
                 i {
-                    color: var(--color-primary);
+                    color: var(--color-primary-0);
                 }
 
                 &::after {
@@ -538,7 +538,7 @@ button {
                     }
 
                     &::after {
-                        background: var(--color-primary);
+                        background: var(--color-primary-0);
                     }
                 }
             }
@@ -549,7 +549,7 @@ button {
 .home-blue {
     .quote-btnmenu {
         margin-top: 30px;
-        background: var(--color-primary-2);
+        background: var(--color-primary-0);
 
         @media only screen and (min-width:575px) {
             display: none;
@@ -569,7 +569,7 @@ button {
 
                 a {
                     i {
-                        color: var(--color-primary-2);
+                        color: var(--color-primary-0);
                     }
 
                     &::after {
@@ -583,7 +583,7 @@ button {
                         }
 
                         &::after {
-                            background: var(--color-primary-2);
+                            background: var(--color-primary-0);
                         }
                     }
                 }
@@ -595,7 +595,7 @@ button {
 .home-blue {
     .quote-btnmenu {
         margin-top: 30px;
-        background: var(--color-primary-2);
+        background: var(--color-primary-0);
 
         @media only screen and (min-width:575px) {
             display: none;
@@ -616,7 +616,7 @@ button {
 
                 a {
                     i {
-                        color: var(--color-primary-2);
+                        color: var(--color-primary-0);
                     }
 
                     &::after {
@@ -630,7 +630,7 @@ button {
                         }
 
                         &::after {
-                            background: var(--color-primary-2);
+                            background: var(--color-primary-0);
                         }
                     }
                 }
@@ -717,7 +717,7 @@ button {
 }
 .button-area2{
     .rts-btn{
-        border: 1px solid var(--color-primary);
+        border: 1px solid var(--color-primary-0);
         border-radius: 0;
         &.two{
             border-radius: 15px;

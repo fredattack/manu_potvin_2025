@@ -60,7 +60,7 @@
 
             &:hover {
                 .title {
-                    color: var(--color-primary);
+                    color: var(--color-primary-0);
                 }
             }
         }
@@ -100,7 +100,7 @@
 
         &:hover {
             &::after {
-                background: var(--color-primary);
+                background: var(--color-primary-0);
                 color: #fff;
             }
         }
@@ -134,7 +134,7 @@
 
         &:hover {
             &::after {
-                background: var(--color-primary);
+                background: var(--color-primary-0);
                 color: #fff;
             }
         }
@@ -286,7 +286,7 @@
 
             &.inner {
                 span {
-                    color: var(--color-primary) !important;
+                    color: var(--color-primary-0) !important;
                 }
             }
         }
@@ -301,10 +301,10 @@
 
             &.inner {
                 .btn-primary-2 {
-                    background: var(--color-primary);
+                    background: var(--color-primary-0);
 
                     &:hover {
-                        color: var(--color-primary);
+                        color: var(--color-primary-0);
                         background: var(--color-primary-alta);
                     }
                 }
@@ -319,7 +319,7 @@
 
         .title-left {
             span {
-                color: var(--color-primary) !important;
+                color: var(--color-primary-0) !important;
             }
 
             .title {
@@ -445,7 +445,7 @@
 
                 &.icon-2 {
                     i {
-                        color: var(--color-primary);
+                        color: var(--color-primary-0);
                     }
                 }
             }

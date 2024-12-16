@@ -59,7 +59,7 @@
         align-items: flex-start;
         i{
             padding: 4px;
-            background: var(--color-primary);
+            background: var(--color-primary-0);
             border-radius: 50%;
             color: #fff;
             font-size: 12px;
@@ -92,7 +92,7 @@
         align-items: center;
         justify-content: space-between;
         padding: 25px 32px;
-        background: var(--color-primary);
+        background: var(--color-primary-0);
         border-radius: 15px;
         bottom: 7%;
         left: 1%;
@@ -134,7 +134,7 @@
         display: flex;
         position: relative;
         .img-1{
-            border-top: 10px solid var(--color-primary);
+            border-top: 10px solid var(--color-primary-0);
             padding-top: 10px;
             @media #{$sm-layout} {
                 width: 65%;
@@ -160,7 +160,7 @@
                 }
                 .video-play-button{
                     &::after{
-                        background: var(--color-primary);
+                        background: var(--color-primary-0);
                     }
                     span{
                         border-left: 14px solid #ffffff;
@@ -169,10 +169,10 @@
             }
             position: absolute;
             bottom: -2%;
-            right: 29%;     
+            right: 29%;
             @media #{$large-mobile} {
                 right: 24%;
-            }  
+            }
         }
     }
 }
@@ -186,7 +186,7 @@
     }
     .title-area{
         span{
-            color: var(--color-primary);
+            color: var(--color-primary-0);
             font-size: 16px;
             letter-spacing: 0.1em;
             font-weight: 600;
@@ -222,9 +222,9 @@
                     p{
                         color: #1C2539;
                     }
-                    
+
                     span{
-                        color: var(--color-primary);
+                        color: var(--color-primary-0);
                         font-weight: 500;
                         font-size: 16px;
                     }
@@ -323,7 +323,7 @@
         left: -28%;
         animation: jump-1 5s linear infinite;
         @media #{$smlg-device} {
-            left: -11%; 
+            left: -11%;
             width: 65%;
             top: 14%;
         }
@@ -397,7 +397,7 @@
     }
 }
 
-.single-business-solution{  
+.single-business-solution{
     display: flex;
     align-items: center;
     margin-bottom: 6px;
@@ -597,7 +597,7 @@
                     margin-bottom: 0;
                 }
                 i{
-                    color: var(--color-primary-2);
+                    color: var(--color-primary-0);
                     font-size: 18px;
                 }
                 p{

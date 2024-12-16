@@ -34,11 +34,11 @@ iframe {
 }
 
 /*===============================
-    Background Color 
+    Background Color
 =================================*/
 
 @include config-bg-colors('bg-color-',
-    'primary'var(--color-primary),
+    'primary'var(--color-primary-0),
     'secondary'var(--color-secondary),
     'tertiary'var(--color-tertiary),
     'gray'var(--color-gray),
@@ -47,7 +47,7 @@ iframe {
     'extra03'var(--color-extra03));
 
 /*===========================
-Background Image 
+Background Image
 =============================*/
 .bg_image {
     background-repeat: no-repeat;
@@ -456,7 +456,7 @@ textarea:-ms-input-placeholder {
 }
 
 /*=============================
-	Overlay styles 
+	Overlay styles
 ==============================*/
 
 [data-overlay],
@@ -490,7 +490,7 @@ textarea:-ms-input-placeholder {
 }
 
 [data-overlay]:before {
-    background: var(--color-primary);
+    background: var(--color-primary-0);
 }
 
 [data-black-overlay]:before {
@@ -512,7 +512,7 @@ textarea:-ms-input-placeholder {
 
 
 /*------------------------------
-    Scroll Up 
+    Scroll Up
 --------------------------------*/
 
 #scrollUp {
@@ -594,7 +594,7 @@ textarea:-ms-input-placeholder {
                 height: 0;
                 border-style: solid;
                 border-width: 0 5px 7px 5px;
-                border-color: transparent transparent var(--color-primary) transparent;
+                border-color: transparent transparent var(--color-primary-0) transparent;
                 position: absolute;
                 content: "";
                 left: 50%;
@@ -607,7 +607,7 @@ textarea:-ms-input-placeholder {
     &:hover {
         span {
             &.text {
-                color: var(--color-primary);
+                color: var(--color-primary-0);
             }
         }
     }

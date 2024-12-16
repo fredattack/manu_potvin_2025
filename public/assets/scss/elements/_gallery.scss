@@ -126,10 +126,10 @@
             @media #{$smlg-device} {
                 top: -22%;
             }
-            @media #{$md-layout} {    
+            @media #{$md-layout} {
                 top: -12%;
             }
-            @media #{$sm-layout} {    
+            @media #{$sm-layout} {
                 top: -12%;
             }
             @media #{$large-mobile} {
@@ -148,14 +148,14 @@
             }
             &:hover{
                 &::after{
-                    background: var(--color-primary);
+                    background: var(--color-primary-0);
                     color: #fff;
                 }
             }
             &.six{
                 &:hover{
                     &::after{
-                        background: var(--color-primary-6);  
+                        background: var(--color-primary-6);
                     }
                 }
             }
@@ -167,10 +167,10 @@
             @media #{$smlg-device} {
                 top: -22%;
             }
-            @media #{$md-layout} {      
+            @media #{$md-layout} {
                top: -12%;
             }
-            @media #{$sm-layout} {      
+            @media #{$sm-layout} {
                top: -12%;
                right: 115px;
             }
@@ -190,14 +190,14 @@
             }
             &:hover{
                 &::after{
-                    background: var(--color-primary);
+                    background: var(--color-primary-0);
                     color: #fff;
                 }
             }
             &.six{
                 &:hover{
                     &::after{
-                        background: var(--color-primary-6);  
+                        background: var(--color-primary-6);
                     }
                 }
             }
@@ -213,7 +213,7 @@
             @media #{$smlg-device} {
                 top: -25%;
             }
-            @media #{$md-layout} {    
+            @media #{$md-layout} {
             top: -13%;
             }
             @media #{$sm-layout} {
@@ -221,10 +221,10 @@
                 right: 71px;
             }
             @media #{$large-mobile} {
-                top: -6.5%; 
+                top: -6.5%;
             }
             .swiper-pagination-current{
-                color: var(--color-primary);
+                color: var(--color-primary-0);
                 font-weight: 700;
             }
             .swiper-pagination-total{

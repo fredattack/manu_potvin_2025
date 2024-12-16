@@ -3,7 +3,7 @@
 .working-process-bg{
     background-image: url(../images/working-step/bg-01.jpg);
     max-width: 1680px;
-    margin:0 auto ; 
+    margin:0 auto ;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -44,7 +44,7 @@
         &::after{
             position: absolute;
             right: 5px;
-            top: 7px;        
+            top: 7px;
             content: '01';
             width: 40px;
             height: 40px;
@@ -52,7 +52,7 @@
             align-items: center;
             justify-content: center;
             border-radius: 50%;
-            background: var(--color-primary-2);
+            background: var(--color-primary-0);
             color: #fff;
             transform: scale(0);
             transition: .3s;
@@ -80,7 +80,7 @@
             &::after{
                 width: 60px;
                 height: 60px;
-    
+
             }
             .icon{
                 width: 193.03px;
@@ -90,7 +90,7 @@
     }
     &:hover{
         .inner{
-            border: 2px dashed var(--color-primary-2);
+            border: 2px dashed var(--color-primary-0);
             &::after{
                 transform: scale(1);
             }
@@ -256,12 +256,12 @@
                     }
                     .content{
                         .title{
-                            color: var(--color-primary-2);
+                            color: var(--color-primary-0);
                         }
                     }
                 }
                 .icon{
-                    img{    
+                    img{
                         width: 70px;
                         transform: scale(100%);
                         transition: all .4s;
@@ -303,7 +303,7 @@
         position: relative;
         @media #{$md-layout} {
             height: 91px;
-            width: 91px; 
+            width: 91px;
         }
         @media #{$sm-layout} {
             height: 91px;
@@ -429,7 +429,7 @@
         border-radius: 0;
         background: #E3E3E3;
         .bg--primary{
-            background: var(--color-primary-2);
+            background: var(--color-primary-0);
             border-radius: 0;
             border: none;
         }
@@ -581,12 +581,12 @@
 
 .title-area-left-ten{
     .pre-title{
-        color: var(--color-primary-2);
+        color: var(--color-primary-0);
     }
     .title{
         margin-top: 15px;
         span{
-            color: var(--color-primary-2);
+            color: var(--color-primary-0);
             font-weight: 400;
         }
     }

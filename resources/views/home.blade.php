@@ -1,4 +1,4 @@
-@extends('Frontend.Layouts.app')
+@extends('Layouts.app')
 
 @section('title')
     Acceuil
@@ -21,20 +21,7 @@
     @include('components.home.testimonials')
     <!-- testimonials area end -->
     <!-- rts cta area start -->
-    <div class="rts-cta-area ptb--100 rts-cta-bg">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="cta-three-wrapper">
-                        <h4 class="title">Une envie, un projet ?
-                            Un rêve à réaliser ... <a href="{{ route('contactPage') }}">Contactez nous</a>
-                        </h4>
-                        {{--                        <a class="rts-btn btn-secondary-3" href="{{ route('contactPage') }}">Lets Work Together</a>--}}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+@include('components.cta-contact')
     <!-- rts cta area End -->
     <!-- rts-service area start -->
     @include('components.home.services')
@@ -964,8 +951,6 @@
 
 
     <!-- start header area -->
-    <!-- rts footer three area start -->
     @include('components.footer')
-    <!-- rts footer three area end -->
     <!-- ENd Header Area -->
 @endsection

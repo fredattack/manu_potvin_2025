@@ -1,15 +1,23 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Pages\OnePageController;
 use App\Http\Controllers\Pages\OtherPageController;
-use App\Http\Controllers\Pages\PageController;
+use App\Http\Controllers\PageController;
 use App\Http\Controllers\Pages\ElementController;
 
 
 
 Route::get('/', HomeController::class)->name('home');
+Route::get('/products/{type}/{subType?}', [PageController::class,'render'])->name('pages');
+
+
+Route::post('/contact', [ContactController::class,'sendForm'])->name('contact.send-form');
+Route::get('contact', [ContactController::class,'index'])->name('contactPage');
+
+
 // Route::prefix('finbiz/')->group(function () {
 // Home pages
 Route::prefix('homes/')->group(function () {

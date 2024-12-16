@@ -12,7 +12,7 @@ textarea {
     &:focus,
     &:active {
         outline: none;
-        border-color: var(--color-primary);
+        border-color: var(--color-primary-0);
     }
 }
 
@@ -79,23 +79,23 @@ textarea {
     }
 
     &.p-holder__active {
-        border-color: var(--color-primary);
+        border-color: var(--color-primary-0);
 
         /* -- Placeholder -- */
         &::placeholder {
-            color: var(--color-primary);
+            color: var(--color-primary-0);
             /* Firefox */
             opacity: 1;
         }
 
         &:-ms-input-placeholder {
             /* Internet Explorer 10-11 */
-            color: var(--color-primary);
+            color: var(--color-primary-0);
         }
 
         &::-ms-input-placeholder {
             /* Microsoft Edge */
-            color: var(--color-primary);
+            color: var(--color-primary-0);
         }
     }
 
@@ -125,7 +125,7 @@ textarea {
     }
 
     &:focus {
-        border-color: var(--color-primary);
+        border-color: var(--color-primary-0);
     }
 }
 
@@ -145,8 +145,8 @@ textarea {
     }
 }
 
-// Custom Checkbox and radio button 
-// Custom Checkbox and radio button 
+// Custom Checkbox and radio button
+// Custom Checkbox and radio button
 input[type="checkbox"],
 input[type="radio"] {
     opacity: 0;
@@ -203,7 +203,7 @@ input[type="radio"] {
 
 input:checked ~ .rn-check-box-label {
     &::before{
-        background: var(--color-primary) !important;
+        background: var(--color-primary-0) !important;
     }
 }
 
@@ -246,7 +246,7 @@ input[type="radio"] {
         transition: var(--transition);
 
         &:focus {
-            border-color: var(--color-primary);
+            border-color: var(--color-primary-0);
             box-shadow: none;
         }
     }
@@ -263,7 +263,7 @@ input[type="radio"] {
         border: 1px solid transparent;
 
         &:focus {
-            border-color: var(--color-primary);
+            border-color: var(--color-primary-0);
         }
     }
 }
@@ -276,18 +276,18 @@ input[type="submit"] {
     font-weight: 500;
     transition: 0.3s;
     height: 60px;
-    background: var(--color-primary);
+    background: var(--color-primary-0);
     color: var(--color-white);
     font-weight: var(--p-medium);
     font-size: var(--font-size-b2);
     line-height: var(--line-height-b3);
     height: 50px;
-    border: 2px solid var(--color-primary);
+    border: 2px solid var(--color-primary-0);
     transition: var(--transition);
 
     &:hover {
         background: transparent;
-        color: var(--color-primary);
+        color: var(--color-primary-0);
         transform: translateY(-5px);
     }
 

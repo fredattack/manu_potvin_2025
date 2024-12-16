@@ -296,7 +296,7 @@
                 &:hover{
                     background: #fff;
                     &::after{
-                        color: var(--color-primary-2);
+                        color: var(--color-primary-0);
                     }
                 }
                 &::after{
@@ -317,7 +317,7 @@
                 &:hover{
                     background: #fff;
                     &::after{
-                        color: var(--color-primary-2);
+                        color: var(--color-primary-0);
                     }
                 }
                 &::after{
@@ -576,7 +576,7 @@
                         position: absolute;
                         height: 100%;
                         width: 6px;
-                        background: var(--color-primary-2);
+                        background: var(--color-primary-0);
                         left: 0;
                         @media(max-width:450px){
                             width: 4px;
@@ -584,7 +584,7 @@
                     }
                 }
                 .subtitle-banner{
-                    color: var(--color-primary-2) !important;
+                    color: var(--color-primary-0) !important;
                     letter-spacing: 1px;
                     @media(max-width:420px){
                         letter-spacing: normal;
@@ -594,7 +594,7 @@
                 .title{
                     .changebox{
                         margin: 0 5px -8px 0;
-                        color: var(--color-primary-2);
+                        color: var(--color-primary-0);
                         overflow: hidden;
                         transition: .8s;
                         white-space: nowrap;
@@ -635,10 +635,10 @@
                 }
                 .button-group{
                     .btn-primary-4{
-                        background: var(--color-primary-2);
+                        background: var(--color-primary-0);
                         padding: 17px 37px;
                         &:hover{
-                            color: var(--color-primary-2);
+                            color: var(--color-primary-0);
                             background: var(--color-gray);
                         }
                     }
@@ -702,7 +702,7 @@
                 background: transparent;
 
                 &:hover {
-                    background: var(--color-primary-2);
+                    background: var(--color-primary-0);
                     border: 1px solid transparent;
                 }
             }
@@ -965,7 +965,7 @@
             &.rts-btn {
                 background: #fff;
                 border-radius: 15px;
-                color: var(--color-primary-2);
+                color: var(--color-primary-0);
                 font-weight: 700;
                 font-size: 16px;
                 display: block;
@@ -973,7 +973,7 @@
                 margin: 45px auto 0 auto;
 
                 &:hover {
-                    background: var(--color-primary-2);
+                    background: var(--color-primary-0);
                     color: #ffff;
                 }
             }
@@ -1165,7 +1165,7 @@ p {
             line-height: 40px;
         }
         .primary{
-            color: #B00F0F;
+            color: var(--color-primary-0);
         }
         .pre{
             font-weight: 700;
