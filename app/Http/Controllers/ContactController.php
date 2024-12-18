@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ContactFormRequest;
+use App\Models\CustomerData;
 use App\Services\EmailSender;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
@@ -19,14 +20,16 @@ class ContactController extends Controller
 
     public function index()
     {
-        return view('Frontend.otherPages.contact');
+        return view('Frontend.otherPages.contact',[
+            "customerData"=>CustomerData::first()
+        ]);
     }
 
     public function sendForm(ContactFormRequest $request )
     {
         // Send an email
         $validated = $request->validated();
-        ray($validated);
+
         try {
             $this->emailSender->send([
                 'name' => $validated['name'],
