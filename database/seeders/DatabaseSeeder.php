@@ -16,7 +16,7 @@ class DatabaseSeeder extends Seeder
         // User::factory(10)->create();
         $this->call([
             CustomerDataSeeder::class,
-            AchievementSeeder::class,
+            RealisationSeeder::class,
             TestimonialSeeder::class,
             CustomMediaSeeder::class,
         ]);
