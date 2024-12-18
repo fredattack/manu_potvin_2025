@@ -10,20 +10,20 @@ use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 
 /**
- * 
+ *
  *
  * @property-read mixed $gallery_images
  * @property-read mixed $image
  * @property-read mixed $images_lightbox
  * @property-read \Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection<int, \Spatie\MediaLibrary\MediaCollections\Models\Media> $media
  * @property-read int|null $media_count
- * @method static \Database\Factories\AchievementFactory factory($count = null, $state = [])
- * @method static \Illuminate\Database\Eloquent\Builder|Achievement newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Achievement newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Achievement onlyTrashed()
- * @method static \Illuminate\Database\Eloquent\Builder|Achievement query()
- * @method static \Illuminate\Database\Eloquent\Builder|Achievement withTrashed()
- * @method static \Illuminate\Database\Eloquent\Builder|Achievement withoutTrashed()
+ * @method static \Database\Factories\RealisationFactory factory($count = null, $state = [])
+ * @method static \Illuminate\Database\Eloquent\Builder|Realisation newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Realisation newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Realisation onlyTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder|Realisation query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Realisation withTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder|Realisation withoutTrashed()
  * @property int $id
  * @property string $title
  * @property string|null $description
@@ -32,17 +32,17 @@ use Spatie\MediaLibrary\InteractsWithMedia;
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property \Illuminate\Support\Carbon|null $deleted_at
- * @method static \Illuminate\Database\Eloquent\Builder|Achievement whereCategory($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Achievement whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Achievement whereDeletedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Achievement whereDescription($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Achievement whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Achievement wherePublished($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Achievement whereTitle($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Achievement whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Realisation whereCategory($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Realisation whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Realisation whereDeletedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Realisation whereDescription($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Realisation whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Realisation wherePublished($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Realisation whereTitle($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Realisation whereUpdatedAt($value)
  * @mixin \Eloquent
  */
-class Achievement extends Model implements HasMedia
+class Realisation extends Model implements HasMedia
 {
     use HasFactory, SoftDeletes, InteractsWithMedia;
 

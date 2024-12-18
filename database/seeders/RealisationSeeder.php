@@ -2,11 +2,11 @@
 
 namespace Database\Seeders;
 
-use App\Models\Achievement;
+use App\Models\Realisation;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class AchievementSeeder extends Seeder
+class RealisationSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -46,7 +46,7 @@ class AchievementSeeder extends Seeder
             ['name' => 'Pergola skylux', 'picture' => '/images/custom/pergola1.jpeg', 'category' => 'pergola']];
 
         foreach ($achievements as $data) {
-             Achievement::create([
+             Realisation::create([
                 'title' => $data['name'],
                 'description' => $data['description'] ?? null,
                 'category' => $data['category'],

@@ -12,6 +12,8 @@ use App\Http\Controllers\Pages\ElementController;
 
 Route::get('/', HomeController::class)->name('home');
 Route::get('/products/{type}/{subType?}', [PageController::class,'render'])->name('pages');
+Route::get('/products/{type}/{subType?}', [PageController::class,'render'])->name('pages');
+Route::get('/{type}', [PageController::class,'render'])->name('pages');
 
 
 Route::post('/contact', [ContactController::class,'sendForm'])->name('contact.send-form');
@@ -103,7 +105,7 @@ Route::prefix('elements/')->group(function () {
 //  Other Pages
 Route::controller(OtherPageController::class)->group(function () {
     Route::get('about', 'aboutPage')->name('aboutPage');
-    Route::get('contact', 'contactPage')->name('contactPage');
+//    Route::get('contact', 'contactPage')->name('contactPage');
     Route::get('error', 'errorPage')->name('errorPage');
     Route::get('blog', 'blogPage')->name('blogPage');
     Route::get('bloggrid', 'blogGridPage')->name('blogGridPage');
