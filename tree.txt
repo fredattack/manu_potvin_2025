@@ -1,0 +1,766 @@
+├── README.md ✘
+├── artisan ✘
+├── composer.json ✘
+├── composer.lock ✘
+├── package-lock.json ✘
+├── package.json ✘
+├── phpunit.xml ✘
+├── tree.txt ✘
+├── vite.config.js ✘
+└── app
+    └── Console
+        └── Commands
+            ├── ListFilesTree.php ✘
+    └── Http
+        └── Controllers
+            ├── Controller.php ✘
+            ├── HomeController.php ✘
+            └── Pages
+                ├── ElementController.php ✘
+                ├── OnePageController.php ✘
+                ├── OtherPageController.php ✘
+                ├── PageController.php ✘
+    └── Models
+        ├── User.php ✘
+        ├── weiboomain.php ✘
+    └── Providers
+        ├── AppServiceProvider.php ✘
+    └── View
+        └── Components
+            ├── Footer.php ✘
+            ├── Header.php ✘
+└── bootstrap
+    ├── app.php ✘
+    ├── providers.php ✘
+    └── cache
+        ├── packages.php ✘
+        ├── services.php ✘
+└── config
+    ├── app.php ✘
+    ├── auth.php ✘
+    ├── cache.php ✘
+    ├── database.php ✘
+    ├── filesystems.php ✘
+    ├── logging.php ✘
+    ├── mail.php ✘
+    ├── queue.php ✘
+    ├── services.php ✘
+    ├── session.php ✘
+└── database
+    ├── database.sqlite ✘
+    └── factories
+        ├── UserFactory.php ✘
+    └── migrations
+        ├── 0001_01_01_000000_create_users_table.php ✘
+        ├── 0001_01_01_000001_create_cache_table.php ✘
+        ├── 0001_01_01_000002_create_jobs_table.php ✘
+    └── seeders
+        ├── DatabaseSeeder.php ✘
+└── public
+    ├── favicon.ico ✘
+    ├── index.php ✘
+    ├── robots.txt ✘
+    └── assets
+        └── css
+            ├── style.css ✘
+            └── plugins
+                ├── animate.min.css ✘
+                ├── fontawesome-5.css ✘
+                ├── swiper.min.css ✘
+                ├── unicons.css ✘
+        └── fonts
+            ├── fa-brands-400.eot ✘
+            ├── fa-brands-400.svg ✘
+            ├── fa-brands-400.ttf ✘
+            ├── fa-brands-400.woff ✘
+            ├── fa-brands-400.woff2 ✘
+            ├── fa-duotone-900.eot ✘
+            ├── fa-duotone-900.svg ✘
+            ├── fa-duotone-900.ttf ✘
+            ├── fa-duotone-900.woff ✘
+            ├── fa-duotone-900.woff2 ✘
+            ├── fa-light-300.eot ✘
+            ├── fa-light-300.svg ✘
+            ├── fa-light-300.ttf ✘
+            ├── fa-light-300.woff ✘
+            ├── fa-light-300.woff2 ✘
+            ├── fa-regular-400.eot ✘
+            ├── fa-regular-400.svg ✘
+            ├── fa-regular-400.ttf ✘
+            ├── fa-regular-400.woff ✘
+            ├── fa-regular-400.woff2 ✘
+            ├── fa-solid-900.eot ✘
+            ├── fa-solid-900.svg ✘
+            ├── fa-solid-900.ttf ✘
+            ├── fa-solid-900.woff ✘
+            ├── fa-solid-900.woff2 ✘
+        └── images
+            ├── fav.png ✘
+            └── about
+                ├── 01.jpg ✘
+                ├── 01.png ✘
+                ├── 02.jpg ✘
+                ├── 02.png ✘
+                ├── 03.jpg ✘
+                ├── 03.png ✘
+                ├── 04.jpg ✘
+                ├── 04.png ✘
+                ├── 05.jpg ✘
+                ├── 06.jpg ✘
+                ├── 06.png ✘
+                ├── Thumbs.db ✘
+                ├── bg-01.jpg ✘
+                ├── call.svg ✘
+                ├── sm-01.png ✘
+                └── main
+                    ├── 05.jpg ✘
+                    ├── 06.jpg ✘
+                    ├── Thumbs.db ✘
+                    ├── about-01-sm.jpg ✘
+                    ├── about-01.png ✘
+                    ├── about-02-sm.jpg ✘
+                    ├── about-02.png ✘
+                    ├── about-03.jpg ✘
+                    ├── about-04.jpg ✘
+                    └── icon
+                        ├── 01.svg ✘
+                        ├── 02.svg ✘
+                        ├── 03.svg ✘
+                    └── user
+                        ├── 01.png ✘
+                        ├── 02.png ✘
+                        ├── 03.png ✘
+                        ├── 04.png ✘
+                        ├── 05.png ✘
+                        ├── Thumbs.db ✘
+                └── shape
+                    ├── 01.png ✘
+                    ├── 02.png ✘
+                    ├── 03.png ✘
+                    ├── 04.png ✘
+                    ├── play-btn.png ✘
+            └── appoinment
+                ├── 01.png ✘
+                ├── 02.png ✘
+                ├── 03.png ✘
+                ├── 04.png ✘
+                ├── 05.png ✘
+                ├── 06.png ✘
+                ├── Thumbs.db ✘
+            └── banner
+                ├── banner-01.jpg ✘
+                ├── banner-02.jpg ✘
+                ├── banner-03.jpg ✘
+                ├── banner-04.jpg ✘
+                ├── banner-05.png ✘
+                ├── banner-06.png ✘
+                ├── banner-07.png ✘
+                ├── banner-08.jpg ✘
+                ├── banner-09.jpg ✘
+                ├── banner-10.jpg ✘
+                ├── banner-11.jpg ✘
+                ├── banner-11.png ✘
+                ├── banner-12.jpg ✘
+                ├── banner-12.png ✘
+                ├── banner-13.jpg ✘
+                ├── banner-13.png ✘
+                ├── banner-14.jpg ✘
+                ├── banner-14.png ✘
+                ├── banner-15.png ✘
+                ├── banner-bg5.jpg ✘
+                ├── img.jpg ✘
+                ├── it-1.webp ✘
+                ├── it-2.webp ✘
+                ├── it-3.webp ✘
+                ├── sm-1.png ✘
+                ├── sm-2.png ✘
+                └── shape
+                    ├── 01.png ✘
+                    ├── 02.png ✘
+                    ├── 03.png ✘
+                    ├── 04.png ✘
+                    ├── 05.png ✘
+                    ├── 06.png ✘
+                    ├── 07.png ✘
+                    ├── 08.png ✘
+                    ├── 09.png ✘
+                    ├── 10.png ✘
+                    ├── Rectangle.png ✘
+                    ├── bg.png ✘
+                    ├── close.png ✘
+                    ├── h7-banner.png ✘
+                    ├── pre-title.png ✘
+                    ├── shape-h6.png ✘
+                    ├── shape.webp ✘
+            └── bg
+                ├── 03.jpg ✘
+                ├── 04.jpg ✘
+                ├── Thumbs.db ✘
+                ├── bg-shape-1.png ✘
+                ├── bg-shape-2.png ✘
+            └── blog
+                ├── 01.jpg ✘
+                ├── 02.jpg ✘
+                ├── 03.jpg ✘
+                ├── 04.jpg ✘
+                ├── 05.jpg ✘
+                ├── 06.jpg ✘
+                ├── 07.jpg ✘
+                ├── 08.jpg ✘
+                ├── 09.jpg ✘
+                ├── 10.jpg ✘
+                ├── 11.jpg ✘
+                ├── 12.jpg ✘
+                ├── 13.jpg ✘
+                ├── 14.png ✘
+                ├── 15.png ✘
+                ├── 16.png ✘
+                ├── 17.png ✘
+                ├── 18.png ✘
+                ├── 19.png ✘
+                ├── 20.png ✘
+                ├── 21.png ✘
+                ├── 22.png ✘
+                ├── bg-1.png ✘
+                ├── blog-lg-1.jpg ✘
+                ├── blog-lg-2.jpg ✘
+                ├── blog-lg-3.jpg ✘
+                ├── blog-lg-4.jpg ✘
+                └── details
+                    ├── 01.jpg ✘
+                    ├── 02.jpg ✘
+                    ├── 03.jpg ✘
+                    ├── author.jpg ✘
+                    └── gallery
+                        ├── 01.png ✘
+                        ├── 02.png ✘
+                        ├── 03.png ✘
+                        ├── 04.png ✘
+                        ├── 05.png ✘
+                        ├── 06.png ✘
+                    └── recent-post
+                        ├── 01.png ✘
+                        ├── 02.png ✘
+                        ├── 03.png ✘
+                        ├── 04.png ✘
+                └── grid
+                    ├── 01.jpg ✘
+                    ├── 02.jpg ✘
+                    ├── 03.jpg ✘
+                    ├── 04.jpg ✘
+                    ├── 05.jpg ✘
+                    ├── 06.jpg ✘
+                    ├── 07.jpg ✘
+                    ├── 08.jpg ✘
+                    ├── 09.jpg ✘
+                    ├── 10.jpg ✘
+            └── breadcrumb
+                ├── 01.jpg ✘
+                ├── Thumbs.db ✘
+            └── business-case
+                ├── 01.jpg ✘
+                ├── 02.jpg ✘
+                ├── 03.jpg ✘
+                ├── 04.jpg ✘
+                ├── 05.jpg ✘
+                ├── 06.jpg ✘
+                ├── 07.jpg ✘
+                ├── bg-01.jpg ✘
+                ├── bg-02.jpg ✘
+                └── icon
+                    ├── 01.png ✘
+                    ├── 02.png ✘
+                    ├── 03.png ✘
+                    ├── shape-1.png ✘
+                    ├── shape-2.png ✘
+            └── business-goal
+                ├── 01.jpg ✘
+                ├── 01.png ✘
+                ├── 02.jpg ✘
+                ├── 03.jpg ✘
+                ├── 04.jpg ✘
+                ├── 05.png ✘
+                ├── Thumbs.db ✘
+                ├── characters.png ✘
+                ├── sm-01.jpg ✘
+                ├── team.png ✘
+                └── icon
+                    ├── 01.png ✘
+                    ├── 01.svg ✘
+                    ├── 02.png ✘
+                    ├── 02.svg ✘
+                    ├── 03.svg ✘
+                    ├── 04.svg ✘
+                    ├── 05.svg ✘
+                    ├── bag.png ✘
+                    ├── box.png ✘
+                    ├── line.png ✘
+                    ├── setting.png ✘
+            └── client
+                ├── 01.png ✘
+                ├── 02.png ✘
+                ├── 03.png ✘
+                ├── 04.png ✘
+                ├── 05.png ✘
+                ├── 06.png ✘
+                ├── bg.jpg ✘
+            └── contact
+                ├── 01.jpg ✘
+                ├── 01.png ✘
+                ├── 02.jpg ✘
+                ├── 02.png ✘
+                ├── 03.jpg ✘
+                ├── 03.png ✘
+                └── shape
+                    ├── 01.png ✘
+                    ├── 01.svg ✘
+                    ├── 02.png ✘
+                    ├── 02.svg ✘
+                    ├── 03.svg ✘
+                    ├── 404.png ✘
+                    ├── location.svg ✘
+            └── counterup
+                ├── bg-01.jpg ✘
+                └── icon
+                    ├── 01.svg ✘
+                    ├── 02.svg ✘
+                    ├── 03.svg ✘
+                    ├── 04.svg ✘
+                    ├── 05.svg ✘
+                    ├── 06.svg ✘
+                    ├── 07.svg ✘
+                    ├── 08.svg ✘
+                    ├── 09.svg ✘
+                    ├── 10.svg ✘
+                    ├── 11.svg ✘
+                    ├── 12.svg ✘
+            └── cta
+                ├── 01.jpg ✘
+                ├── 02.jpg ✘
+                ├── 03.jpg ✘
+                ├── 04.jpg ✘
+                ├── 05.jpg ✘
+                ├── bg-01.jpg ✘
+            └── faq
+                ├── 01.png ✘
+                ├── 02.png ✘
+                ├── bg-01.jpg ✘
+                ├── customer.webp ✘
+                ├── education.webp ✘
+                ├── hospitality-1.webp ✘
+                ├── info.webp ✘
+                ├── logistics.webp ✘
+                ├── shape-2.png ✘
+                ├── shape.png ✘
+                ├── steel-factory.webp ✘
+            └── feature
+                ├── 01.png ✘
+                ├── 02.jpg ✘
+                ├── 03.jpg ✘
+                ├── 04.png ✘
+                ├── Thumbs.db ✘
+                └── shape
+                    ├── 01.png ✘
+                    ├── Thumbs.db ✘
+            └── footer
+                ├── Group 160.png ✘
+                ├── callto-action.png ✘
+                ├── footer-bg-1.jpg ✘
+                ├── footer-bg-2.jpg ✘
+                ├── footer-bg-3.png ✘
+                ├── under-title-2.png ✘
+                ├── under-title.png ✘
+                └── h1-shape
+                    ├── 01.svg ✘
+                    ├── 02.png ✘
+                    ├── 03.png ✘
+                └── post
+                    ├── 01.png ✘
+                    ├── 02.png ✘
+                └── three-gallery
+                    ├── 01.png ✘
+                    ├── 02.png ✘
+                    ├── 03.png ✘
+                    ├── 04.png ✘
+                    ├── 05.png ✘
+                    ├── 06.png ✘
+            └── gallery
+                ├── 01.jpg ✘
+                ├── 01.svg ✘
+                ├── Thumbs.db ✘
+                ├── bg-vedio.png ✘
+                ├── gallery-01.jpg ✘
+                ├── gallery-02.jpg ✘
+                ├── gallery-03.jpg ✘
+                ├── gallery-bg-1.jpg ✘
+                ├── shape.png ✘
+                └── icon
+                    ├── 01.svg ✘
+            └── icon
+                ├── menu-light.png ✘
+                ├── menu.png ✘
+            └── logo
+                ├── logo-1.svg ✘
+                ├── logo-10.svg ✘
+                ├── logo-2.svg ✘
+                ├── logo-3.svg ✘
+                ├── logo-4.svg ✘
+                ├── logo-5.1.svg ✘
+                ├── logo-5.svg ✘
+                ├── logo-6.svg ✘
+                ├── logo-7.svg ✘
+                ├── logo-8.svg ✘
+                ├── logo-9.svg ✘
+                ├── logo.webp ✘
+            └── not optimize
+                ├── 01.svg ✘
+            └── pricing
+                ├── bg-01.jpg ✘
+                ├── bg-02.jpg ✘
+            └── product
+                ├── 01.jpg ✘
+                ├── 02.jpg ✘
+                ├── 03.jpg ✘
+                ├── 04.jpg ✘
+                ├── 05.jpg ✘
+                ├── 06.jpg ✘
+                ├── 07.jpg ✘
+                ├── 08.jpg ✘
+                ├── 09.jpg ✘
+                ├── 10.jpg ✘
+                ├── 11.png ✘
+                ├── 12.png ✘
+                ├── 13.png ✘
+                ├── bg-lg-01.jpg ✘
+                ├── d-01.jpg ✘
+                ├── d-02.jpg ✘
+                ├── d-03.jpg ✘
+                └── bg
+                    ├── 01.jpg ✘
+                    ├── 02.jpg ✘
+                    ├── sm-1.jpg ✘
+                └── icon
+                    ├── 01.jpg ✘
+                    ├── 02.jpg ✘
+                └── shape
+                    ├── navigation-white.png ✘
+            └── service
+                ├── 01.jpg ✘
+                ├── 01.png ✘
+                ├── 02.jpg ✘
+                ├── 02.png ✘
+                ├── 03.jpg ✘
+                ├── 04.jpg ✘
+                ├── 05.jpg ✘
+                ├── 06.jpg ✘
+                ├── 07.jpg ✘
+                ├── 08.jpg ✘
+                ├── 09.jpg ✘
+                ├── 10.jpg ✘
+                ├── 11.jpg ✘
+                ├── 12.jpg ✘
+                ├── 13.jpg ✘
+                ├── 14.jpg ✘
+                ├── 15.jpg ✘
+                ├── 16.jpg ✘
+                ├── 17.jpg ✘
+                ├── 17.png ✘
+                ├── 18.jpg ✘
+                ├── 19.jpg ✘
+                ├── 20.jpg ✘
+                ├── 21.jpg ✘
+                ├── bg-01.jpg ✘
+                ├── bg-02.jpg ✘
+                ├── bg-03.jpg ✘
+                ├── bg-04.jpg ✘
+                ├── bg-05.jpg ✘
+                ├── sm-01.jpg ✘
+                └── h2
+                    ├── 01.jpg ✘
+                    ├── 02.jpg ✘
+                    ├── 03.jpg ✘
+                └── icon
+                    ├── 01.svg ✘
+                    ├── 02.svg ✘
+                    ├── 03.svg ✘
+                    ├── 04.svg ✘
+                    ├── 05.svg ✘
+                    ├── 06.svg ✘
+                    ├── 07.svg ✘
+                    ├── 08.svg ✘
+                    ├── 09.svg ✘
+                    ├── 10.svg ✘
+                    ├── 11.svg ✘
+                    ├── 12.svg ✘
+                    ├── 13.svg ✘
+                    ├── 14.svg ✘
+                    ├── 15.svg ✘
+                    ├── 16.svg ✘
+                    ├── 17.svg ✘
+                    ├── 18.svg ✘
+                    ├── 19.svg ✘
+                    ├── 20.svg ✘
+                    ├── 21.svg ✘
+                    ├── 22.svg ✘
+                    ├── 23.svg ✘
+                    ├── 24.svg ✘
+                    ├── dot.png ✘
+                    ├── service-logo1.svg ✘
+                    ├── service-logo11.svg ✘
+                    ├── service-logo2.svg ✘
+                    ├── service-logo22.svg ✘
+                    ├── service-logo3.svg ✘
+                    ├── service-logo33.svg ✘
+                    ├── service-logo4.svg ✘
+                    ├── service-logo5.svg ✘
+                    ├── service-logo6.svg ✘
+                    ├── shape-1.png ✘
+                    ├── w-dot.png ✘
+            └── team
+                ├── Thumbs.db ✘
+                ├── bg-01.jpg ✘
+                ├── bg-02.jpg ✘
+                ├── bg-02.png ✘
+                └── tm
+                    ├── 01.jpg ✘
+                    ├── 02.jpg ✘
+                    ├── 03.jpg ✘
+                    ├── 04.jpg ✘
+                    ├── 06.jpg ✘
+                    ├── 07.jpg ✘
+                    ├── 08.jpg ✘
+                    ├── 09.jpg ✘
+                    ├── 10.jpg ✘
+                    ├── 11.jpg ✘
+                    ├── 12.jpg ✘
+                    ├── 13.jpg ✘
+                    ├── 14.jpg ✘
+                    ├── 14.png ✘
+                    ├── 15.jpg ✘
+                    ├── 15.png ✘
+                    ├── 16.jpg ✘
+                    ├── 16.png ✘
+                    ├── 17.jpg ✘
+                    ├── 17.png ✘
+                    ├── lg-01.jpg ✘
+                    ├── lg-02.jpg ✘
+                    ├── lg-03.jpg ✘
+                    ├── team-lg.jpg ✘
+            └── testimonials
+                ├── 01.png ✘
+                ├── 02.png ✘
+                ├── 03.png ✘
+                ├── 04.png ✘
+                ├── 05.png ✘
+                ├── 06.png ✘
+                ├── 07.png ✘
+                ├── 08.png ✘
+                ├── 09.jpg ✘
+                ├── 10.jpg ✘
+                ├── 10.png ✘
+                ├── 11.png ✘
+                ├── 12.png ✘
+                ├── 13.png ✘
+                ├── 14.jpg ✘
+                ├── 15.png ✘
+                ├── bg-01.jpg ✘
+                ├── bg-02.jpg ✘
+                ├── bg-03.jpg ✘
+                ├── bg-04.jpg ✘
+                └── icon
+                    ├── 01.png ✘
+                    ├── 02.png ✘
+                    ├── 03.png ✘
+                    ├── logo-01.png ✘
+                    ├── logo-02.png ✘
+                    ├── logo-03.png ✘
+                    ├── logo-04.png ✘
+                └── shape
+                    ├── 01.svg ✘
+                    ├── 02.png ✘
+                    ├── 03.png ✘
+            └── working-step
+                ├── 01.png ✘
+                ├── Thumbs.db ✘
+                ├── bg-01.jpg ✘
+                ├── bg-02.jpg ✘
+                ├── bg-03.jpg ✘
+                └── icon
+                    ├── 01.svg ✘
+                    ├── 02.svg ✘
+                    ├── 03.svg ✘
+                    ├── 04.svg ✘
+                    ├── 05.svg ✘
+                    ├── 06.svg ✘
+                    ├── 07.svg ✘
+                    ├── 08.svg ✘
+                    ├── 09.svg ✘
+                    ├── 10.svg ✘
+                    ├── 11.svg ✘
+                    ├── 12.svg ✘
+                    ├── goal.svg ✘
+                    ├── save.svg ✘
+                    ├── target.svg ✘
+                    ├── user.svg ✘
+        └── js
+            ├── main.js ✘
+            └── plugins
+                ├── contact.form.js ✘
+                ├── counterup.js ✘
+                ├── sal.min.js ✘
+                ├── swiper.js ✘
+        └── maps
+            ├── style.css.map ✘
+        └── scss
+            ├── style.scss ✘
+            └── default
+                ├── _animations.scss ✘
+                ├── _common.scss ✘
+                ├── _forms.scss ✘
+                ├── _mixins.scss ✘
+                ├── _reset.scss ✘
+                ├── _sal.scss ✘
+                ├── _shortcode.scss ✘
+                ├── _spacing.scss ✘
+                ├── _text-animation.scss ✘
+                ├── _typography.scss ✘
+                ├── _variables.scss ✘
+            └── elements
+                ├── _about.scss ✘
+                ├── _appoinment.scss ✘
+                ├── _back-totop.scss ✘
+                ├── _banner.scss ✘
+                ├── _blog.scss ✘
+                ├── _business-goal.scss ✘
+                ├── _button.scss ✘
+                ├── _contact.scss ✘
+                ├── _counterup.scss ✘
+                ├── _cta.scss ✘
+                ├── _faq.scss ✘
+                ├── _feature.scss ✘
+                ├── _footer.scss ✘
+                ├── _gallery.scss ✘
+                ├── _map-area.scss ✘
+                ├── _preloader.scss ✘
+                ├── _pricing.scss ✘
+                ├── _project.scss ✘
+                ├── _service.scss ✘
+                ├── _swiper.scss ✘
+                ├── _team-details.scss ✘
+                ├── _team.scss ✘
+                ├── _testimonial.scss ✘
+                ├── _trsted-client.scss ✘
+                ├── _trusted-client.scss ✘
+                ├── _working-process.scss ✘
+            └── header
+                ├── _breadcrumb.scss ✘
+                ├── _header.scss ✘
+                ├── _mobile-menu.scss ✘
+                ├── _nav.scss ✘
+└── resources
+    └── css
+        ├── app.css ✘
+    └── js
+        ├── app.js ✘
+        ├── bootstrap.js ✘
+    └── views
+        └── Frontend
+            └── Elements
+                ├── accordion.blade.php ✘
+                ├── addressBox.blade.php ✘
+                ├── blogQuote.blade.php ✘
+                ├── blogSlider.blade.php ✘
+                ├── brand.blade.php ✘
+                ├── button.blade.php ✘
+                ├── contactForm.blade.php ✘
+                ├── counter.blade.php ✘
+                ├── cta.blade.php ✘
+                ├── heading.blade.php ✘
+                ├── pricing.blade.php ✘
+                ├── progress-bar.blade.php ✘
+                ├── tab.blade.php ✘
+                ├── tabAddon.blade.php ✘
+                ├── typography.blade.php ✘
+                ├── video.blade.php ✘
+                ├── workingProcess.blade.php ✘
+            └── Homes
+                ├── home1.blade.php ✘
+                ├── home10.blade.php ✘
+                ├── home11.blade.php ✘
+                ├── home12.blade.php ✘
+                ├── home13.blade.php ✘
+                ├── home2.blade.php ✘
+                ├── home3.blade.php ✔
+                ├── home4.blade.php ✘
+                ├── home5.blade.php ✘
+                ├── home6.blade.php ✘
+                ├── home7.blade.php ✘
+                ├── home8.blade.php ✘
+                ├── home9.blade.php ✘
+            └── Includes
+                ├── footer.blade.php ✘
+                ├── header.blade.php ✘
+                ├── mainList.blade.php ✘
+                ├── mobileMenu.blade.php ✘
+            └── Layouts
+                ├── app.blade.php ✘
+                ├── appSecond.blade.php ✘
+                ├── element.blade.php ✘
+            └── Pages
+                ├── appoitment.blade.php ✘
+                ├── ourService.blade.php ✘
+                ├── portfolioStyle2.blade.php ✘
+                ├── portfolioStyle3.blade.php ✘
+                ├── portfolioStyle4.blade.php ✘
+                ├── portfolioStyle5.blade.php ✘
+                ├── priceplans.blade.php ✘
+                ├── projecDetails.blade.php ✘
+                ├── project.blade.php ✘
+                ├── team.blade.php ✘
+                ├── teamDetails.blade.php ✘
+                ├── teamStyle2.blade.php ✘
+                ├── teamStyle3.blade.php ✘
+                ├── teamStyle4.blade.php ✘
+                ├── teamStyle5.blade.php ✘
+                ├── testimonial.blade.php ✘
+                ├── testimonialStyle1.blade.php ✘
+                ├── testimonials.blade.php ✘
+            └── onePages
+                ├── brandingAgency.blade.php ✘
+                ├── businessAgency.blade.php ✘
+                ├── businessManagement.blade.php ✘
+                ├── consulting.blade.php ✘
+                ├── corporate.blade.php ✘
+                ├── finance.blade.php ✘
+                ├── humanResource.blade.php ✘
+                ├── index.blade.php ✘
+                ├── insurance.blade.php ✘
+                ├── itsolution.blade.php ✘
+                ├── marketing.blade.php ✘
+                ├── modernAgency.blade.php ✘
+                ├── stratupAgency.blade.php ✘
+            └── otherPages
+                ├── about.blade.php ✘
+                ├── blog.blade.php ✘
+                ├── blogDetails.blade.php ✘
+                ├── blogGrid.blade.php ✘
+                ├── contact.blade.php ✘
+                ├── errorPage.blade.php ✘
+                ├── ourService.blade.php ✘
+                ├── service-2.blade.php ✘
+                ├── service-3.blade.php ✘
+                ├── serviceDetails.blade.php ✘
+└── routes
+    ├── console.php ✘
+    ├── web.php ✘
+└── storage
+    └── app
+        └── public
+    └── logs
+        ├── laravel.log ✘
+└── tests
+    ├── TestCase.php ✘
+    └── Feature
+        ├── ExampleTest.php ✘
+    └── Unit
+        ├── ExampleTest.php ✘
