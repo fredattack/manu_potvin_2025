@@ -7,8 +7,8 @@
                 <li>
                     <ul>
                         <a href="{{ route('pages',['type'=>'portes-fenetres-chassis'])  }}" class="tag">Portes-Fenêtres-Chassis</a>
-                        <li class="mobile-menu-link"><a href ="{{ route('pages',['type'=>'chassis','subType'=>"pvc"])  }}">Chassis PVC</a></li>
-                        <li class="mobile-menu-link"><a href ="{{ route('pages',['type'=>'chassis','subType'=>"alu"]) }}">Chassis ALU</a></li>
+                        <li class="mobile-menu-link"><a href ="{{ route('pagesKinded',['type'=>'chassis','subType'=>"pvc"])  }}">Chassis PVC</a></li>
+                        <li class="mobile-menu-link"><a href ="{{ route('pagesKinded',['type'=>'chassis','subType'=>"alu"]) }}">Chassis ALU</a></li>
                     </ul>
                 </li>
             </ul>

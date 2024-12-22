@@ -7,8 +7,8 @@
                 <li class="sub-droupdown">
                     <a class="sub-menu-link" href="{{ route('pages',['type'=>'portes-fenetres-chassis']) }}">Portes-Fenêtres-Chassis</a>
                     <ul class="submenu third-lvl">
-                        <li><a href="{{ route('pages',['type'=>'chassis','subType'=>"pvc"]) }}">Chassis PVC</a></li>
-                        <li><a href="{{ route('pages',['type'=>'chassis','subType'=>"alu"]) }}">Chassis ALU</a></li>
+                        <li><a href="{{ route('pagesKinded',['type'=>'chassis','subType'=>"pvc"]) }}">Chassis PVC</a></li>
+                        <li><a href="{{ route('pagesKinded',['type'=>'chassis','subType'=>"alu"]) }}">Chassis ALU</a></li>
                     </ul>
                 </li>
                 <li><a href ="{{ route('pages',['type'=>'porte-de-garage']) }}">Portes de garage</a></li>

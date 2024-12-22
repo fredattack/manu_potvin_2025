@@ -5,13 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Spatie\Image\Enums\Fit;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 /**
- * 
+ *
  *
  * @property-read mixed $image
  * @property-read \Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection<int, \App\Models\CustomMedia> $media
@@ -41,6 +42,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
 class Testimonial extends Model implements HasMedia
 {
     use HasFactory,InteractsWithMedia;
+
     protected $fillable = ['author', 'content', 'city','published'];
     protected $appends = ['image'];
 
@@ -60,5 +62,10 @@ class Testimonial extends Model implements HasMedia
             },
         );
 
+    }
+
+    public function realisation(): BelongsTo
+    {
+        return $this->belongsTo(Realisation::class);
     }
 }

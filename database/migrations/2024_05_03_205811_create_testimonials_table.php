@@ -17,7 +17,7 @@ return new class extends Migration
             $table->text('content');
             $table->string('city');
             $table->boolean('published')->default(false);
-            $table->foreignId('achievement_id')->nullable()->constrained();
+            $table->foreignId('realisation_id')->nullable()->constrained('realisations');
             $table->timestamps();
         });
     }
