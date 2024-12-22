@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\RealisationController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Pages\OnePageController;
@@ -9,15 +10,15 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\Pages\ElementController;
 
 
-
-Route::get('/', HomeController::class)->name('home');
-Route::get('/products/{type}/{subType?}', [PageController::class,'render'])->name('pages');
-Route::get('/products/{type}/{subType?}', [PageController::class,'render'])->name('pages');
-Route::get('/{type}', [PageController::class,'render'])->name('pages');
-
-
 Route::post('/contact', [ContactController::class,'sendForm'])->name('contact.send-form');
 Route::get('contact', [ContactController::class,'index'])->name('contactPage');
+
+Route::get('/', HomeController::class)->name('home');
+Route::get('/{type}', [PageController::class,'render'])->name('pages');
+Route::get('/products/{type}/kind/{subType?}', [PageController::class,'render'])->name('pages');
+Route::get('/realisation/{realisation}/detail', RealisationController::class)->name('pages.details');
+
+
 
 
 // Route::prefix('finbiz/')->group(function () {

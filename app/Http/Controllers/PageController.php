@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\CustomerData;
+use App\Models\Realisation;
 use Database\Seeders\CustomerDataSeeder;
 use Illuminate\Support\Str;
 
@@ -17,7 +18,8 @@ class PageController extends Controller
         }
 
         return view( $view,[
-        "customerData"=>CustomerData::first()
+        "customerData"=>CustomerData::first(),
+            "modelData" => Realisation::with(['media'])->get()
         ]);
     }
 }

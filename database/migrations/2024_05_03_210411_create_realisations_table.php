@@ -15,8 +15,12 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->text('description')->nullable();
-            $table->string('category');
+            $table->json('category');
+            $table->string('place')->nullable();
+            $table->date('date')->nullable();
+            $table->string('customer')->nullable();
             $table->boolean('published')->default(false);
+            $table->boolean('favorite')->default(false);
             $table->timestamps();
             $table->softDeletes();
         });

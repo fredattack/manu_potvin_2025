@@ -1,14 +1,17 @@
+<?php
+/** @var \App\Models\Realisation $realisation  */
+?>
 <div class="rts-business-case-s-2 style-home-7S">
-    <a href="{{ route('portfolioDetails') }}" class="thumbnail">
-        <img src="{{ asset('assets/images/business-case/04.jpg') }}" alt="Business_case">
+    <a href="{{route('pages.details',['realisation'=>$realisation])}}" class="thumbnail">
+        {!! $realisation->image !!}
     </a>
     <div class="inner">
-        <a href="{{ route('portfolioDetails') }}">
+        <a href="{{ route('pages.details',['realisation'=>$realisation]) }}" >
             <h5 class="title">
-                Business Growth
+                {{$realisation->title}}
             </h5>
         </a>
-        <span>Business Strategy</span>
+        <span></span>
     </div>
-    <a href="{{ route('portfolioDetails') }}" class="over_link"></a>
+    <a href="{{ route('pages.details',['realisation'=>$realisation]) }}" class="over_link"></a>
 </div>

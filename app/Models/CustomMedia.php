@@ -63,63 +63,66 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
 class CustomMedia extends Media
 {
     protected string $conversionName = '';
+
 /**
 * Override the toHtml method.
 *
 * @return string
 */
-//    public function toHtml($rounded=false)
-//    {
-//        $imageGenerator = ImageGeneratorFactory::forMedia($this) ?? new Image();
-//
-//        if (! $imageGenerator->canHandleMime($this->mime_type)) {
-//            return '';
-//        }
-//
-//        $attributeString = collect($this->extraAttributes)
-//            ->map(fn ($value, $name) => $name.'="'.$value.'"')->implode(' ');
-//
-//        if (strlen($attributeString)) {
-//            $attributeString = ' '.$attributeString;
-//        }
-//
-//        $loadingAttributeValue = config('media-library.default_loading_attribute_value');
-//        if ($this->conversionName !== '') {
-//            $conversionObject = ConversionCollection::createForMedia($this)->getByName($this->conversionName);
-//
-//            $loadingAttributeValue = $conversionObject->getLoadingAttributeValue();
-//        }
-//
-//        if ($this->loadingAttributeValue !== '') {
-//            $loadingAttributeValue = $this->loadingAttributeValue;
-//        }
-//
-//        $viewName = 'image';
-//        $width = '';
-//        $height = '';
-//
-//        if ($this->hasResponsiveImages($this->conversionName)) {
-//            $viewName = config('media-library.responsive_images.use_tiny_placeholders')
-//                ? 'responsiveImageWithPlaceholder'
-//                : 'responsiveImage';
-//
-//            $responsiveImage = $this->responsiveImages($this->conversionName)->files->first();
-//
-//            $width = $responsiveImage->width();
-//            $height = $responsiveImage->height();
-//        }
-//
-//        $media = $this;
-//        $conversion = $this->conversionName;
-//
-//        return view("media-library.{$viewName}", compact(
-//            'media',
-//            'conversion',
-//            'attributeString',
-//            'loadingAttributeValue',
-//            'width',
-//            'height',
-//            'rounded'
-//        ))->render();
-//    }
+    public function toHtml($rounded=false): string
+    {
+        $imageGenerator = ImageGeneratorFactory::forMedia($this) ?? new Image();
+
+        if (! $imageGenerator->canHandleMime($this->mime_type)) {
+            return '';
+        }
+
+        $attributeString = collect($this->extraAttributes)
+            ->map(fn ($value, $name) => $name.'="'.$value.'"')->implode(' ');
+
+        if (strlen($attributeString)) {
+            $attributeString = ' '.$attributeString;
+        }
+
+        $loadingAttributeValue = config('media-library.default_loading_attribute_value');
+
+        if ($this->conversionName !== '') {
+            $conversionObject = ConversionCollection::createForMedia($this)->getByName($this->conversionName);
+
+            $loadingAttributeValue = $conversionObject->getLoadingAttributeValue();
+        }
+
+        if ($this->loadingAttributeValue !== '') {
+            $loadingAttributeValue = $this->loadingAttributeValue;
+        }
+
+        $viewName = 'image';
+        $width = '';
+        $height = '';
+
+        if ($this->hasResponsiveImages($this->conversionName)) {
+            $viewName = config('media-library.responsive_images.use_tiny_placeholders')
+                ? 'responsiveImageWithPlaceholder'
+                : 'responsiveImage';
+
+            $responsiveImage = $this->responsiveImages($this->conversionName)->files->first();
+
+            $width = $responsiveImage->width();
+            $height = $responsiveImage->height();
+        }
+
+        $media = $this;
+
+        $conversion = $this->conversionName;
+
+        return view("media-library.{$viewName}", compact(
+            'media',
+            'conversion',
+            'attributeString',
+            'loadingAttributeValue',
+            'width',
+            'height',
+            'rounded'
+        ))->render();
+    }
 }

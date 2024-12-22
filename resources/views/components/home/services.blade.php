@@ -13,86 +13,40 @@
         <div class="row g-5 mt--20">
             <div class="col-12">
                 <div class="swiper mySwiperh2_Service">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="service-one-inner-four">
-                                <div class="big-thumbnail-area">
-                                    <a href="#" class="thumbnail">
-                                        <img src="{{ asset('assets/images/service/07.jpg') }}"
-                                                alt="Business-service">
-                                    </a>
-                                    <div class="content">
-                                        <img src="{{ asset('assets/images/service/icon/16.svg') }}"
-                                                alt="Business-icon">
-                                        <h5 class="title">Portes-Fenêtres-Chassis</h5>
-                                        <p class="disc">Des solutions sur mesure pour vos portes, fenêtres et châssis, alliant design et performance.
-                                        </p>
-                                    </div>
-                                    <a href="{{ route('serviceDetailsPage') }}" class="over_link"></a>
-                                </div>
-                                <a href="{{ route('serviceDetailsPage') }}" class="rts-btn btn-primary-3"> Read
-                                    More<i class="fal fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="service-one-inner-four">
-                                <div class="big-thumbnail-area">
-                                    <a href="#" class="thumbnail">
-                                        <img src="{{ asset('assets/images/service/08.jpg') }}"
-                                                alt="Business-service">
-                                    </a>
-                                    <div class="content">
-                                        <img src="{{ asset('assets/images/service/icon/17.svg') }}"
-                                                alt="Business-icon">
-                                        <h5 class="title">Portes de garage</h5>
-                                        <p class="disc">Sécurité et style pour vos portes de garage, adaptées à tous vos besoins.
-                                        </p>
-                                    </div>
-                                    <a href="{{ route('serviceDetailsPage') }}" class="over_link"></a>
-                                </div>
-                                <a href="{{ route('serviceDetailsPage') }}" class="rts-btn btn-primary-3"> Read
-                                    More<i class="fal fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="service-one-inner-four">
-                                <div class="big-thumbnail-area">
-                                    <a href="#" class="thumbnail">
-                                        <img src="{{ asset('assets/images/service/09.jpg') }}"
-                                                alt="Business-service">
-                                    </a>
-                                    <div class="content">
-                                        <img src="{{ asset('assets/images/service/icon/18.svg') }}"
-                                                alt="Business-icon">
-                                        <h5 class="title">Pergolas</h5>
-                                        <p class="disc">Profitez de vos espaces extérieurs avec des pergolas élégantes et fonctionnelles.
-                                        </p>
-                                    </div>
-                                    <a href="{{ route('serviceDetailsPage') }}" class="over_link"></a>
-                                </div>
-                                <a href="{{ route('serviceDetailsPage') }}" class="rts-btn btn-primary-3"> Read
-                                    More<i class="fal fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="service-one-inner-four">
-                                <div class="big-thumbnail-area">
-                                    <a href="#" class="thumbnail">
-                                        <img src="{{ asset('assets/images/service/09.jpg') }}"
-                                                alt="Business-service">
-                                    </a>
-                                    <div class="content">
 
-                                        <h5 class="title">Moustiquaires</h5>
-                                        <p class="disc">Protégez votre intérieur avec des moustiquaires pratiques et discrètes.
-                                        </p>
+                        @php
+                            $categories = isset($categories) ? $categories : \App\Enums\Categories::all();
+                        @endphp
+                    <div class="swiper-wrapper">
+                        @foreach( $categories as $category)
+                            @php
+                            $service = $serviceListe->hasOneCategory(is_array($category) ? $category['key'] : $category->value,'category')?->first();
+                            @endphp
+                            <?php
+                            /** @var \App\Models\Realisation $service  */
+                            ?>
+                        @if($service)
+                                <div class="swiper-slide">
+                                <div class="service-one-inner-four">
+                                    <div class="big-thumbnail-area">
+                                        <a href="#" class="thumbnail">
+                                            @php
+                                                ray($service->image)
+                                            @endphp
+                                            {!! $service->image !!}
+                                        </a>
+                                        <div class="content">
+                                            <h5 class="title">{{\App\Enums\Categories::getCategoryLabels($service->category)}}</h5>
+                                            <p class="disc">{{\App\Enums\Categories::getDescription($service->main_category)}}</p>
+                                        </div>
+                                        <a href="{{ route('pages',['type'=>\App\Enums\Categories::getUrlPath($service->main_category)]) }}" class="over_link"></a>
                                     </div>
-                                    <a href="{{ route('serviceDetailsPage') }}" class="over_link"></a>
+                                    <a href="{{ route('pages',['type'=>\App\Enums\Categories::getUrlPath($service->main_category)])  }}" class="rts-btn btn-primary-3"> Voir
+                                        Plus<i class="fal fa-arrow-right"></i></a>
                                 </div>
-                                <a href="{{ route('serviceDetailsPage') }}" class="rts-btn btn-primary-3"> Read
-                                    More<i class="fal fa-arrow-right"></i></a>
-                            </div>
-                        </div>
+                    </div>
+                        @endif
+                        @endforeach
                     </div>
                 </div>
             </div>

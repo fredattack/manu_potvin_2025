@@ -24539,7 +24539,7 @@ section.svg-container:nth-last-of-type(0) svg.radial-progress {
 .rts-business-case-s-2::after {
   content: "";
   position: absolute;
-  background-image: url(../images/business-case/icon/shape-1.png);
+  background-image: url(../images/custom/shape/shape-1.png);
   height: 100%;
   width: 100%;
   top: -64%;
@@ -24591,7 +24591,7 @@ section.svg-container:nth-last-of-type(0) svg.radial-progress {
 .rts-business-case-s-2 .inner span::after {
   position: absolute;
   content: "";
-  background-image: url(../images/business-case/icon/02.png);
+  background-image: url(../images/custom/shape/02-realisations.png);
   height: 58px;
   width: 58px;
   bottom: -85px;
@@ -25733,7 +25733,7 @@ section.svg-container:nth-last-of-type(0) svg.radial-progress {
   content: "";
   height: 100%;
   width: 133%;
-  background: linear-gradient(180deg, rgba(223, 10, 10, 0.55) 0%, rgba(90, 0, 0, 0.352) 100%);
+  background: linear-gradient(180deg, #5A8FA0 0%, #95D5DC 100%);
   left: 0;
   top: 0;
   transform: rotate(-45deg) translateY(126%);
@@ -25745,7 +25745,7 @@ section.svg-container:nth-last-of-type(0) svg.radial-progress {
   content: "";
   height: 100%;
   width: 133%;
-  background: linear-gradient(180deg, #5a00005a 0%, #df0a0a8c 100%);
+  background: linear-gradient(180deg, #5A8FA0 0%, #95D5DC 100%);
   left: 0;
   top: 0;
   transform: rotate(-54deg) translateY(-144%);

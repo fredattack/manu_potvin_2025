@@ -5,11 +5,18 @@
 @endsection
 
 @section('content')
+    @php
+        $category = \App\Enums\Categories::PORTE_DE_GARAGE->value;
+
+    @endphp
+
     @include('components.header')
     <!-- start breadcrumb area -->
 
     <div id="side-bar" class="side-bar">
-        <button class="close-icon-menu"><i class="far fa-times"></i></button>
+        <button class="close-icon-menu">
+            <i class="far fa-times"></i>
+        </button>
         <!-- inner menu area desktop start -->
         <div class="rts-sidebar-menu-desktop">
             <a class="logo-1" href="{{ route('home') }}"><img class="logo"
@@ -94,14 +101,18 @@
                                 <span class="subtitle-banner"><strong>DES PORTES DE GARAGE </strong> ADAPTÉES À VOS BESOINS</span>
                                 <!-- type headline start-->
                                 <h1 class="title">
-                                    Optimisez votre  <br>
+                                    Optimisez votre
+                                    <br>
                                     <div class="changebox">
-                                        <span>esthétique</span> <br>
+                                        <span>esthétique</span>
+                                        <br>
                                         <span>confort</span><br>
-                                        <span>performance énergétique</span> <br>
+                                        <span>performance énergétique</span>
+                                        <br>
                                         <span>sécurité</span><br>
                                     </div>
-                                    avec nos <br> portes de garage...
+                                    avec nos
+                                    <br> portes de garage...
                                 </h1>
                             </div>
                             <p class="disc" style="color: var(--color-primary-alta)">
@@ -141,7 +152,7 @@
                             <div class="single-business-solution-2">
                                 <div class="content">
                                     <h6 class="title">
-                                       Avec plus de 20 ans d'expérience, nous proposons des portes de garage robustes, esthétiques et adaptées à tous vos besoins.
+                                        Avec plus de 20 ans d'expérience, nous proposons des portes de garage robustes, esthétiques et adaptées à tous vos besoins.
                                     </h6>
                                 </div>
                             </div>
@@ -190,7 +201,8 @@
                             Manu Potvin
                         </span>
                         <h2 class="title">
-                            L'expertise en portes de garage <br> pour un confort quotidien
+                            L'expertise en portes de garage
+                            <br> pour un confort quotidien
                         </h2>
                     </div>
                 </div>
@@ -200,17 +212,17 @@
                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12 first-child">
                     <ul class="content-box first">
                         <li class="content left">
-                            <h5 class="main-title">Installation de portes de garage</h5>
+                            <h5 class="main-title">Installation</h5>
                             <p class="desc">Installation rapide et efficace de portes de garage, adaptée à vos besoins et à votre espace.
                             </p>
                         </li>
                         <li class="content left one">
-                            <h5 class="main-title">Solutions sur mesure pour votre garage</h5>
+                            <h5 class="main-title">Solutions sur mesure</h5>
                             <p class="desc">Des portes de garage conçues pour offrir à la fois sécurité et esthétique, personnalisées selon vos préférences.
                             </p>
                         </li>
                         <li class="content left">
-                            <h5 class="main-title">Maintenance de portes de garage</h5>
+                            <h5 class="main-title">Maintenance</h5>
                             <p class="desc">Service de maintenance pour garantir la longévité et la performance de vos portes de garage.
                             </p>
                         </li>
@@ -219,8 +231,10 @@
                 <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 text-center">
                     <div class="business-goal-one">
                         <img src="{{ asset('assets/images/custom/default/portes-de-garage/porte_garage_second.jpeg') }}" alt="Business_Goal">
-                        <div class="shape"><img src="{{ asset('assets/images/business-goal/icon/line.png') }}"
-                                    alt=""></div>
+                        <div class="shape">
+                            <img src="{{ asset('assets/images/business-goal/icon/line.png') }}"
+                                    alt="">
+                        </div>
                     </div>
                 </div>
                 <!-- business goal right -->
@@ -229,17 +243,17 @@
                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12">
                     <ul class="content-box last">
                         <li class="content right">
-                            <h5 class="main-title">Réparation de portes de garage</h5>
+                            <h5 class="main-title">Réparation</h5>
                             <p class="desc">Réparation rapide et professionnelle pour remettre vos portes en parfait état de fonctionnement.
                             </p>
                         </li>
                         <li class="content right two">
-                            <h5 class="main-title">Produits de qualité pour portes de garage</h5>
+                            <h5 class="main-title">Produits de qualité</h5>
                             <p class="desc">Vente de portes de garage robustes et performantes, pour tous les types de garages.
                             </p>
                         </li>
                         <li class="content right">
-                            <h5 class="main-title">Conseils personnalisés pour votre projet</h5>
+                            <h5 class="main-title">Conseils personnalisés</h5>
                             <p class="desc">Des experts à votre service pour vous conseiller sur le choix de la porte de garage idéale selon vos besoins.
                             </p>
                         </li>
@@ -290,17 +304,29 @@
                                                         Jasmine Lemon
                                                     </h6>
                                                 </a>
-                                                <p>Manager at <span>Apple</span></p>
+                                                <p>Manager at
+                                                    <span>Apple</span>
+                                                </p>
                                             </div>
                                         </div>
                                         <div class="right">
                                             <div class="stars-area">
                                                 <ul>
-                                                    <li><a href="#"><i class="fas fa-star"></i></a></li>
-                                                    <li><a href="#"><i class="fas fa-star"></i></a></li>
-                                                    <li><a href="#"><i class="fas fa-star"></i></a></li>
-                                                    <li><a href="#"><i class="fas fa-star"></i></a></li>
-                                                    <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                    <li>
+                                                        <a href="#"><i class="fas fa-star"></i></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#"><i class="fas fa-star"></i></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#"><i class="fas fa-star"></i></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#"><i class="fas fa-star"></i></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#"><i class="fas fa-star"></i></a>
+                                                    </li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -329,17 +355,29 @@
                                                         Jasmine Lemon
                                                     </h6>
                                                 </a>
-                                                <p>Manager at <span>Apple</span></p>
+                                                <p>Manager at
+                                                    <span>Apple</span>
+                                                </p>
                                             </div>
                                         </div>
                                         <div class="right">
                                             <div class="stars-area">
                                                 <ul>
-                                                    <li><a href="#"><i class="fas fa-star"></i></a></li>
-                                                    <li><a href="#"><i class="fas fa-star"></i></a></li>
-                                                    <li><a href="#"><i class="fas fa-star"></i></a></li>
-                                                    <li><a href="#"><i class="fas fa-star"></i></a></li>
-                                                    <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                    <li>
+                                                        <a href="#"><i class="fas fa-star"></i></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#"><i class="fas fa-star"></i></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#"><i class="fas fa-star"></i></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#"><i class="fas fa-star"></i></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#"><i class="fas fa-star"></i></a>
+                                                    </li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -368,17 +406,29 @@
                                                         Jasmine Lemon
                                                     </h6>
                                                 </a>
-                                                <p>Manager at <span>Apple</span></p>
+                                                <p>Manager at
+                                                    <span>Apple</span>
+                                                </p>
                                             </div>
                                         </div>
                                         <div class="right">
                                             <div class="stars-area">
                                                 <ul>
-                                                    <li><a href="#"><i class="fas fa-star"></i></a></li>
-                                                    <li><a href="#"><i class="fas fa-star"></i></a></li>
-                                                    <li><a href="#"><i class="fas fa-star"></i></a></li>
-                                                    <li><a href="#"><i class="fas fa-star"></i></a></li>
-                                                    <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                    <li>
+                                                        <a href="#"><i class="fas fa-star"></i></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#"><i class="fas fa-star"></i></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#"><i class="fas fa-star"></i></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#"><i class="fas fa-star"></i></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#"><i class="fas fa-star"></i></a>
+                                                    </li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -407,17 +457,29 @@
                                                         Jasmine Lemon
                                                     </h6>
                                                 </a>
-                                                <p>Manager at <span>Apple</span></p>
+                                                <p>Manager at
+                                                    <span>Apple</span>
+                                                </p>
                                             </div>
                                         </div>
                                         <div class="right">
                                             <div class="stars-area">
                                                 <ul>
-                                                    <li><a href="#"><i class="fas fa-star"></i></a></li>
-                                                    <li><a href="#"><i class="fas fa-star"></i></a></li>
-                                                    <li><a href="#"><i class="fas fa-star"></i></a></li>
-                                                    <li><a href="#"><i class="fas fa-star"></i></a></li>
-                                                    <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                    <li>
+                                                        <a href="#"><i class="fas fa-star"></i></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#"><i class="fas fa-star"></i></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#"><i class="fas fa-star"></i></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#"><i class="fas fa-star"></i></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#"><i class="fas fa-star"></i></a>
+                                                    </li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -446,17 +508,29 @@
                                                         Jasmine Lemon
                                                     </h6>
                                                 </a>
-                                                <p>Manager at <span>Apple</span></p>
+                                                <p>Manager at
+                                                    <span>Apple</span>
+                                                </p>
                                             </div>
                                         </div>
                                         <div class="right">
                                             <div class="stars-area">
                                                 <ul>
-                                                    <li><a href="#"><i class="fas fa-star"></i></a></li>
-                                                    <li><a href="#"><i class="fas fa-star"></i></a></li>
-                                                    <li><a href="#"><i class="fas fa-star"></i></a></li>
-                                                    <li><a href="#"><i class="fas fa-star"></i></a></li>
-                                                    <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                    <li>
+                                                        <a href="#"><i class="fas fa-star"></i></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#"><i class="fas fa-star"></i></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#"><i class="fas fa-star"></i></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#"><i class="fas fa-star"></i></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#"><i class="fas fa-star"></i></a>
+                                                    </li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -473,13 +547,13 @@
         </div>
     </div>
     <!-- testimonials area end -->
-    <!-- business case start -->
+            <!-- business case start -->
     <div class="rts-business-case rts-section-gap">
         <div class="container">
             <div class="row">
                 <div class="title-area text-center business-case business-case5">
-                    <span>Our Case Studies</span>
-                    <h2 class="title">Our Recent Projects</h2>
+                    <span>Manu Potvin</span>
+                    <h2 class="title">Nos réalisations</h2>
                 </div>
             </div>
         </div>
@@ -488,114 +562,28 @@
                 <div class="col-12">
                     <div class="swiper mySwiperh2_Business_Cases">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <!-- single business case -->
-                                <div class="rts-business-case-s-2">
-                                    <a href="{{ route('portfolioDetails') }}" class="thumbnail">
-                                        <img src="{{ asset('assets/images/business-case/04.jpg') }}" alt="Business_case">
-                                    </a>
-                                    <div class="inner">
-                                        <a href="{{ route('portfolioDetails') }}">
-                                            <h5 class="title">
-                                                Business Growth
-                                            </h5>
+                            @foreach(    \App\Models\Realisation::whereJsonContains('category',$category)->get() as $realisation)
+                                <div class="swiper-slide">
+                                    <!-- single business case -->
+                                    <div class="rts-business-case-s-2">
+                                        <a href="{{ route('pages.details',['realisation'=>$realisation]) }}" class="thumbnail">
+                                            {!! $realisation->image !!}
                                         </a>
-                                        <span>Business Strategy</span>
+                                        <div class="inner">
+                                            <a href="{{  route('pages.details',['realisation'=>$realisation]) }}">
+                                                <h5 class="title">
+                                                    {{$realisation->title}}
+                                                </h5>
+                                            </a>
+                                            <span>{{$realisation->description}}</span>
+                                        </div>
+                                        <a href="{{ route('pages.details',['realisation'=>$realisation]) }}" class="over_link"></a>
                                     </div>
-                                    <a href="{{ route('portfolioDetails') }}" class="over_link"></a>
+                                    <!-- single business case End -->
                                 </div>
-                                <!-- single business case End -->
-                            </div>
-                            <div class="swiper-slide">
-                                <!-- single business case -->
-                                <div class="rts-business-case-s-2">
-                                    <a href="{{ route('portfolioDetails') }}" class="thumbnail">
-                                        <img src="{{ asset('assets/images/business-case/05.jpg') }}" alt="Business_case">
-                                    </a>
-                                    <div class="inner">
-                                        <a href="{{ route('portfolioDetails') }}">
-                                            <h5 class="title">
-                                                Business Growth
-                                            </h5>
-                                        </a>
-                                        <span>Business Strategy</span>
-                                    </div>
-                                    <a href="{{ route('portfolioDetails') }}" class="over_link"></a>
-                                </div>
-                                <!-- single business case End -->
-                            </div>
-                            <div class="swiper-slide">
-                                <!-- single business case -->
-                                <div class="rts-business-case-s-2">
-                                    <a href="{{ route('portfolioDetails') }}" class="thumbnail">
-                                        <img src="{{ asset('assets/images/business-case/06.jpg') }}" alt="Business_case">
-                                    </a>
-                                    <div class="inner">
-                                        <a href="{{ route('portfolioDetails') }}">
-                                            <h5 class="title">
-                                                Startup Solution
-                                            </h5>
-                                        </a>
-                                        <span>Business Strategy</span>
-                                    </div>
-                                    <a href="{{ route('portfolioDetails') }}" class="over_link"></a>
-                                </div>
-                                <!-- single business case End -->
-                            </div>
-                            <div class="swiper-slide">
-                                <!-- single business case -->
-                                <div class="rts-business-case-s-2">
-                                    <a href="{{ route('portfolioDetails') }}" class="thumbnail">
-                                        <img src="{{ asset('assets/images/business-case/07.jpg') }}" alt="Business_case">
-                                    </a>
-                                    <div class="inner">
-                                        <a href="{{ route('portfolioDetails') }}">
-                                            <h5 class="title">
-                                                Growth Manage
-                                            </h5>
-                                        </a>
-                                        <span>Business Strategy</span>
-                                    </div>
-                                    <a href="{{ route('portfolioDetails') }}" class="over_link"></a>
-                                </div>
-                                <!-- single business case End -->
-                            </div>
-                            <div class="swiper-slide">
-                                <!-- single business case -->
-                                <div class="rts-business-case-s-2">
-                                    <a href="{{ route('portfolioDetails') }}" class="thumbnail">
-                                        <img src="{{ asset('assets/images/business-case/04.jpg') }}" alt="Business_case">
-                                    </a>
-                                    <div class="inner">
-                                        <a href="{{ route('portfolioDetails') }}">
-                                            <h5 class="title">
-                                                Company Skills
-                                            </h5>
-                                        </a>
-                                        <span>Business Strategy</span>
-                                    </div>
-                                    <a href="{{ route('portfolioDetails') }}" class="over_link"></a>
-                                </div>
-                                <!-- single business case End -->
-                            </div>
-                            <div class="swiper-slide">
-                                <!-- single business case -->
-                                <div class="rts-business-case-s-2">
-                                    <a href="{{ route('portfolioDetails') }}" class="thumbnail">
-                                        <img src="{{ asset('assets/images/business-case/05.jpg') }}" alt="Business_case">
-                                    </a>
-                                    <div class="inner">
-                                        <a href="{{ route('portfolioDetails') }}">
-                                            <h5 class="title">
-                                                Personal skill
-                                            </h5>
-                                        </a>
-                                        <span>Business Strategy</span>
-                                    </div>
-                                    <a href="{{ route('portfolioDetails') }}" class="over_link"></a>
-                                </div>
-                                <!-- single business case End -->
-                            </div>
+                            @endforeach
+
+
                         </div>
                     </div>
                 </div>

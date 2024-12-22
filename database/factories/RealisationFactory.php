@@ -19,7 +19,13 @@ class RealisationFactory extends Factory
         return [
             'title' => $this->faker->word,
             'description' => $this->faker->paragraph,
-            'category' => $this->faker->randomElement(['CHASSIS','MOUSTIQUAIRE','PORTE DE GARAGE','PERGOLA']),
+            'category' => json_encode(
+                [$this->faker->randomElement( ['home',
+            'chassis',
+            'porte_de_garage',
+            'pergolas',
+            'moustiquaires'])
+            ]),
             'published' => $this->faker->boolean(30),
         ];
     }

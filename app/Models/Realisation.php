@@ -8,9 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
+use Spatie\MediaLibrary\ResponsiveImages\ResponsiveImageGenerator;
 
 /**
- *
+ * 
  *
  * @property-read mixed $gallery_images
  * @property-read mixed $image
@@ -40,6 +42,17 @@ use Spatie\MediaLibrary\InteractsWithMedia;
  * @method static \Illuminate\Database\Eloquent\Builder|Realisation wherePublished($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Realisation whereTitle($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Realisation whereUpdatedAt($value)
+ * @property string|null $place
+ * @property string|null $date
+ * @property string|null $customer
+ * @method static \Illuminate\Database\Eloquent\Builder|Realisation whereCustomer($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Realisation whereDate($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Realisation wherePlace($value)
+ * @property int $favorite
+ * @property-read mixed $image_url
+ * @property-read mixed $main_category
+ * @method static \Illuminate\Database\Eloquent\Builder|Realisation favorites($blackListIds = null)
+ * @method static \Illuminate\Database\Eloquent\Builder|Realisation whereFavorite($value)
  * @mixin \Eloquent
  */
 class Realisation extends Model implements HasMedia
@@ -54,10 +67,32 @@ class Realisation extends Model implements HasMedia
         'category',
     ];
 
+    protected $casts = ['category' => 'array'];
+
     public function registerMediaCollections(): void
     {
         $this->addMediaCollection('illustration')->singleFile();
         $this->addMediaCollection('gallery');
+    }
+
+//
+    public function registerMediaConversions(Media $media = null): void
+    {
+        $this->addMediaConversion('thumb')
+            ->width(300)
+            ->height(300)
+            ->withResponsiveImages();
+    }
+
+    public function mainCategory(): Attribute
+    {
+        return Attribute::make(
+            get: function() {
+                if(is_null($this->category)) return null;
+                return $this->category[0];
+            },
+        );
+
     }
 
     public function galleryImages(): Attribute
@@ -77,14 +112,62 @@ class Realisation extends Model implements HasMedia
 
     }
 
+    public function date(): Attribute
+    {
+        return Attribute::make(
+            get: function($value) {
+                if(is_null($value)) return $this->created_at;
+                return $value;
+            },
+        );
+
+    }
+    public function customer(): Attribute
+    {
+        return Attribute::make(
+            get: function($value) {
+                if(is_null($value)) return 'anonyme';
+                return $value;
+            },
+        );
+
+    }
+    public function place(): Attribute
+    {
+        return Attribute::make(
+            get: function($value) {
+                if(is_null($value)) return 'privé';
+                return $value;
+            },
+        );
+
+    }
+
     public function image(): Attribute
     {
         return Attribute::make(
+
             get: function() {
                 if ($this->media->where('collection_name', 'illustration')->first()) {
-                    return $this->media()->where('collection_name', 'illustration')->first()?->toHtml();
+                    $args = $this->media->where( 'collection_name', 'illustration' )->first();
+                    ray($args?->toHtml())->red();
+                    return $args?->toHtml();
                 }
-                return '<img class="rounded-full" src="/images/custom/testimonials.jpg" width="960" height="960">';
+                return '<img class="rounded-full" src="'.url("/assets/images/custom/default/portfolio_banner.jpeg").'" width="960" height="960">';
+            },
+        );
+
+    }
+    public function imageUrl(): Attribute
+    {
+        return Attribute::make(
+
+            get: function() {
+                if ($this->media->where('collection_name', 'illustration')->first()) {
+                    $args = $this->media->where( 'collection_name', 'illustration' )->first();
+                    return $args?->getUrl();
+                }
+                return 'No Images';
             },
         );
 
@@ -103,5 +186,25 @@ class Realisation extends Model implements HasMedia
 
     }
 
+
+
+
+    public function scopeFavorites($query,$blackListIds = null    )
+    {
+        return $query->select('realisations.*')
+            ->leftJoin('media', function ($join) {
+                $join->on('media.model_id', '=', 'realisations.id')
+                    ->where('media.collection_name', '=', 'illustration');
+            })
+            ->when($blackListIds, function ($query, $blackListIds) {
+                $query->whereNotIn('realisations.id', $blackListIds);
+            })
+            ->where(function ($query) {
+                $query->where('favorite', true)
+                    ->orWhereNotNull('media.id');
+            })
+            ->groupBy('category')
+            ->orderByRaw('CASE WHEN favorite = 1 THEN 1 ELSE 2 END, media.created_at DESC');
+    }
 
 }

@@ -6,6 +6,9 @@
 
 
 @section('content')
+    @php
+        $category = \App\Enums\Categories::PERGOLAS->value;
+    @endphp
     @include('components.header')
     <!-- start breadcrumb area -->
 
@@ -349,88 +352,13 @@
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                         <div class="row g-5">
+                                @foreach (\App\Models\Realisation::whereJsonContains('category',$category)->get() as $realisation)
                             <div class="col-lg-4">
                                 <!-- single business case -->
                                 @include('components.portfolio.pergolas_element')
                                 <!-- single business case End -->
                             </div>
-                            <div class="col-lg-4">
-                                <!-- single business case -->
-                                @include('components.portfolio.pergolas_element')
-                                <!-- single business case End -->
-                            </div>
-                            <div class="col-lg-4">
-                                <!-- single business case -->
-                                <div class="rts-business-case-s-2 style-home-7S">
-                                    <a href="{{ route('portfolioDetails') }}" class="thumbnail">
-                                        <img src="{{ asset('assets/images/business-case/06.jpg') }}" alt="Business_case">
-                                    </a>
-                                    <div class="inner">
-                                        <a href="{{ route('portfolioDetails') }}">
-                                            <h5 class="title">
-                                                Business Growth
-                                            </h5>
-                                        </a>
-                                        <span>Business Strategy</span>
-                                    </div>
-                                    <a href="{{ route('portfolioDetails') }}" class="over_link"></a>
-                                </div>
-                                <!-- single business case End -->
-                            </div>
-                            <div class="col-lg-4">
-                                <!-- single business case -->
-                                <div class="rts-business-case-s-2 style-home-7S">
-                                    <a href="{{ route('portfolioDetails') }}" class="thumbnail">
-                                        <img src="{{ asset('assets/images/business-case/07.jpg') }}" alt="Business_case">
-                                    </a>
-                                    <div class="inner">
-                                        <a href="{{ route('portfolioDetails') }}">
-                                            <h5 class="title">
-                                                Business Growth
-                                            </h5>
-                                        </a>
-                                        <span>Business Strategy</span>
-                                    </div>
-                                    <a href="{{ route('portfolioDetails') }}" class="over_link"></a>
-                                </div>
-                                <!-- single business case End -->
-                            </div>
-                            <div class="col-lg-4">
-                                <!-- single business case -->
-                                <div class="rts-business-case-s-2 style-home-7S">
-                                    <a href="{{ route('portfolioDetails') }}" class="thumbnail">
-                                        <img src="{{ asset('assets/images/business-case/04.jpg') }}" alt="Business_case">
-                                    </a>
-                                    <div class="inner">
-                                        <a href="{{ route('portfolioDetails') }}">
-                                            <h5 class="title">
-                                                Business Growth
-                                            </h5>
-                                        </a>
-                                        <span>Business Strategy</span>
-                                    </div>
-                                    <a href="{{ route('portfolioDetails') }}" class="over_link"></a>
-                                </div>
-                                <!-- single business case End -->
-                            </div>
-                            <div class="col-lg-4">
-                                <!-- single business case -->
-                                <div class="rts-business-case-s-2 style-home-7S">
-                                    <a href="{{ route('portfolioDetails') }}" class="thumbnail">
-                                        <img src="{{ asset('assets/images/business-case/07.jpg') }}" alt="Business_case">
-                                    </a>
-                                    <div class="inner">
-                                        <a href="{{ route('portfolioDetails') }}">
-                                            <h5 class="title">
-                                                Business Growth
-                                            </h5>
-                                        </a>
-                                        <span>Business Strategy</span>
-                                    </div>
-                                    <a href="{{ route('portfolioDetails') }}" class="over_link"></a>
-                                </div>
-                                <!-- single business case End -->
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
@@ -462,59 +390,6 @@
     <!-- customers testimonials start -->
     @include('components.portfolio.testimonials')
     <!-- customers testimonials end -->
-
-    <!-- business progress area start -->
-    <div class="business-progress-area rts-section-gapBottom">
-        <div class="box">
-            <img src="{{ asset('assets/images/business-goal/icon/box.png') }}" alt="box">
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="thumbnail-progress-7">
-                        <img src="{{ asset('assets/images/business-goal/05.png') }}" alt="progress">
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="title-area-style-six text-start">
-                        <div class="pre-title">
-                            <img src="{{ asset('assets/images/custom/shape/pre-title.png') }}" alt="pre-title">
-                            <span class="pre">Business Progress</span>
-                            <img class="two" src="{{ asset('assets/images/custom/shape/pre-title.png') }}" alt="pre-title">
-                        </div>
-                        <h2 class="title">
-                            Transformez vos extérieurs avec nos pergolas sur-mesure
-                        </h2>
-                    </div>
-                    <div class="inner-goal-progress-7">
-                        <p class="disc">
-                            Créez un espace extérieur unique grâce à nos pergolas personnalisées. Que ce soit pour profiter de l'ombre, ajouter du style ou améliorer votre confort, nous avons la solution parfaite pour répondre à vos besoins. Nos experts vous accompagnent à chaque étape, de la conception à l'installation.
-                        </p>
-                        <div class="row mb--50 g-5">
-
-                            <div class="col-lg-6">
-                                <div class="left-business-goal">
-                                    <div class="left">
-                                        <h4 class="title">
-                                            98%
-                                        </h4>
-                                        <p class="dsic">
-                                            Satisfaction Client
-                                        </p>
-                                    </div>
-                                    <div class="right">
-                                        <img src="{{ asset('assets/images/business-goal/icon/05.svg') }}" alt="logo">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="#" class="rts-btn btn-primary-5">Collaborons dès maintenant</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- business progress area end -->
 
 </div>
 

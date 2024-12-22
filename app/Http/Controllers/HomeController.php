@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\CustomerData;
+use App\Models\Realisation;
 
 class HomeController extends Controller
 {
@@ -11,7 +12,14 @@ class HomeController extends Controller
     {
         $customerData = CustomerData::first();
         $themeColor = 'manu-potvin-color';
-        return view('home', compact('themeColor','customerData'));
+
+        $favoritesRealisations = Realisation::with(['media'])->favorites()->get();
+        $serviceRealisations = Realisation::with(['media'])->favorites($favoritesRealisations->pluck('id'))->get();
+        ray()->clearScreen();
+        ray($serviceRealisations);
+//ray($serviceRealisations)->die();
+
+        return view('home', compact('themeColor','customerData', 'favoritesRealisations', 'serviceRealisations'));
     }
 //
 //    public function main()
