@@ -10,6 +10,9 @@
 @endsection
 
 @section('content')
+    @php
+        $category = \App\Enums\Categories::CHASSIS->value;
+    @endphp
     @include('components.header')
     <!-- start breadcrumb area -->
     <x-breadcrump
@@ -27,28 +30,10 @@
                     <!-- single post -->
                     <div class="blog-single-post-listing details mb--0">
                         <div class="thumbnail">
-                            <img src="{{ asset('assets/images/blog/blog-lg-1.jpg') }}" alt="Business-Blog">
+                            <img src="{{ asset('assets/images/custom/default/chassis/fenetre_alu_first-.jpg') }}" alt="Business-Blog">
                         </div>
                         <div class="blog-listing-content">
                             <div class="user-info">
-                               {{-- <!-- single info -->
-                                <div class="single">
-                                    <i class="far fa-user-circle"></i>
-                                    <span>by David Smith</span>
-                                </div>
-                                <!-- single infoe end -->
-                                <!-- single info -->
-                                <div class="single">
-                                    <i class="far fa-clock"></i>
-                                    <span>by David Smith</span>
-                                </div>
-                                <!-- single infoe end -->
-                                <!-- single info -->
-                                <div class="single">
-                                    <i class="far fa-tags"></i>
-                                    <span>by David Smith</span>
-                                </div>
-                                <!-- single infoe end -->--}}
                             </div>
                             <h2>Pourquoi Choisir des Châssis en PVC ?</h2>
                             <p>
@@ -134,10 +119,10 @@
                                         </div>
                                         <div class="col-lg-6 col-md-6 mx-auto text-center">
                                             <div class="thumbnail details mb-4">
-                                                <img src="{{ asset('assets/images/blog/details/01.jpg') }}" alt="finbiz_buseness" class="img-fluid">
+                                                <img src="{{ asset('assets/images/custom/default/chassis/chassis_alu_main.jpeg') }}" alt="finbiz_buseness" class="img-fluid">
                                             </div>
                                             <div class="thumbnail details">
-                                                <img src="{{ asset('assets/images/blog/details/02.jpg') }}" alt="finbiz_buseness" class="img-fluid">
+                                                <img src="{{ asset('assets/images/custom/default/chassis/chassis_alu_second.jpeg') }}" alt="finbiz_buseness" class="img-fluid">
                                             </div>
                                         </div>
 
@@ -186,104 +171,9 @@
                 <!--rts blog wizered area -->
                 <div class="col-xl-4 col-md-12 col-sm-12 col-12">
 
-                    <!-- single wizered start -->
-                    <div class="rts-single-wized Recent-post">
-                        <div class="wized-header">
-                            <h5 class="title">
-                                Gallery Posts
-                            </h5>
-                        </div>
-                        <div class="wized-body">
-                            <div class="gallery-inner">
-                                <div class="row-1 single-row">
-                                    <a href="#"><img src="{{ asset('assets/images/blog/details/gallery/01.png') }}" alt="Gallery"></a>
-                                    <a href="#"><img src="{{ asset('assets/images/blog/details/gallery/02.png') }}" alt="Gallery"></a>
-                                    <a href="#"><img src="{{ asset('assets/images/blog/details/gallery/03.png') }}" alt="Gallery"></a>
-                                </div>
-                                <div class="row-2 single-row">
-                                    <a href="#"><img src="{{ asset('assets/images/blog/details/gallery/04.png') }}" alt="Gallery"></a>
-                                    <a href="#"><img src="{{ asset('assets/images/blog/details/gallery/05.png') }}" alt="Gallery"></a>
-                                    <a href="#"><img src="{{ asset('assets/images/blog/details/gallery/06.png') }}" alt="Gallery"></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- single wizered End -->
-                    <!-- single wizered start -->
-                    <div class="rts-single-wized Recent-post">
-                        <div class="wized-header">
-                            <h5 class="title">
-                                Recent Posts
-                            </h5>
-                        </div>
-                        <div class="wized-body">
-                            <!-- recent-post -->
-                            <div class="recent-post-single">
-                                <div class="thumbnail">
-                                    <a href="#"><img src="{{ asset('assets/images/blog/details/recent-post/01.png') }}" alt="Blog_post"></a>
-                                </div>
-                                <div class="content-area">
-                                    <div class="user">
-                                        <i class="fal fa-clock"></i>
-                                        <span>15 Jan, 2023</span>
-                                    </div>
-                                    <a class="post-title" href="#">
-                                        <h6 class="title">We would love to share a similar experience</h6>
-                                    </a>
-                                </div>
-                            </div>
-                            <!-- recent-post End -->
-                            <!-- recent-post -->
-                            <div class="recent-post-single">
-                                <div class="thumbnail">
-                                    <a href="#"><img src="{{ asset('assets/images/blog/details/recent-post/02.png') }}" alt="Blog_post"></a>
-                                </div>
-                                <div class="content-area">
-                                    <div class="user">
-                                        <i class="fal fa-clock"></i>
-                                        <span>15 Jan, 2023</span>
-                                    </div>
-                                    <a class="post-title" href="#">
-                                        <h6 class="title">We would love to share a similar experience</h6>
-                                    </a>
-                                </div>
-                            </div>
-                            <!-- recent-post End -->
-                            <!-- recent-post -->
-                            <div class="recent-post-single">
-                                <div class="thumbnail">
-                                    <a href="#"><img src="{{ asset('assets/images/blog/details/recent-post/03.png') }}" alt="Blog_post"></a>
-                                </div>
-                                <div class="content-area">
-                                    <div class="user">
-                                        <i class="fal fa-clock"></i>
-                                        <span>15 Jan, 2023</span>
-                                    </div>
-                                    <a class="post-title" href="#">
-                                        <h6 class="title">We would love to share a similar experience</h6>
-                                    </a>
-                                </div>
-                            </div>
-                            <!-- recent-post End -->
-                            <!-- recent-post -->
-                            <div class="recent-post-single">
-                                <div class="thumbnail">
-                                    <a href="#"><img src="{{ asset('assets/images/blog/details/recent-post/04.png') }}" alt="Blog_post"></a>
-                                </div>
-                                <div class="content-area">
-                                    <div class="user">
-                                        <i class="fal fa-clock"></i>
-                                        <span>15 Jan, 2023</span>
-                                    </div>
-                                    <a class="post-title" href="#">
-                                        <h6 class="title">We would love to share a similar experience</h6>
-                                    </a>
-                                </div>
-                            </div>
-                            <!-- recent-post End -->
-                        </div>
-                    </div>
-                    <!-- single wizered End -->
+                   @include('components.gallery',['category'=>$category])
+
+                    @include('components.recentProjects',['category'=>$category])
 
                     <!-- single wizered start -->
                     @include('components.tags',['items'=> [
@@ -298,6 +188,7 @@
     'Technology',
 ]])
                     <!-- single wizered End -->
+
                     <!-- single wizered start -->
                    @include('components.contact_card')
                     <!-- single wizered End -->

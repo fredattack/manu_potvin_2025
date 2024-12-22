@@ -50,7 +50,7 @@
                                     </div>
                                     <div class="info-details">
                                         <span>Date:</span>
-                                        <h6 class="name">{{$realisation->date->format('d M Y ')}}</h6>
+                                        <h6 class="name">{{$realisation->date->format('d M Y')}}</h6>
                                     </div>
                                 </div>
                                 <!-- end single info -->

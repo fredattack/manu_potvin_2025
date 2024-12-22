@@ -566,18 +566,18 @@
                                 <div class="swiper-slide">
                                     <!-- single business case -->
                                     <div class="rts-business-case-s-2">
-                                        <a href="{{ route('pages.details',['realisation'=>$realisation]) }}" class="thumbnail">
+                                        <a href="{{ route('pages.details',['realisation'=>$realisation]) }}" class="thumbnail"  target="_blank">
                                             {!! $realisation->image !!}
                                         </a>
                                         <div class="inner">
-                                            <a href="{{  route('pages.details',['realisation'=>$realisation]) }}">
+                                            <a href="{{  route('pages.details',['realisation'=>$realisation]) }}"  target="_blank">
                                                 <h5 class="title">
                                                     {{$realisation->title}}
                                                 </h5>
                                             </a>
                                             <span>{{$realisation->description}}</span>
                                         </div>
-                                        <a href="{{ route('pages.details',['realisation'=>$realisation]) }}" class="over_link"></a>
+                                        <a href="{{ route('pages.details',['realisation'=>$realisation]) }}" class="over_link"  target="_blank"></a>
                                     </div>
                                     <!-- single business case End -->
                                 </div>
