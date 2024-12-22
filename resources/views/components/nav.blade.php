@@ -20,7 +20,7 @@
                 </li>
             </ul>
         </li>
-        <li><a class="nav-item" href="{{ route('contactPage') }}">Nos Réalisations</a></li>
+        <li><a class="nav-item" href="{{ route('pages',['type'=>'realisations']) }}">Nos Réalisations</a></li>
         <li><a class="nav-item" href="{{ route('contactPage') }}">Contact</a></li>
     </ul>
 </nav>
