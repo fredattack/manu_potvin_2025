@@ -28,12 +28,20 @@ jobs:
 
       - name: Install Composer dependencies
         run: composer install --no-dev --optimize-autoloader
-      - name: Set up SSH
+      - name: Set up SSH 2
         run: |
           mkdir -p ~/.ssh
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H 207.154.255.72 >> ~/.ssh/known_hosts
+
+      - name: Debug SSH Key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          echo "=== Debugging id_rsa ==="
+          cat ~/.ssh/id_rsa
 
       - name: Deploy using SSH
         uses: appleboy/ssh-action@v0.1.4
