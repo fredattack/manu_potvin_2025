@@ -1,4 +1,4 @@
-name: Deploy Application
+name: Deploy Laravel Application
 
 on:
   push:
@@ -28,21 +28,11 @@ jobs:
           host: 207.154.255.72
           username: root
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          debug: truechmod 700 ~/.ssh
+          debug: true
           script: |
             cd /var/www/manu-potvin
             git fetch origin
             git checkout main
             git pull origin main
             composer install --no-dev --optimize-autoloader
-            php artisan migrate --force
-            php artisan config:cache
-            php artisan route:cache
-            php artisan view:cache
-            chown -R www-data:www-data storage bootstrap/cache
-            chmod -R 775 storage bootstrap/cache
-            php artisan queue:restart
-            php artisan cache:clear
-
-      - name: Notify Deployment Success
-        run: echo "Deployment completed successfully!"
+       
