@@ -36,7 +36,7 @@ jobs:
 
       - name: Test SSH Connection
         run: |
-          ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa root@${{ secrets.DO_HOST }} echo "SSH connection successful"
+          ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa root@207.154.255.72 echo "SSH connection successful"
 
       - name: Deploy using SSH
         uses: appleboy/ssh-action@v0.1.4
