@@ -10,10 +10,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Test SSH connection
-      - run: |
-         ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ${{ secrets.DO_USER }}@${{ secrets.DO_HOST }} "echo SSH connection successful"
-
       - name: Checkout code
         uses: actions/checkout@v3
 
