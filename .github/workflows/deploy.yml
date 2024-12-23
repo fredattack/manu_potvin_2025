@@ -28,6 +28,7 @@ jobs:
           host: 207.154.255.72
           username: root
           key: ${{ secrets.SSH_PRIVATE_KEY }}
+          debug: truechmod 700 ~/.ssh
           script: |
             cd /var/www/manu-potvin
             git fetch origin
