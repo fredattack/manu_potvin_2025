@@ -30,7 +30,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           debug: true
           script: |
-            cd /var/www/manu-potvin
+            cd /var/www/laravel
             git fetch origin
             git checkout main
             git pull origin main
