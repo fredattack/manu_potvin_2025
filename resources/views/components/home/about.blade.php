@@ -3,10 +3,10 @@
         <div class="row g-5">
             <div class="col-lg-5">
                 <div class="about-three-thumbnail-left">
-                    <img src="{{ asset('assets/images/about/main/05.jpg') }}" alt="Business-about">
-                    <div class="about-sm-thumb">
-                        <img src="{{ asset('assets/images/about/main/about-01-sm.jpg') }}" alt="business_about-sm">
-                    </div>
+                    <img src="{{ asset('/assets/images/custom/default/home/paralallax.jpeg') }}" alt="Business-about">
+{{--                    <div class="about-sm-thumb">--}}
+{{--                        <img src="{{ asset('assets/images/about/main/about-01-sm.jpg') }}" alt="business_about-sm">--}}
+{{--                    </div>--}}
                     <a href="#" class="vedio-icone">
                             <span id="play-video" class="video-play-button">
                                 <img src="{{ asset('assets/images/custom/shape/play-btn.png') }}" alt="Play btn">
@@ -66,27 +66,6 @@
                             <!-- end -->
                         </div>
                     </div>
-                    <!--usrer aresa start -->
-                    <div class="row">
-                        <div class="col-l2">
-                            <div class="rts-user-three-wrapper">
-                                <div class="user-wrapper">
-                                    <a href="#"><img src="{{ asset('assets/images/about/main/user/01.png') }}"
-                                                alt="Business_User"></a>
-                                    <a href="#"><img src="{{ asset('assets/images/about/main/user/02.png') }}"
-                                                alt="Business_User"></a>
-                                    <a href="#"><img src="{{ asset('assets/images/about/main/user/03.png') }}"
-                                                alt="Business_User"></a>
-                                </div>
-                                <div class="reviews">
-                                    <h5 class="title">1500+</h5>
-                                    <span>Active Reviews</span>
-                                </div>
-                                <a href="#" class="rts-btn btn-primary-3 color-h-black ml--35">Get Started</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!--usrer aresa end -->
                 </div>
             </div>
         </div>

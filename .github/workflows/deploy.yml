@@ -25,7 +25,7 @@ jobs:
       - name: Deploy to Server
         uses: appleboy/ssh-action@v0.1.4
         with:
-          host: 165.232.126.175
+          host: 207.154.255.72
           username: root
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |

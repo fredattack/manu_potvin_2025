@@ -2,9 +2,10 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="client-two-wrapper">
-
-                    <img src="{{ asset('assets/images/client/01.png') }}" alt="Business_client">
+                <div class="client-two-wrapper  ">
+                @foreach(\App\Models\Partner::with('media')->get() as $partner)
+                    {!! $partner->image !!}
+                @endforeach
                 </div>
             </div>
         </div>

@@ -2,11 +2,11 @@
     <div class="swiper mySwiperh3_banner">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-                <div class="bg_banner-three slide-1 bg_image rts-section-gap">
+                <div class="bg_banner-three slide-1 bg_image rts-section-gap" style="background-image: url({{asset('/assets/images/custom/default/home/new_main_home-2.jpg')}});width: 100%; max-height: 90vh;object-fit: contain;">
                     <div class="container">
                         <div class="row">
                             <div class="col-12">
-                                <div class="banner-three-inner">
+                                <div class="banner-three-inner" >
                                     <span class="subtitle-banner">Nous construisons</span>
                                     <!-- type headline start-->
                                     <h1 class="title cd-headline clip is-full-width">
@@ -23,7 +23,7 @@
                 </div>
             </div>
             <div class="swiper-slide">
-                <div class=" bg_banner-three slide-2 bg_image rts-section-gap">
+                <div class=" bg_banner-three slide-2 bg_image rts-section-gap" style="background-image: url({{asset('/assets/images/custom/default/home/new_main_home-2.jpg')}});width: 100%; max-height: 90vh;object-fit: contain;">
                     <div class="container">
                         <div class="row">
                             <div class="col-12">
@@ -44,7 +44,7 @@
                 </div>
             </div>
             <div class="swiper-slide">
-                <div class=" bg_banner-three slide-3 bg_image rts-section-gap">
+                <div class=" bg_banner-three slide-3 bg_image rts-section-gap" style="background-image: url({{asset('/assets/images/custom/default/home/new_main_home-2.jpg')}});width: 100%; max-height: 90vh;object-fit: contain;">
                     <div class="container">
                         <div class="row">
                             <div class="col-12">
