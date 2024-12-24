@@ -22,4 +22,5 @@ jobs:
         with:
           username: root
           host: 207.154.255.72
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: 'cd /var/www/laravel && ./scripts/server_deploy.sh'
