@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Enums\Categories;
 use App\Models\CustomerData;
 use App\Models\Realisation;
 use Database\Seeders\CustomerDataSeeder;
@@ -11,10 +12,10 @@ class PageController extends Controller
 {
     public function render(string $type,string $subType = null)
     {
-        $view = 'Pages.' . $type . '.' . Str::lower( $subType);
+        $view = 'Pages.' . Categories::getUrlPath( $type) . '.' . Str::lower( $subType);
 
         if(!view()->exists($view)){
-            $view = 'Pages.' . $type;
+            $view = 'Pages.' . Categories::getUrlPath( $type);
         }
 
         return view( $view,[
