@@ -17,13 +17,23 @@
                     <div class="rts-contact-fluid rts-section-gap">
                         <div class="rts-title-area contact-fluid text-center mb--50">
                             <p class="pre-title">
-                                Get In Touch
+                               Manu POTVIN
                             </p>
-                            <h2 class="title">Needs Help? Let’s Get in Touch</h2>
+                            <h2 class="title">Besoin d'aide ? Prenons contact ... </h2>
                         </div>
                         <div class="form-wrapper">
-                            <div id="form-messages"></div>
-                            <form id="contact-form" action="{{route('contact.send-form')}}" method="post">
+                            @if (session('success'))
+                                <div class="alert alert-success">
+                                     {{ session('success') }}
+                                </div>
+                                @elseif(session('error'))
+                                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                        {{ session('error') }}
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                    </div>
+                            @else
+                            <form  action="{{route('contact.send-form')}}" method="POST">
+                                @csrf
                                 <div class="name-email">
                                     <input type="text" name="name" placeholder="Votre Nom" required>
                                     <input type="email" name="email" placeholder="Votre Email" required>
@@ -33,6 +43,7 @@
                                 <textarea placeholder="Entrez votre message" name="message" required></textarea>
                                 <button type="submit" class="rts-btn btn-primary">Envoyer votre message</button>
                             </form>
+                            @endif
                         </div>
                     </div>
                 </div>

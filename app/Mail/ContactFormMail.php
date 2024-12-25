@@ -22,7 +22,7 @@ class ContactFormMail extends Mailable
 
     public function build()
     {
-        return $this->from( 'noreply@example.com' )
+        return $this->from( 'noreply@manupotvin.be' )
             ->subject( 'Nouveau message de contact' )
             ->view( 'emails.contact-form' )
             ->with( 'data', $this->data );

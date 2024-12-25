@@ -37,10 +37,12 @@ class ContactController extends Controller
                 'email' => $validated['email'],
                 'message' => $validated['message'],
             ]);
-            return redirect()->back();
+            return redirect()->back()->with('success', 'Votre message a été envoyé avec succès. Merci de nous avoir contactés !');
+
         } catch (\Exception $e) {
+            ray($e);
             Log::warning($e->getMessage());
-            return redirect('/')->with('error', 'Une erreur est survenue lors de l\'envoi de votre message.');
+            return redirect()->back()->with('error', 'Une erreur est survenue lors de l\'envoi de votre message.');
         }
     }
 }

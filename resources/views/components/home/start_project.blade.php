@@ -49,20 +49,8 @@
                 <div class="bg-input-project">
                     <div class="product-form">
 
-                        @if(session('success'))
-                            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                                {{ session('success') }}
-                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                            </div>
-                        @endif
 
-                        @if(session('error'))
-                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                                {{ session('error') }}
-                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                            </div>
-                        @endif
-                        <form id="contact-form" action="{{route('contact.send-form')}}" method="POST">
+                        <form action="{{route('contact.send-form')}}" method="POST">
                             @csrf
                            @include('components.contact_inputs',['submitLabel' => 'Prenez contact maintenant !'])
                         </form>
