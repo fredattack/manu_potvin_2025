@@ -5,6 +5,9 @@
 @endsection
 
 @section('content')
+    @php
+        $category = \App\Enums\Categories::MOUSTIQUAIRES->value;
+    @endphp
     @include('components.header')
     <!-- start breadcrumb area -->
 
@@ -45,6 +48,8 @@
 
     </div>
 
+
+    @include('components.contact-response-flash')
 
     <!-- rts about area start -->
     <div class="rts-about-area-start rts-section-gap">
@@ -247,29 +252,28 @@
             <div class="row g-5">
                 <div class="swiper mySwiperh3_business-case">
                     <div class="swiper-wrapper">
-                        @for($i=0;$i<3;$i++)
+                        @foreach(    \App\Models\Realisation::whereJsonContains('category',$category)->get() as $realisation)
                             <div class="swiper-slide">
                                 <!-- single case study -->
                                 <div class="rts-cse-study-3-wrapper">
                                     <div class="thumbnail">
-                                        <img src="{{ asset('assets/images/business-case/01.jpg') }}" alt="Business-solution">
-                                        <a href="#" class="icon">
-                                            <i class="far fa-eye"></i>
+                                        <a href="{{ route('pages.details',['realisation'=>$realisation]) }}" class="thumbnail"  target="_blank">
+                                            {!! $realisation->image !!}
                                         </a>
                                         <div class="content">
                                             <div class="content-wrap">
-                                                <a href="#">
-                                                    <h5 class="title">Digital Business Solution</h5>
+                                                <a href="{{ route('pages.details',['realisation'=>$realisation]) }}">
+                                                    <h5 class="title">{{$realisation->title}}</h5>
                                                 </a>
                                                 <span>Business Strategy</span>
                                             </div>
                                         </div>
-                                        <a href="#" class="over_link"></a>
+                                        <a href="{{ route('pages.details',['realisation'=>$realisation]) }}" class="over_link"></a>
                                     </div>
                                 </div>
                                 <!-- single case study End -->
                             </div>
-                        @endfor
+                        @endforeach
                     </div>
                 </div>
             </div>
