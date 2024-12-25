@@ -1,52 +1,36 @@
-name: Deploy Application
+name: Deploy to Server
 
 on:
   push:
     branches:
-      - main
+      - main # Déclencher l'action sur les push vers la branche main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      # 1. Vérifier le dépôt
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Set up SSH
+      # 2. Configurer SSH
+      - name: Setup SSH
         run: |
           mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY }}"
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
-          cat ~/.ssh/id_rsa
           ssh-keyscan -H 207.154.255.72 >> ~/.ssh/known_hosts
 
-      - name: Set up PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: '8.3'
-          extensions: mbstring, bcmath, ctype, fileinfo, json, tokenizer, xml, pdo_mysql
-
-      - name: Install Composer dependencies
-        run: composer install --no-dev --optimize-autoloader
-
-      - name: Test SSH Connection
+      # 3. Déployer sur le serveur
+      - name: Deploy application
         run: |
-          ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa root@207.154.255.72 echo "SSH connection successful"
-
-      - name: Deploy using SSH
-        uses: appleboy/ssh-action@v0.1.4
-        with:
-          host: 207.154.255.72
-          username: root
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          port: 22
-          script: |
+          ssh -o StrictHostKeyChecking=no root@207.154.255.72 << 'EOF'
+            cd /var/www/laravel || git clone git@github.com:<utilisateur>/<repo>.git /var/www/laravel
             cd /var/www/laravel
-            git fetch origin
-            git checkout main
             git pull origin main
+            # Ajouter des commandes spécifiques pour votre application
+            npm install
             composer install --no-dev --optimize-autoloader
             php artisan migrate --force
             php artisan config:cache
@@ -56,6 +40,7 @@ jobs:
             chmod -R 775 storage bootstrap/cache
             php artisan queue:restart
             php artisan cache:clear
+          EOF
 
       - name: Notify Deployment Success
         run: echo "Deployment completed successfully!"
