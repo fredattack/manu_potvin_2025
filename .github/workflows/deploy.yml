@@ -26,7 +26,7 @@ jobs:
       - name: Deploy application
         run: |
           ssh -o StrictHostKeyChecking=no root@207.154.255.72 << 'EOF'
-            cd /var/www/laravel || git clone git@github.com:<utilisateur>/<repo>.git /var/www/laravel
+            cd /var/www/laravel || git clone git@github.com:fredattack/manu_potvin_2025.git /var/www/laravel
             cd /var/www/laravel
             git pull origin main
             # Ajouter des commandes spécifiques pour votre application
