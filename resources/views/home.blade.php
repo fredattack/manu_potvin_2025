@@ -1,7 +1,7 @@
 @extends('Layouts.app')
 
 @section('title')
-    Acceuil
+    Boom Acceuil
 @endsection
 
 @section('content')
