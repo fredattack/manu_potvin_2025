@@ -5,18 +5,18 @@
             <a class="nav-link" href="#">Nos Produits</a>
             <ul class="submenu menu-link3">
                 <li class="sub-droupdown">
-                    <a class="sub-menu-link" href="{{ route('pages',['type'=>'portes-fenetres-chassis']) }}">Portes-Fenêtres-Chassis</a>
+                    <a class="sub-menu-link" href="{{ route('pages',['type'=>App\Enums\Categories::CHASSIS->value]) }}">Portes-Fenêtres-Chassis</a>
                     <ul class="submenu third-lvl">
-                        <li><a href="{{ route('pagesKinded',['type'=>'chassis','subType'=>"pvc"]) }}">Chassis PVC</a></li>
-                        <li><a href="{{ route('pagesKinded',['type'=>'chassis','subType'=>"alu"]) }}">Chassis ALU</a></li>
+                        <li><a href="{{ route('pagesKinded',['type'=>App\Enums\Categories::CHASSIS->value,'subType'=>"pvc"]) }}">Chassis PVC</a></li>
+                        <li><a href="{{ route('pagesKinded',['type'=>App\Enums\Categories::CHASSIS->value,'subType'=>"alu"]) }}">Chassis ALU</a></li>
                     </ul>
                 </li>
-                <li><a href ="{{ route('pages',['type'=>'porte-de-garage']) }}">Portes de garage</a></li>
+                <li><a href ="{{ route('pages',['type'=>App\Enums\Categories::PORTE_DE_GARAGE->value]) }}">Portes de garage</a></li>
                 <li>
-                    <a class="nav-item" href="{{ route('pages',['type'=>'pergolas']) }}">Pergolas</a>
+                    <a class="nav-item" href="{{ route('pages',['type'=>App\Enums\Categories::PERGOLAS->value]) }}">Pergolas</a>
                 </li>
                 <li>
-                    <a class="nav-item" href="{{ route('pages',['type'=>'moustiquaire']) }}">Moustiquaires</a>
+                    <a class="nav-item" href="{{ route('pages',['type'=>App\Enums\Categories::MOUSTIQUAIRES->value]) }}">Moustiquaires</a>
                 </li>
             </ul>
         </li>
