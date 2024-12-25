@@ -12,10 +12,16 @@ class PageController extends Controller
 {
     public function render(string $type,string $subType = null)
     {
-        $view = 'Pages.' . Categories::getUrlPath( $type) . '.' . Str::lower( $subType);
 
-        if(!view()->exists($view)){
-            $view = 'Pages.' . Categories::getUrlPath( $type);
+        if(!Categories::hasValue($type)){
+            $view = "Pages.".$type;
+        }
+        else{
+              $view = 'Pages.' . Categories::getUrlPath( $type) . '.' . Str::lower( $subType);
+
+             if(!view()->exists($view)){
+                $view = 'Pages.' . Categories::getUrlPath( $type);
+            }
         }
 
         return view( $view,[

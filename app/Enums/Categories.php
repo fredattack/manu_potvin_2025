@@ -84,5 +84,9 @@ enum Categories: string
         return  $category?->urlPath() ?? 'Label non trouvé';
     }
 
+    public static  function  hasValue($VALUE)
+    {
+        return in_array($VALUE, collect(self::all())->pluck('key')->toArray());
+    }
 
 }
