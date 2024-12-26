@@ -13,8 +13,8 @@
                 <!-- Swiper -->
                 <div class="swiper testimonials-h2">
                     <div class="swiper-wrapper">
-                        @foreach(App\Models\Testimonial::wherePublished(true)->get() as $testimonial)
-                             @include('components.home.testimonial')
+                        @foreach(App\Models\Testimonial::with('realisation')->wherePublished(true)->get() as $testimonial)
+                           @include('components.home.testimonial')
                         @endforeach
                     </div>
                 </div>

@@ -12,7 +12,7 @@ use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 /**
- *
+ * 
  *
  * @property-read mixed $image
  * @property-read \Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection<int, \App\Models\CustomMedia> $media
@@ -37,6 +37,9 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
  * @method static \Illuminate\Database\Eloquent\Builder|Testimonial whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Testimonial wherePublished($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Testimonial whereUpdatedAt($value)
+ * @property int|null $realisation_id
+ * @property-read \App\Models\Realisation|null $realisation
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Testimonial whereRealisationId($value)
  * @mixin \Eloquent
  */
 class Testimonial extends Model implements HasMedia

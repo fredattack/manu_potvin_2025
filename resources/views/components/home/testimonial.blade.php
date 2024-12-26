@@ -7,19 +7,23 @@
         <div class="body">
             <h5 class="title"></h5>
             <p class="disc">
-                {{$testimonial->content}}”
+                "{{$testimonial->content}}”
             </p>
         </div>
         <div class="footer">
             <div class="left">
                 @if($testimonial->realisation instanceof \App\Models\Realisation)
-                <a class="thumbnail" href="#">
-                    {!! $testimonial->realisation->image !!}}
+                    <a class="thumbnail" href="{{
+                        $testimonial->realisation instanceof \App\Models\Realisation
+                        ? route('pages.details',['realisation'=>$testimonial->realisation])
+                         :'#'}}
+                         ">
+                    {!! $testimonial->realisation->image !!}
                 </a>
                 @endif
                 <div class="desig">
                     <a href="{{$testimonial->realisation instanceof \App\Models\Realisation
-? route('pages.details',['realisation'=>$realisation])
+? route('pages.details',['realisation'=>$testimonial->realisation])
  :'#'}}">
                         <h6 class="title">
                             {{$testimonial->author}}

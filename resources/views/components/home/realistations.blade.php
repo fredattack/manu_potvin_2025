@@ -36,7 +36,7 @@
                                         </div>
                                     </div>
                                     <div class="body">
-                                        <a href="{{ route('blogPage') }}">
+                                        <a href="{{ route('pages.details',['realisation'=>$realisation]) }}">
                                             <h5 class="title">
                                                 {{$realisation->title}}
                                             </h5>

@@ -10,6 +10,31 @@ use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
+/**
+ * 
+ *
+ * @property int $id
+ * @property string $name
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property \Illuminate\Support\Carbon|null $deleted_at
+ * @property-read mixed $image
+ * @property-read \Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection<int, \App\Models\CustomMedia> $media
+ * @property-read int|null $media_count
+ * @method static \Database\Factories\PartnerFactory factory($count = null, $state = [])
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Partner newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Partner newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Partner onlyTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Partner query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Partner whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Partner whereDeletedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Partner whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Partner whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Partner whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Partner withTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Partner withoutTrashed()
+ * @mixin \Eloquent
+ */
 class Partner extends Model implements HasMedia
 {
     use HasFactory, SoftDeletes, InteractsWithMedia;
