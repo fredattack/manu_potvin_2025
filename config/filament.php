@@ -85,4 +85,8 @@ return [
 
     'livewire_loading_delay' => 'default',
 
+    'guard' => 'web', // Vérifiez que le bon guard est utilisé
+    'pages' => [
+        'login' => \Filament\Pages\Auth\Login::class,
+    ],
 ];
