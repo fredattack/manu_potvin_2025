@@ -12,7 +12,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Spatie\MediaLibrary\ResponsiveImages\ResponsiveImageGenerator;
 
 /**
- * 
+ *
  *
  * @property-read mixed $gallery_images
  * @property-read mixed $image
@@ -203,8 +203,8 @@ class Realisation extends Model implements HasMedia
                 $query->where('favorite', true)
                     ->orWhereNotNull('media.id');
             })
-            ->groupBy('category')
-            ->orderByRaw('CASE WHEN favorite = 1 THEN 1 ELSE 2 END, media.created_at DESC');
+         /*   ->groupBy('category')
+            ->orderByRaw('CASE WHEN favorite = 1 THEN 1 ELSE 2 END, media.created_at DESC')*/;
     }
 
 }
