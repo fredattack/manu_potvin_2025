@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\PartnerResource\Pages;
 use App\Models\Partner;
 use Filament\Forms\Components\Placeholder;
+use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -16,6 +17,7 @@ use Filament\Tables\Actions\ForceDeleteAction;
 use Filament\Tables\Actions\ForceDeleteBulkAction;
 use Filament\Tables\Actions\RestoreAction;
 use Filament\Tables\Actions\RestoreBulkAction;
+use Filament\Tables\Columns\SpatieMediaLibraryImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\TrashedFilter;
 use Filament\Tables\Table;
@@ -27,15 +29,22 @@ class PartnerResource extends Resource
     protected static ?string $model = Partner::class;
 
     protected static ?string $slug = 'partners';
+    protected static ?string $label = 'partenaires';
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?int $navigationSort = 4;
+    protected static ?string $navigationIcon = 'heroicon-o-users';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema( [
+
                 TextInput::make( 'name' )
                     ->required(),
+
+                SpatieMediaLibraryFileUpload::make( 'illustration' )
+                    ->responsiveImages()
+                    ->collection( 'illustration' ),
 
                 Placeholder::make( 'created_at' )
                     ->label( 'Created Date' )
@@ -51,6 +60,8 @@ class PartnerResource extends Resource
     {
         return $table
             ->columns( [
+                SpatieMediaLibraryImageColumn::make( 'illustration' )->collection( 'illustration' ),
+
                 TextColumn::make( 'name' )
                     ->searchable()
                     ->sortable(),

@@ -28,6 +28,10 @@ class BannerResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+    public static function shouldRegisterNavigation(): bool
+    {
+        return false; // Hides the resource from the navigation menu
+    }
     public static function form(Form $form): Form
     {
         return $form

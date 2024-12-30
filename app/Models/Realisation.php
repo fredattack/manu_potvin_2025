@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Scopes\OrderByScope;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -12,7 +13,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Spatie\MediaLibrary\ResponsiveImages\ResponsiveImageGenerator;
 
 /**
- * 
+ *
  *
  * @property-read mixed $gallery_images
  * @property-read mixed $image
@@ -71,6 +72,11 @@ class Realisation extends Model implements HasMedia
     ];
 
     protected $casts = ['category' => 'array'];
+
+    protected static function booted()
+    {
+        static::addGlobalScope(new OrderByScope());
+    }
 
     public function registerMediaCollections(): void
     {
@@ -153,7 +159,6 @@ class Realisation extends Model implements HasMedia
             get: function() {
                 if ( $this->illustration ) {
                     $args = $this->illustration;
-                    ray($args->orientation())->red();
                     return $args?->toHtml();
                 }
                 return '<img class="rounded-full" src="'.url("/assets/images/custom/default/portfolio_banner.jpeg").'" width="960" height="960">';
@@ -206,8 +211,7 @@ class Realisation extends Model implements HasMedia
                 $query->where('favorite', true)
                     ->orWhereNotNull('media.id');
             })
-         /*   ->groupBy('category')
-            ->orderByRaw('CASE WHEN favorite = 1 THEN 1 ELSE 2 END, media.created_at DESC')*/;
+            ->orderByRaw('CASE WHEN favorite = 1 THEN 1 ELSE 2 END, media.created_at DESC');
     }
 
     /**

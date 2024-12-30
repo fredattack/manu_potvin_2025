@@ -18,29 +18,35 @@ class TestimonialResource extends Resource
 {
     protected static ?string $model = Testimonial::class;
 
-//    protected static ?string $navigationIcon = 'heroicon-o-annotation';
+    protected static ?string $navigationIcon = 'heroicon-o-megaphone';
 
-    protected static ?string $navigationGroup = 'Content Management';
+    protected static ?string $pluralLabel = 'Témoignages';
+
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
                 Forms\Components\TextInput::make('author')
+                    ->label('Auteur')
                     ->required()
                     ->maxLength(255),
                 Forms\Components\Textarea::make('content')
+                    ->label('Contenu')
                     ->required(),
                 Forms\Components\TextInput::make('city')
+                    ->label('Ville')
                     ->required()
                     ->maxLength(255),
                 Forms\Components\Toggle::make('published')
-                    ->label('Published')
+                    ->label('Publier')
                     ->default(false),
                 Forms\Components\DateTimePicker::make('created_at')
+                    ->label('Date')
                     ->label('Created At'),
 
                 Forms\Components\Select::make('realisation_id')
+                    ->label('Rélisation')
                     ->relationship('realisation', 'title')
                     ->nullable(),
             ]);
@@ -50,16 +56,23 @@ class TestimonialResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('author')->sortable()->searchable(),
+                TextColumn::make('author')
+                    ->label('Auteur')
+                    ->sortable()
+                    ->searchable(),
                 TextColumn::make('content')
+                    ->label('Contenu')
                     ->limit(50)
                     ->sortable(),
-                TextColumn::make('city')->sortable()->searchable(),
+                TextColumn::make('city')
+                    ->label('Ville')
+                    ->sortable()
+                    ->searchable(),
                 BooleanColumn::make('published')
-                    ->label('Published'),
+                    ->label('Publier'),
                 TextColumn::make('created_at')
-                    ->dateTime()
-                    ->label('Created At'),
+                    ->label('Date')
+                    ->dateTime('j F Y')
             ])
             ->filters([
                 SelectFilter::make('published')

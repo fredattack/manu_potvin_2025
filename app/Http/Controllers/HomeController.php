@@ -19,8 +19,18 @@ class HomeController extends Controller
 
         $serviceRealisations = Realisation::with(['media'])
             ->favorites($favoritesRealisations->pluck('id'))
-            ->get();
+            ->get()
+            ->groupBy(fn ($item) => $item->category[0] ?? null);
 
+
+        if($serviceRealisations->count() < 4){
+            $serviceRealisations = Realisation::query()
+            ->whereNotNull('category')
+            ->whereHas( 'media')
+            ->get()
+            ->groupBy(fn ($item) => $item->category[0] ?? null) // Group by the first category
+            ->map(fn ($items) => $items->first()); // Pick the first realization for each group
+        }
 
         return view('home', compact('themeColor','customerData', 'favoritesRealisations', 'serviceRealisations'));
     }

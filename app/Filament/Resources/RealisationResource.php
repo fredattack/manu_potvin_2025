@@ -2,9 +2,11 @@
 
 namespace App\Filament\Resources;
 
+use App\Enums\Categories;
 use App\Filament\Resources\RealisationResource\Pages;
 use App\Models\Realisation;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
+use Filament\Forms\Components\Toggle;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables\Actions\Action;
@@ -24,70 +26,100 @@ class RealisationResource extends Resource
 {
     protected static ?string $model = Realisation::class;
 
-//    protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationIcon = 'heroicon-o-wrench-screwdriver';
+
     protected static ?string $pluralLabel = 'Realisations';
-    protected static ?string $navigationGroup = 'Content Management';
+
 
     public static function form(Form $form): Form
     {
         return $form
-            ->schema([
-                TextInput::make('title')
+            ->schema( [
+
+                Toggle::make('published')
+                    ->label('Publier')
+                    ->default(true),
+
+                Toggle::make('favorite')
+                    ->label('Favoris')
+                    ->default(false),
+
+                TextInput::make( 'title' )
+                    ->label( 'Titre')
                     ->required()
-                    ->maxLength(255),
+                    ->maxLength( 255 ),
 
-                Textarea::make('description'),
+                Textarea::make( 'description' ),
 
-                TextInput::make('category')
-                    ->required(),
+                Select::make( 'category' )
+                    ->label( 'Catégorie')
+                    ->required()
+                    ->multiple()
+                    ->options(
+                        collect( Categories::all() )
+                            ->filter( fn($item) => $item['key'] != 'tout' )
+                            ->mapWithKeys( function($category) {
+                                return [$category['key'] => $category['label']];
+                            } )
+                            ->toArray()
+                    ),
 
-                TextInput::make('place'),
+                TextInput::make( 'place' )->label( 'Lieu'),
 
-                DatePicker::make('date'),
+                DatePicker::make( 'date' ),
 
-                TextInput::make('customer'),
+                TextInput::make( 'customer' )
+                    ->placeholder( 'anonyme')
+                    ->label( 'Client'),
 
-                SpatieMediaLibraryFileUpload::make('illustration')
+                SpatieMediaLibraryFileUpload::make( 'illustration' )
                     ->responsiveImages()
-                ->collection( 'illustration'),
+                    ->collection( 'illustration' ),
 
-                SpatieMediaLibraryFileUpload::make('gallery')
+                SpatieMediaLibraryFileUpload::make( 'gallery' )
+                    ->label( 'Gallerie')
                     ->responsiveImages()
                     ->multiple()
-                    ->collection( 'gallery'),
+                    ->collection( 'gallery' ),
 
-                Select::make('published')
-                    ->label('Published')
-                    ->options([0 => 'No', 1 => 'Yes'])
-                    ->default(0),
-
-                Select::make('favorite')
-                    ->label('Favorite')
-                    ->options([0 => 'No', 1 => 'Yes'])
-                    ->default(0),
-            ]);
+            ] );
     }
 
     public static function table(Table $table): Table
     {
         return $table
-            ->columns([
-                SpatieMediaLibraryImageColumn::make('illustration')->collection( 'illustration'),
+            ->columns( [
+                SpatieMediaLibraryImageColumn::make( 'illustration' )
+                    ->collection( 'illustration' ),
 
-                TextColumn::make('title')->sortable()->searchable(),
-                TextColumn::make('category')->sortable()->searchable(),
-                TextColumn::make('place')->sortable(),
-                TextColumn::make('date')->date(),
-                BooleanColumn::make('published'),
-                BooleanColumn::make('favorite'),
+                TextColumn::make( 'title' )
+                    ->label('Titre')
+                    ->sortable()
+                    ->searchable(),
+                TextColumn::make( 'category' )
+                    ->label('Catégorie')
+                    ->sortable()
+                    ->searchable()
+                    ->formatStateUsing( function($state, $record) {
+                        return Categories::getCategoryLabels( $record->category );
+                    } ),
+                TextColumn::make( 'place' )
+                    ->label('Lieu')
+                    ->sortable(),
+                TextColumn::make( 'date' )
+                    ->dateTime('j F Y'),
+                BooleanColumn::make( 'published' )
+                    ->label('Publié'),
+                BooleanColumn::make( 'favorite' )
+                    ->label('Favoris'),
 
-            ])
-            ->defaultSort('ordre', 'asc')
-            ->reorderable('ordre')
-            ->filters([
-                Filter::make('published')->query(fn ($query) => $query->where('published', true)),
-                Filter::make('favorite')->query(fn ($query) => $query->where('favorite', true)),
-            ]);
+            ] )
+            ->defaultSort( 'ordre', 'asc' )
+            ->reorderable( 'ordre' )
+            ->filters( [
+                Filter::make( 'published' )->query( fn($query) => $query->where( 'published', true ) ),
+                Filter::make( 'favorite' )->query( fn($query) => $query->where( 'favorite', true ) ),
+            ] );
     }
 
     public static function getPages(): array

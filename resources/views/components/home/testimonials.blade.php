@@ -18,7 +18,7 @@
                         @endforeach
                     </div>
                 </div>
-                <div class="swiper-pagination2"></div>
+{{--                <div class="swiper-pagination2"></div>--}}
                 <!-- swiper end -->
             </div>
         </div>
