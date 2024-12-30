@@ -12,7 +12,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Spatie\MediaLibrary\ResponsiveImages\ResponsiveImageGenerator;
 
 /**
- *
+ * 
  *
  * @property-read mixed $gallery_images
  * @property-read mixed $image
@@ -53,6 +53,9 @@ use Spatie\MediaLibrary\ResponsiveImages\ResponsiveImageGenerator;
  * @property-read mixed $main_category
  * @method static \Illuminate\Database\Eloquent\Builder|Realisation favorites($blackListIds = null)
  * @method static \Illuminate\Database\Eloquent\Builder|Realisation whereFavorite($value)
+ * @property int|null $ordre Ordre d'affichage
+ * @property-read mixed $illustration
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Realisation whereOrdre($value)
  * @mixin \Eloquent
  */
 class Realisation extends Model implements HasMedia

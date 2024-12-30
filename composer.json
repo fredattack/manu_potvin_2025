@@ -41,7 +41,10 @@
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi",
-            "@php artisan filament:upgrade"
+            "@php artisan filament:upgrade",
+            "@php artisan ide-helper:generate --env=local || true",
+            "@php artisan ide-helper:meta --env=local || true",
+            "@php artisan ide-helper:models --env=local --write || true"
         ],
         "post-update-cmd": [
             "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
