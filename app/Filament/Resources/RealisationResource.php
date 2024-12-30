@@ -4,10 +4,10 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\RealisationResource\Pages;
 use App\Models\Realisation;
-use Filament\Forms;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
+use Filament\Tables\Actions\Action;
 use Filament\Tables\Columns\BooleanColumn;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\SpatieMediaLibraryImageColumn;
@@ -16,9 +16,9 @@ use Filament\Tables\Filters\Filter;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\DatePicker;
-use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Select;
 use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Builder;
 
 class RealisationResource extends Resource
 {
@@ -80,8 +80,10 @@ class RealisationResource extends Resource
                 TextColumn::make('date')->date(),
                 BooleanColumn::make('published'),
                 BooleanColumn::make('favorite'),
-                ImageColumn::make('illustration')->label('Illustration'),
+
             ])
+            ->defaultSort('ordre', 'asc')
+            ->reorderable('ordre')
             ->filters([
                 Filter::make('published')->query(fn ($query) => $query->where('published', true)),
                 Filter::make('favorite')->query(fn ($query) => $query->where('favorite', true)),
@@ -96,4 +98,5 @@ class RealisationResource extends Resource
             'edit' => Pages\EditRealisation::route( '/{record}/edit' ),
         ];
     }
+
 }

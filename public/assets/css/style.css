@@ -25788,9 +25788,20 @@ section.svg-container:nth-last-of-type(0) svg.radial-progress {
 .big-bg-porduct-details {
   position: relative;
 }
+
+/* Default styling for screens smaller than 992px */
 .big-bg-porduct-details img {
   width: 100%;
   border-radius: 16px;
+}
+
+/* Styling for screens larger than 992px */
+@media screen and (min-width: 992px) {
+  .big-bg-porduct-details img {
+    max-height: 90vh;
+    width: auto;
+    border-radius: 16px;
+  }
 }
 .big-bg-porduct-details .project-info {
   position: absolute;

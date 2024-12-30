@@ -148,9 +148,9 @@ class Realisation extends Model implements HasMedia
         return Attribute::make(
 
             get: function() {
-                if ($this->media->where('collection_name', 'illustration')->first()) {
-                    $args = $this->media->where( 'collection_name', 'illustration' )->first();
-                    ray($args?->toHtml())->red();
+                if ( $this->illustration ) {
+                    $args = $this->illustration;
+                    ray($args->orientation())->red();
                     return $args?->toHtml();
                 }
                 return '<img class="rounded-full" src="'.url("/assets/images/custom/default/portfolio_banner.jpeg").'" width="960" height="960">';
@@ -163,8 +163,8 @@ class Realisation extends Model implements HasMedia
         return Attribute::make(
 
             get: function() {
-                if ($this->media->where('collection_name', 'illustration')->first()) {
-                    $args = $this->media->where( 'collection_name', 'illustration' )->first();
+                if ( $this->illustration ) {
+                    $args = $this->illustration;
                     return $args?->getUrl();
                 }
                 return 'No Images';
@@ -205,6 +205,19 @@ class Realisation extends Model implements HasMedia
             })
          /*   ->groupBy('category')
             ->orderByRaw('CASE WHEN favorite = 1 THEN 1 ELSE 2 END, media.created_at DESC')*/;
+    }
+
+    /**
+     * @return \Closure|Media|null
+     */
+    protected function illustration():  Attribute
+    {
+        return Attribute::make(
+            get: function($value) {
+                return $this->media?->where( 'collection_name', 'illustration' )->first();
+            },
+        );
+
     }
 
 }

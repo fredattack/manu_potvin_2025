@@ -8,7 +8,7 @@ use Spatie\MediaLibrary\Conversions\ImageGenerators\ImageGeneratorFactory;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 /**
- * 
+ *
  *
  * @property-read mixed $extension
  * @property-read mixed $human_readable_size
@@ -62,6 +62,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
  */
 class CustomMedia extends Media
 {
+
     protected string $conversionName = '';
 
 /**
@@ -124,5 +125,18 @@ class CustomMedia extends Media
             'height',
             'rounded'
         ))->render();
+    }
+
+    public function orientation():string
+    {
+        if(!str_starts_with($this->mime_type, 'image/')) return 'not an image';
+        $image = getimagesize($this->getPath());
+
+        ray($image);
+        $width = $image[0];
+        $height = $image[1];
+
+        $orientation = ( $width != $height ? ( $width > $height ? 'landscape' : 'portrait' ) : 'square' );
+        return $orientation;
     }
 }

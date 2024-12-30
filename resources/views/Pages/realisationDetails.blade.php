@@ -10,13 +10,12 @@
 
 
     <!-- project details image area -->
-    <div class="rts-project-details-area rts-section-gap">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="big-bg-porduct-details">
+                    <div class="big-bg-porduct-details" style="background: url({{asset("assets/images/custom/bg-00.webp")}})">
                         {!! $realisation->image !!}
-                        <div class="project-info">
+                        <div class="project-info ">
                             <div class="info-head">
                                 <h5 class="title">{{$realisation->title}}</h5>
                             </div>
@@ -87,19 +86,10 @@
                 <?php
                 /** @var \App\Models\CustomerData $media  */
                 ?>
+                <x-lightbox-gallery :images="$realisation->images_lightbox" />
 
-                @forelse($realisation->images_lightbox as $media)
-                    <div class="col-lg-4">
-                        <div class="thumbnail">
-                            <img src="{{ $media}}" alt="">
-                        </div>
-                    </div>
-                    @empty
-                        "Pas d'images dans cette galerie"
-                @endforelse
 
 
         </div>
-    </div>
     <!-- project details image area end -->
 @endsection
