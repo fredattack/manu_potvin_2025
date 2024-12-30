@@ -49,7 +49,7 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
 :root {
   --color-primary-0: #95D5DC;
-  --color-primary: #DF0A0A;
+  --color-primary: #df0a0a;
   --color-primary-2: #0B4DF5;
   --color-primary-3: #F64A00;
   --color-primary-4: #5264F3;
@@ -17742,7 +17742,7 @@ button.menu.rts-btn.btn-primary-3-menu:hover .menu-light {
   z-index: 3;
   width: 0;
   height: 0;
-  border-left: 14px solid #DF0A0A;
+  border-left: 14px solid ;
   border-top: 8px solid transparent;
   border-bottom: 8px solid transparent;
   top: 50%;
@@ -18247,7 +18247,7 @@ button.menu.rts-btn.btn-primary-3-menu:hover .menu-light {
   letter-spacing: 1px;
 }
 .banner-one-inner .pre-title span {
-  color: #DF0A0A;
+  color: var(--background-color-0);
   font-weight: 800;
 }
 .banner-one-inner .title {
@@ -18282,7 +18282,7 @@ button.menu.rts-btn.btn-primary-3-menu:hover .menu-light {
 }
 .banner-one-inner .title span {
   font-style: italic;
-  color: #DF0A0A;
+  color: var(--color-primary-0);
   font-weight: 300;
   font-size: 70px;
 }
@@ -21485,13 +21485,13 @@ body.thirteen-body .title-area span {
 }
 .thumbnail-image-gallery .video-play-button span {
   left: -52%;
-  border-left: 19px solid #DF0A0A;
+  border-left: 19px solid var(--color-primary-0);
   border-top: 12px solid transparent;
   border-bottom: 12px solid transparent;
 }
 @media only screen and (max-width: 575px) {
   .thumbnail-image-gallery .video-play-button span {
-    border-left: 15px solid #DF0A0A;
+    border-left: 15px solid var(--color-primary-0);
     border-top: 8px solid transparent;
     border-bottom: 8px solid transparent;
   }
@@ -22247,7 +22247,7 @@ section.svg-container:nth-last-of-type(0) svg.radial-progress {
   content: "";
   left: 50%;
   top: 50%;
-  background: #DF0A0A;
+  background: var(--color-primary-0);
   height: 60px;
   width: 60px;
   transform: translate(-50%, -50%);
@@ -22506,7 +22506,7 @@ section.svg-container:nth-last-of-type(0) svg.radial-progress {
   display: block;
   width: 1px;
   height: 100%;
-  border: 1px dashed #DF0A0A;
+  border: 1px dashed var(--color-primary-0);
   top: 3px;
   left: 18px;
   position: absolute;
@@ -22632,7 +22632,7 @@ section.svg-container:nth-last-of-type(0) svg.radial-progress {
   display: block;
   width: 1px;
   height: 100%;
-  border: 1px dashed #DF0A0A;
+  border: 1px dashed var(--color-primary-0);
   top: 0;
   left: 10px;
   position: absolute;
@@ -23842,7 +23842,7 @@ section.svg-container:nth-last-of-type(0) svg.radial-progress {
 .cta-one-bg {
   background-image: url(../images/cta/01.jpg);
   background-repeat: no-repeat;
-  background-color: #DF0A0A;
+  background-color: var(--color-primary-0);
   background-blend-mode: multiply;
   overflow: hidden;
   background-position: center;
@@ -26491,7 +26491,7 @@ section.svg-container:nth-last-of-type(0) svg.radial-progress {
 .portfolio-area.style-5 .item::after {
   content: "";
   position: absolute;
-  background-color: #df0a0a;
+  background-color: var(--color-primary-0);
   opacity: 0.902;
   clip-path: polygon(100% 0, 100% 100%, 45.5% 100%, 0% 55%, 0 0);
   width: 100%;
@@ -31938,19 +31938,19 @@ p.disc {
 .rts-progress-one-wrapper .meter > span {
   display: block;
   height: 100%;
-  background-color: #DF0A0A;
+  background-color: var(--color-primary-0);
   position: relative;
   overflow: hidden;
   transition: width 2s ease-out;
 }
 .rts-progress-one-wrapper .orange > span {
-  background-color: #DF0A0A;
+  background-color: var(--color-primary-0);
 }
 .rts-progress-one-wrapper .red > span {
-  background-color: #DF0A0A;
+  background-color: var(--color-primary-0);
 }
 .rts-progress-one-wrapper .cadetblue > span {
-  background-color: #DF0A0A;
+  background-color: var(--color-primary-0);
 }
 
 .rts-progress-one-wrapper .single-progress {
@@ -31965,12 +31965,12 @@ p.disc {
 }
 .rts-progress-one-wrapper .progress-top p {
   margin-bottom: 0;
-  color: #DF0A0A;
+  color: var(--color-primary-0);
   font-weight: 500;
   font-size: 16px;
 }
 .rts-progress-one-wrapper .progress-top .persectage {
-  color: #DF0A0A;
+  color: var(--color-primary-0);
   font-weight: 500;
   font-size: 16px;
 }
@@ -32739,13 +32739,13 @@ p.disc {
 }
 
 .progress-wrap svg {
-  color: #df0a0a;
+  color: var(--color-primary-0);
   border-radius: 50%;
   background: #fff;
 }
 
 .progress-wrap svg.progress-circle path {
-  stroke: #df0a0a;
+  stroke: var(--color-primary-0);
   stroke-width: 34px;
   box-sizing: border-box;
   -webkit-transition: all 200ms linear;
@@ -32913,7 +32913,7 @@ p.disc {
 .background-cta {
   background-image: url(../images/footer/callto-action.png);
   background-repeat: no-repeat;
-  background-color: #DF0A0A;
+  background-color: var(--color-primary-0);
   background-blend-mode: multiply;
   overflow: hidden;
   border-radius: 100px;
@@ -33226,7 +33226,7 @@ p.disc {
 .footer-one-single-wized .post-wrapper .single-footer-post .post-right a {
   max-width: max-content;
   padding-left: 0;
-  color: #DF0A0A;
+  color: var(--color-primary-0);
   display: flex;
   align-items: center;
   margin-top: -1px;
