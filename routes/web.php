@@ -10,6 +10,7 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\Pages\ElementController;
 
 
+Route::post('/contact-newsletter', [ContactController::class,'newsletter'])->name('contact.newsletter');
 Route::post('/contact', [ContactController::class,'sendForm'])->name('contact.send-form');
 Route::get('contact', [ContactController::class,'index'])->name('contactPage');
 

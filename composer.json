@@ -9,9 +9,11 @@
         "arcanedev/log-viewer": "^11.0",
         "filament/filament": "^3.2",
         "filament/spatie-laravel-media-library-plugin": "^3.2",
+        "ibrahimbougaoua/filament-rating-star": "^1.0",
         "laravel/framework": "^11.0",
         "laravel/tinker": "^2.9",
         "league/csv": "^9.18",
+        "sendinblue/api-v3-sdk": "^8.4",
         "spatie/laravel-medialibrary": "^11.10",
         "spatie/ray": "^1.41"
     },

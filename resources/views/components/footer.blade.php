@@ -81,8 +81,9 @@
                             <div class="body">
                                 <div class="update-wrapper">
                                     <p class="disc">Inscrivez-vous pour recevoir nos dernières actualités et articles. Nous ne vous enverrons pas de courriers indésirables.</p>
-                                    <form class="email-footer-area">
-                                        <input type="email" placeholder="Saisissez votre adresse email" required>
+                                    <form class="email-footer-area" action="{{route('contact.newsletter')}}" method="post">
+                                        @csrf
+                                        <input type="email" placeholder="Saisissez votre adresse email" name="email" required>
                                         <button type="submit">
                                             <i class="fas fa-location-arrow"></i>
                                         </button>
