@@ -23,9 +23,7 @@
     <!-- rts cta area start -->
 @include('components.cta-contact')
     <!-- rts cta area End -->
-    @php
-        ray($serviceRealisations);
-    @endphp
+
     <!-- rts-service area start -->
     @include('components.home.services',['serviceListe'=>$serviceRealisations])
     <!-- rts-service area end -->

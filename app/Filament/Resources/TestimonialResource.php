@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\TestimonialResource\Pages;
 use App\Models\Testimonial;
 use Filament\Forms;
+use Filament\Forms\Components\Section;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables\Columns\BooleanColumn;
@@ -12,6 +13,9 @@ use Filament\Tables\Columns\TextColumn;
 
 use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
+use IbrahimBougaoua\FilamentRatingStar\Forms\Components\RatingStar;
+use IbrahimBougaoua\FilamentRatingStar\Columns\Components\RatingStar as RatingStarColumn;
+
 
 
 class TestimonialResource extends Resource
@@ -27,23 +31,29 @@ class TestimonialResource extends Resource
     {
         return $form
             ->schema([
+                Forms\Components\Toggle::make('published')
+                    ->label('Publier')
+                    ->default(false)
+                    ->columnSpan(2),
                 Forms\Components\TextInput::make('author')
                     ->label('Auteur')
                     ->required()
                     ->maxLength(255),
                 Forms\Components\Textarea::make('content')
-                    ->label('Contenu')
+                    ->label('Message')
                     ->required(),
                 Forms\Components\TextInput::make('city')
                     ->label('Ville')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\Toggle::make('published')
-                    ->label('Publier')
-                    ->default(false),
+                Section::make()
+                    ->schema([
+                        RatingStar::make('rating')
+                            ->label('')
+                    ]),
+
                 Forms\Components\DateTimePicker::make('created_at')
-                    ->label('Date')
-                    ->label('Created At'),
+                    ->label('Date'),
 
                 Forms\Components\Select::make('realisation_id')
                     ->label('Rélisation')
@@ -64,6 +74,7 @@ class TestimonialResource extends Resource
                     ->label('Contenu')
                     ->limit(50)
                     ->sortable(),
+                RatingStarColumn::make('rating')->size('sm'),
                 TextColumn::make('city')
                     ->label('Ville')
                     ->sortable()

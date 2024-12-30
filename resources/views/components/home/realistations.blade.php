@@ -20,10 +20,13 @@
                         <!-- single blog -->
                         <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                             <div class="blog-three-wrapepr">
-                                <a href="{{ route('pages.details',['realisation'=>$realisation]) }}" class="main-thumbnail" target="_blank">
-                                    <img src="{{ $realisation->image_url }}" alt="Blog_image" width="100%">
+
+
+                                <a href="{{ route('pages.details',['realisation'=>$realisation]) }}" class="main-thumbnail" target="_blank" >
+                                    <img src="{{ $realisation->image_url }}" alt="Blog_image" width="100%" >
                                     <span class="badge-blog">{{\App\Enums\Categories::getLabelByKey($category['key'])}}</span>
                                 </a>
+
                                 <div class="blog-body">
                                     <div class="blog-header">
                                         <div class="left">

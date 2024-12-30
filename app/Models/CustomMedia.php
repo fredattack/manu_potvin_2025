@@ -8,7 +8,7 @@ use Spatie\MediaLibrary\Conversions\ImageGenerators\ImageGeneratorFactory;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 /**
- *
+ * 
  *
  * @property-read mixed $extension
  * @property-read mixed $human_readable_size

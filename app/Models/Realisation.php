@@ -13,7 +13,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Spatie\MediaLibrary\ResponsiveImages\ResponsiveImageGenerator;
 
 /**
- *
+ * 
  *
  * @property-read mixed $gallery_images
  * @property-read mixed $image

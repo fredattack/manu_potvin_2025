@@ -40,6 +40,8 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
  * @property int|null $realisation_id
  * @property-read \App\Models\Realisation|null $realisation
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Testimonial whereRealisationId($value)
+ * @property int $rating
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Testimonial whereRating($value)
  * @mixin \Eloquent
  */
 class Testimonial extends Model implements HasMedia

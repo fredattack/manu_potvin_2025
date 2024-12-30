@@ -38,11 +38,12 @@ class RealisationResource extends Resource
 
                 Toggle::make('published')
                     ->label('Publier')
-                    ->default(true),
+                    ->default(true)
+                    ->columnSpan(2),
 
-                Toggle::make('favorite')
-                    ->label('Favoris')
-                    ->default(false),
+//                Toggle::make('favorite')
+//                    ->label('Favoris')
+//                    ->default(false),
 
                 TextInput::make( 'title' )
                     ->label( 'Titre')
@@ -110,8 +111,8 @@ class RealisationResource extends Resource
                     ->dateTime('j F Y'),
                 BooleanColumn::make( 'published' )
                     ->label('Publié'),
-                BooleanColumn::make( 'favorite' )
-                    ->label('Favoris'),
+//                BooleanColumn::make( 'favorite' )
+//                    ->label('Favoris'),
 
             ] )
             ->defaultSort( 'ordre', 'asc' )
