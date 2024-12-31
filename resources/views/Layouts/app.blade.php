@@ -3,6 +3,7 @@
 
 <head>
     <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-E7RV97D6SG"></script>
     <script>
         window.dataLayer = window.dataLayer || [];

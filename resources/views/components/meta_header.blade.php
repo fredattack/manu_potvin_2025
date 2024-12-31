@@ -24,6 +24,8 @@
 
 <!-- Autres meta tags -->
 <link rel="canonical" href="{{ url()->current() }}">
+<meta name="google-site-verification" content="c5hfFXSFb7nsZGJVL4r4-ELtDr4zzQbnZIdQnrJdeNc">
+
 
 <title>Manu Potvin - @yield('title')</title>
 <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/images/custom/logo/favicon_manu.png') }}">

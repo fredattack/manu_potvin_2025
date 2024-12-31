@@ -1,2 +1,4 @@
 User-agent: *
-Disallow:
+Disallow: /mp_admin/
+
+Sitemap: https://www.manupotvin.be/sitemap.xml
