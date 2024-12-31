@@ -11,7 +11,8 @@ class EmailSender
 {
     public function send(array $data)
     {
-//        $customerData = CustomerData::first();
-        Mail::to( 'fredmoras8@gmail.com' )->send( new ContactFormMail( $data ) );
+        $customerData = CustomerData::first();
+        Mail::to( $customerData->email)
+            ->send( new ContactFormMail( $data ) );
     }
 }
