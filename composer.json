@@ -15,6 +15,7 @@
         "league/csv": "^9.18",
         "sendinblue/api-v3-sdk": "^8.4",
         "spatie/laravel-medialibrary": "^11.10",
+        "spatie/laravel-sitemap": "^7.3",
         "spatie/ray": "^1.41"
     },
     "require-dev": {
