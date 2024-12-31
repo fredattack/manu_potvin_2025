@@ -22,6 +22,9 @@
 <meta name="twitter:site" content="@VotreCompteTwitter">
 <meta name="twitter:creator" content="@VotreCompteTwitter">
 
+<!-- Autres meta tags -->
+<link rel="canonical" href="{{ url()->current() }}">
+
 <title>Manu Potvin - @yield('title')</title>
 <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/images/custom/logo/favicon_manu.png') }}">
 <link rel="stylesheet" href="{{ asset('assets/css/plugins/swiper.min.css') }}">
