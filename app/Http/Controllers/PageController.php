@@ -18,12 +18,12 @@ class PageController extends Controller
         }
         else{
               $view = 'Pages.' . Categories::getUrlPath( $type) . '.' . Str::lower( $subType);
-
+ray($view)->red();
              if(!view()->exists($view)){
                 $view = 'Pages.' . Categories::getUrlPath( $type);
             }
         }
-
+ray($view)->blue();
         return view( $view,[
         "customerData"=>CustomerData::first(),
             "modelData" => Realisation::with(['media'])->get()

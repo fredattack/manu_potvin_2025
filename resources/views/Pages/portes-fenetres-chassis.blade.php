@@ -198,15 +198,16 @@
                     <!-- single wizered End -->
                     <!-- single wizered start -->
                     @include('components.tags',['items'=> [
-     'Services',
-     'Business',
-     'Growth',
-     'Finance',
-     'UI/UX Design',
-     'Solution',
-     'Speed',
-     'Strategy',
-     'Technology',
+     "chassis aluminium",
+    "chassis PVC",
+    "chassis sur mesure",
+    "isolation thermique",
+    "isolation acoustique",
+    "design contemporain",
+    "rénovation chassis",
+    "installation chassis",
+    "performances énergétiques",
+    "durabilité chassis"
  ]])
                     <!-- single wizered End -->
                     <!-- single wizered start -->

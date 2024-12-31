@@ -35,21 +35,11 @@
             <div class="right">
                 <div class="stars-area">
                     <ul>
+                        @for($i=0;$i<$testimonial->rating;$i++)
                         <li>
-                            <a href="#"><i class="fas fa-star"></i></a>
+                            <i class="fas fa-star"></i>
                         </li>
-                        <li>
-                            <a href="#"><i class="fas fa-star"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fas fa-star"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fas fa-star"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fas fa-star"></i></a>
-                        </li>
+                        @endfor
                     </ul>
                 </div>
             </div>

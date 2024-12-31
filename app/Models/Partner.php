@@ -11,7 +11,7 @@ use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 /**
- * 
+ *
  *
  * @property int $id
  * @property string $name
@@ -60,7 +60,6 @@ class Partner extends Model implements HasMedia
             get: function() {
                 if ($this->media->where('collection_name', 'illustration')->first()) {
                     $args = $this->media->where( 'collection_name', 'illustration' )->first();
-                    ray($args?->toHtml())->red();
                     return $args?->toHtml();
                 }
                 return '<img class="rounded-full" src="'.url("/assets/images/custom/default/portfolio_banner.jpeg").'" width="960" height="960">';

@@ -1,7 +1,13 @@
 @extends('Layouts.app')
 
 @section('title')
-    Home Seven (Business Consultant)
+    Pergolas sur-mesure | Installation et Design
+@endsection
+@section('meta_description')
+    Découvrez nos pergolas sur-mesure à Hannut. Profitez d'un design élégant et d'une installation clé en main pour transformer vos extérieurs. Contactez Manu Potvin dès aujourd'hui !
+@endsection
+@section('meta_keywords')
+  pergolas sur-mesure, installation de pergolas, pergolas Hannut, pergolas Waremme, pergolas Braives, pergolas Lincent, pergolas Orp-Jauche, pergolas Jodoigne, design extérieur, pergolas aluminium, pergolas PVC
 @endsection
 
 
@@ -292,24 +298,7 @@
     <div class="team-bg-image-style-six">
         <img src="{{ asset('assets/images/team/bg-02.png') }}" alt="bg">
     </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="title-area-style-six text-center">
-{{--                    <div class="pre-title">--}}
-{{--                        <img src="{{ asset('assets/images/custom/shape/pre-title.png') }}" alt="pre-title">--}}
-{{--                        <span class="pre">Team Members</span>--}}
-{{--                        <img class="two" src="{{ asset('assets/images/custom/shape/pre-title.png') }}" alt="pre-title">--}}
-{{--                    </div>--}}
-                    <h2 class="title color-white">
-{{--                        Finbiz Professionals--}}
-                    </h2>
-                </div>
 
-            </div>
-        </div>
-
-    </div>
 </div>
 <!-- team area end -->
 

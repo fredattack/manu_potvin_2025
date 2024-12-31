@@ -5,11 +5,11 @@
                 <div class="title-area-style-six text-center">
                     <div class="pre-title">
                         <img src="{{ asset('assets/images/custom/shape/pre-title.png') }}" alt="pre-title">
-                        <span class="pre">Business Progress</span>
+                        <span class="pre"></span>
                         <img class="two" src="{{ asset('assets/images/custom/shape/pre-title.png') }}" alt="pre-title">
                     </div>
                     <h2 class="title">
-                        Customer Testimonials
+                        Ce que disent nos clients
                     </h2>
                 </div>
             </div>
@@ -19,229 +19,49 @@
             <div class="col-lg-12">
                 <div class="swiper clients-review-testimonials-7">
                     <div class="swiper-wrapper">
+                        @foreach(App\Models\Testimonial::with('realisation')->wherePublished(true)->get() as $testimonial)
+                        <div class="swiper-slide">
+                            <div class="testimonials-7-style">
+                                @if($testimonial->realisation instanceof \App\Models\Realisation)
+                                <a class="thumbnail" href="{{
+                        $testimonial->realisation instanceof \App\Models\Realisation
+                        ? route('pages.details',['realisation'=>$testimonial->realisation])
+                         :'#'}}
+                         ">
+{{--                                    {!! $testimonial->realisation->image !!}--}}
+                                </a>
+                                @endif
+                                <div class="body">
+                                    <h5 class="title">
 
-                        <div class="swiper-slide">
-                            <div class="testimonials-7-style">
-                                <a class="thumb" href="#"><img src="{{ asset('assets/images/testimonials/08.png') }}" alt="image"></a>
-                                <div class="body">
-                                    <h5 class="title">
-                                        The quick settle tips
                                     </h5>
                                     <p class="disc">
-                                        “Itae varius intger justo neque massa facisi orci, lobortis rutrum dictumst morbi metus
-                                        aptent sem nunc a conubia”
+                                        "{{$testimonial->content}}”
                                     </p>
                                 </div>
                                 <div class="footer">
                                     <div class="name-area">
-                                        <a href="#">
+                                        <a href="{{$testimonial->realisation instanceof \App\Models\Realisation
+? route('pages.details',['realisation'=>$testimonial->realisation])
+ :'#'}}">
                                             <h6 class="title">
-                                                Andrew Smith
+                                                {{$testimonial->author}}
                                             </h6>
                                         </a>
-                                        <span>Zoko Author</span>
+                                        <span>{{$testimonial->city}}</span>
                                     </div>
                                     <div class="stars-area">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
+                                        @for($i=0;$i<$testimonial->rating;$i++)
+                                            <i class="fas fa-star"></i>
+                                        @endfor
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="testimonials-7-style">
-                                <a class="thumb" href="#"><img src="{{ asset('assets/images/testimonials/08.png') }}" alt="image"></a>
-                                <div class="body">
-                                    <h5 class="title">
-                                        The quick settle tips
-                                    </h5>
-                                    <p class="disc">
-                                        “Itae varius intger justo neque massa facisi orci, lobortis rutrum dictumst morbi metus
-                                        aptent sem nunc a conubia”
-                                    </p>
-                                </div>
-                                <div class="footer">
-                                    <div class="name-area">
-                                        <a href="#">
-                                            <h6 class="title">
-                                                Andrew Smith
-                                            </h6>
-                                        </a>
-                                        <span>Zoko Author</span>
-                                    </div>
-                                    <div class="stars-area">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="testimonials-7-style">
-                                <a class="thumb" href="#"><img src="{{ asset('assets/images/testimonials/08.png') }}" alt="image"></a>
-                                <div class="body">
-                                    <h5 class="title">
-                                        The quick settle tips
-                                    </h5>
-                                    <p class="disc">
-                                        “Itae varius intger justo neque massa facisi orci, lobortis rutrum dictumst morbi metus
-                                        aptent sem nunc a conubia”
-                                    </p>
-                                </div>
-                                <div class="footer">
-                                    <div class="name-area">
-                                        <a href="#">
-                                            <h6 class="title">
-                                                Andrew Smith
-                                            </h6>
-                                        </a>
-                                        <span>Zoko Author</span>
-                                    </div>
-                                    <div class="stars-area">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="testimonials-7-style">
-                                <a class="thumb" href="#"><img src="{{ asset('assets/images/testimonials/08.png') }}" alt="image"></a>
-                                <div class="body">
-                                    <h5 class="title">
-                                        The quick settle tips
-                                    </h5>
-                                    <p class="disc">
-                                        “Itae varius intger justo neque massa facisi orci, lobortis rutrum dictumst morbi metus
-                                        aptent sem nunc a conubia”
-                                    </p>
-                                </div>
-                                <div class="footer">
-                                    <div class="name-area">
-                                        <a href="#">
-                                            <h6 class="title">
-                                                Andrew Smith
-                                            </h6>
-                                        </a>
-                                        <span>Zoko Author</span>
-                                    </div>
-                                    <div class="stars-area">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
+                        @endforeach
                     </div>
                 </div>
             </div>
-
-            <!-- <div class="col-lg-4">
-                    <div class="testimonials-7-style">
-                        <a class="thumb" href="#"><img src="{{ asset('assets/images/testimonials/08.png') }}" alt="image"></a>
-                        <div class="body">
-                            <h5 class="title">
-                                The quick settle tips
-                            </h5>
-                            <p class="disc">
-                                “Itae varius intger justo neque massa facisi orci, lobortis rutrum dictumst morbi metus
-                                aptent sem nunc a conubia”
-                            </p>
-                        </div>
-                        <div class="footer">
-                            <div class="name-area">
-                                <a href="#">
-                                    <h6 class="title">
-                                        Andrew Smith
-                                    </h6>
-                                </a>
-                                <span>Zoko Author</span>
-                            </div>
-                            <div class="stars-area">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="testimonials-7-style">
-                        <a class="thumb" href="#"><img src="{{ asset('assets/images/testimonials/08.png') }}" alt="image"></a>
-                        <div class="body">
-                            <h5 class="title">
-                                The quick settle tips
-                            </h5>
-                            <p class="disc">
-                                “Itae varius intger justo neque massa facisi orci, lobortis rutrum dictumst morbi metus
-                                aptent sem nunc a conubia”
-                            </p>
-                        </div>
-                        <div class="footer">
-                            <div class="name-area">
-                                <a href="#">
-                                    <h6 class="title">
-                                        Andrew Smith
-                                    </h6>
-                                </a>
-                                <span>Zoko Author</span>
-                            </div>
-                            <div class="stars-area">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="testimonials-7-style">
-                        <a class="thumb" href="#"><img src="{{ asset('assets/images/testimonials/08.png') }}" alt="image"></a>
-                        <div class="body">
-                            <h5 class="title">
-                                The quick settle tips
-                            </h5>
-                            <p class="disc">
-                                “Itae varius intger justo neque massa facisi orci, lobortis rutrum dictumst morbi metus
-                                aptent sem nunc a conubia”
-                            </p>
-                        </div>
-                        <div class="footer">
-                            <div class="name-area">
-                                <a href="#">
-                                    <h6 class="title">
-                                        Andrew Smith
-                                    </h6>
-                                </a>
-                                <span>Zoko Author</span>
-                            </div>
-                            <div class="stars-area">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
         </div>
     </div>
 </div>

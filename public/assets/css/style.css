@@ -25168,7 +25168,7 @@ section.svg-container:nth-last-of-type(0) svg.radial-progress {
 .rts-business-case-s-2.style-home-7S::after {
   content: "";
   position: absolute;
-  background-image: url(../images/business-case/icon/shape-2.png);
+  background-image: url(../images/custom/shape/shape-1.png);
   height: 100%;
   width: 100%;
   top: -64%;
@@ -25186,7 +25186,7 @@ section.svg-container:nth-last-of-type(0) svg.radial-progress {
 .rts-business-case-s-2.style-home-7S .inner span::after {
   position: absolute;
   content: "";
-  background-image: url(../images/business-case/icon/03.png);
+  background-image: url(../images/custom/shape/h7-banner.png);
   height: 58px;
   width: 58px;
   bottom: -85px;

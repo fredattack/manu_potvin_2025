@@ -2,7 +2,7 @@
 
 
 @section('title')
-    Châssis Alu - Durable, Écologique, et Performant
+    Châssis PVC - Durable, Écologique, et Performant
 @endsection
 
 @section('meta-description')
@@ -16,8 +16,8 @@
     @include('components.header')
     <!-- start breadcrumb area -->
     <x-breadcrump
-            title="Châssis Alu"
-            breadcrumbPath="Châssis.Aluminium"
+            title="Châssis PVC"
+            breadcrumbPath="Châssis.PVC"
     />
     <!-- end breadcrumb area -->
 
@@ -30,10 +30,11 @@
                     <!-- single post -->
                     <div class="blog-single-post-listing details mb--0">
                         <div class="thumbnail">
-                            <img src="{{ asset('assets/images/custom/default/chassis/fenetre_alu_first-.jpg') }}" alt="Business-Blog">
+                            <img src="{{ asset('assets/images/custom/default/chassis/chassis_alu_main.jpeg') }}" alt="Business-Blog">
                         </div>
                         <div class="blog-listing-content">
                             <div class="user-info">
+
                             </div>
                             <h2>Pourquoi Choisir des Châssis en PVC ?</h2>
                             <p>
@@ -119,10 +120,10 @@
                                         </div>
                                         <div class="col-lg-6 col-md-6 mx-auto text-center">
                                             <div class="thumbnail details mb-4">
-                                                <img src="{{ asset('assets/images/custom/default/chassis/chassis_alu_main.jpeg') }}" alt="finbiz_buseness" class="img-fluid">
+                                                <img src="{{ asset('assets/images/custom/default/chassis/chassis_alu_second.jpeg') }}" alt="finbiz_buseness" class="img-fluid">
                                             </div>
                                             <div class="thumbnail details">
-                                                <img src="{{ asset('assets/images/custom/default/chassis/chassis_alu_second.jpeg') }}" alt="finbiz_buseness" class="img-fluid">
+                                                <img src="{{ asset('assets/images/custom/default/chassis/chassis_detail_alu.jpeg') }}" alt="finbiz_buseness" class="img-fluid">
                                             </div>
                                         </div>
 
@@ -157,9 +158,9 @@
                                     <div class="details-share">
                                         <h6>Share:</h6>
                                         <button><i class="fab fa-facebook-f"></i></button>
-                                        <button><i class="fab fa-twitter"></i></button>
-                                        <button><i class="fab fa-instagram"></i></button>
-                                        <button><i class="fab fa-linkedin-in"></i></button>
+{{--                                        <button><i class="fab fa-twitter"></i></button>--}}
+{{--                                        <button><i class="fab fa-instagram"></i></button>--}}
+{{--                                        <button><i class="fab fa-linkedin-in"></i></button>--}}
                                     </div>
                                 </div>
                             </div>
@@ -171,26 +172,32 @@
                 <!--rts blog wizered area -->
                 <div class="col-xl-4 col-md-12 col-sm-12 col-12">
 
-                   @include('components.gallery',['category'=>$category])
+                    @include('components.gallery',['category'=>$category])
 
                     @include('components.recentProjects',['category'=>$category])
 
-                    <!-- single wizered start -->
                     @include('components.tags',['items'=> [
-    'Services',
-    'Business',
-    'Growth',
-    'Finance',
-    'UI/UX Design',
-    'Solution',
-    'Speed',
-    'Strategy',
-    'Technology',
-]])
-                    <!-- single wizered End -->
+     "châssis PVC",
+    "fenêtres PVC",
+    "portes en PVC",
+    "économie d'énergie",
+    "isolation thermique",
+    "design moderne",
+    "entretien facile",
+    "résistance à la corrosion",
+    "durabilité",
+    "options personnalisables"
+ ]])
 
-                    <!-- single wizered start -->
-                   @include('components.contact_card')
+                    <div class="rts-single-wized contact">
+                        <div class="wized-header">
+                            <a href="#"><img src="{{ asset('assets/images/custom/logo/logo_full.png') }}" alt="Business_logo"></a>
+                        </div>
+                        <div class="wized-body">
+                            <h5 class="title">Un projet en tête ? Nous sommes là pour vous aider.</h5>
+                            <a class="rts-btn btn-primary-5" href="{{ route('contactPage') }}">Contactez-nous</a>
+                        </div>
+                    </div>
                     <!-- single wizered End -->
                 </div>
                 <!-- rts- blog wizered end area -->
