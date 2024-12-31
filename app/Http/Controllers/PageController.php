@@ -13,17 +13,18 @@ class PageController extends Controller
     public function render(string $type,string $subType = null)
     {
 
+        if(!in_array( $subType, ['alu','pvc'])){
+            abort( 404);
+        }
         if(!Categories::hasValue($type)){
             $view = "Pages.".$type;
         }
         else{
               $view = 'Pages.' . Categories::getUrlPath( $type) . '.' . Str::lower( $subType);
-ray($view)->red();
              if(!view()->exists($view)){
                 $view = 'Pages.' . Categories::getUrlPath( $type);
             }
         }
-ray($view)->blue();
         return view( $view,[
         "customerData"=>CustomerData::first(),
             "modelData" => Realisation::with(['media'])->get()
