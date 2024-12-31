@@ -33,7 +33,7 @@
     <!-- rts cta area End -->
 
     <!-- rts-service area start -->
-    @include('components.home.services',['serviceListe'=>$serviceRealisations])
+{{--    @include('components.home.services',['serviceListe'=>$serviceRealisations])--}}
     <!-- rts-service area end -->
 
     <!-- start partners area -->
