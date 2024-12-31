@@ -13,7 +13,7 @@ class PageController extends Controller
     public function render(string $type,string $subType = null)
     {
 
-        if(!in_array( $subType, ['alu','pvc'])){
+        if(!in_array( $subType, ['alu','pvc',null])){
             abort( 404);
         }
         if(!Categories::hasValue($type)){
