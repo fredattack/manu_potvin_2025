@@ -12,7 +12,7 @@
     @yield('content')
 
     <!-- start loader -->
-    @include('Components.footer')
+    @include('components.footer')
     @yield('script')
 
 </body>
