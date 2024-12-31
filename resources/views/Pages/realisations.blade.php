@@ -3,6 +3,15 @@
 @section('title')
 Nos Réalisations
 @endsection
+@section('meta_description', 'Découvrez nos réalisations en châssis, portes, fenêtres et pergolas pour vous inspirer.')
+@section('meta_keywords', 'réalisations, exemples travaux, châssis, portes, pergolas')
+@section('og_title', 'Nos Réalisations - Inspiration pour vos projets')
+@section('og_description', 'Explorez nos projets achevés et inspirez-vous pour vos châssis, fenêtres ou pergolas.')
+@section('og_image',asset('assets/images/custom/default/portes-de-garage/porte_garage_main_2.jpeg'))
+@section('twitter_title', 'Nos Réalisations - Inspiration garantie')
+@section('twitter_description', 'Parcourez nos réalisations pour découvrir nos solutions sur mesure en châssis et pergolas.')
+@section('twitter_image', asset('assets/images/custom/default/portes-de-garage/porte_garage_main_2.jpeg'))
+
 @section('content')
  @include('components.header')
 

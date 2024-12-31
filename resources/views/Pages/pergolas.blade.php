@@ -9,6 +9,12 @@
 @section('meta_keywords')
   pergolas sur-mesure, installation de pergolas, pergolas Hannut, pergolas Waremme, pergolas Braives, pergolas Lincent, pergolas Orp-Jauche, pergolas Jodoigne, design extérieur, pergolas aluminium, pergolas PVC
 @endsection
+@section('og_title', 'Pergolas sur mesure - Style et confort pour votre extérieur')
+@section('og_description', 'Nos pergolas offrent style et confort pour vos espaces extérieurs. Découvrez nos modèles personnalisables.')
+@section('og_image', asset('/assets/images/custom/default/pergolas/pergolas_main2.jpg'))
+@section('twitter_title', 'Pergolas sur mesure - Style et confort')
+@section('twitter_description', 'Explorez nos pergolas modernes pour des espaces extérieurs élégants et fonctionnels.')
+@section('twitter_image', asset('/assets/images/custom/default/pergolas/pergolas_main2.jpg'))
 
 
 @section('content')

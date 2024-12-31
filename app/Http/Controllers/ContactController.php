@@ -22,7 +22,7 @@ class ContactController extends Controller
 
     public function index()
     {
-        return view('Frontend.otherPages.contact',[
+        return view('Pages.contact',[
             "customerData"=>CustomerData::first()
         ]);
     }

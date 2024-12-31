@@ -5,9 +5,17 @@
     Châssis PVC - Durable, Écologique, et Performant
 @endsection
 
-@section('meta-description')
+@section('meta_description')
     Découvrez les avantages des châssis en PVC : durabilité, faible entretien, esthétique moderne, et performance énergétique. Contactez-nous pour une solution sur-mesure adaptée à vos besoins.
 @endsection
+
+@section('meta_keywords', 'châssis PVC, isolation thermique, entretien facile, durabilité')
+@section('og_title', 'Châssis PVC - Isolation et Facilité d’entretien')
+@section('og_description', 'Les châssis en PVC offrent isolation thermique, durabilité et un entretien minimal.')
+@section('og_image', asset('assets/images/custom/default/chassis/chassis_alu_main.jpeg'))
+@section('twitter_title', 'Châssis PVC - Isolation et Confort')
+@section('twitter_description', 'Optez pour des châssis en PVC pour une isolation optimale et un design contemporain.')
+@section('twitter_image', asset('assets/images/custom/default/chassis/chassis_alu_main.jpeg'))
 
 @section('content')
     @php

@@ -3,7 +3,7 @@
 
 <head>
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    @include('Frontend.Includes.header')
+    @include('components.meta_header')
     @yield('css')
 </head>
 
@@ -12,7 +12,7 @@
     @yield('content')
 
     <!-- start loader -->
-    @include('Frontend.Includes.footer')
+    @include('Components.footer')
     @yield('script')
 
 </body>

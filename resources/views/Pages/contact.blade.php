@@ -1,4 +1,12 @@
 @extends('Layouts.app')
+@section('meta_description', 'Contactez-nous pour des conseils, des devis ou des informations sur nos services d’installation et d’entretien de châssis, fenêtres, portes et pergolas.')
+@section('meta_keywords', 'contact, installation châssis, fenêtres, portes, pergolas, devis')
+@section('og_title', 'Contactez-nous - Votre expert en châssis, fenêtres et pergolas')
+@section('og_description', 'Prenez contact avec notre équipe pour obtenir des conseils ou un devis personnalisé pour vos projets.')
+@section('og_image', asset('images/contact.png'))
+@section('twitter_title', 'Contactez-nous - Châssis et fenêtres')
+@section('twitter_description', 'Besoin d’informations ou d’un devis ? Contactez nos experts en châssis, fenêtres et pergolas.')
+@section('twitter_image', asset('images/contact.png'))
 
 @section('title')
     Contactez Nous

@@ -5,9 +5,16 @@
     Châssis Alu - Durable, Écologique, et Performant
 @endsection
 
-@section('meta-description')
+@section('meta_description')
     Découvrez les avantages des châssis en Alu : durabilité, faible entretien, esthétique moderne, et performance énergétique. Contactez-nous pour une solution sur-mesure adaptée à vos besoins.
 @endsection
+@section('meta_keywords', 'châssis aluminium, design moderne, durabilité, performance')
+@section('og_title', 'Châssis Aluminium - Élégance et Durabilité')
+@section('og_description', 'Les châssis en aluminium allient élégance et robustesse pour vos projets.')
+@section('og_image', asset('assets/images/custom/default/chassis/fenetre_alu_first-.jpg'))
+@section('twitter_title', 'Châssis Aluminium - Performance et Style')
+@section('twitter_description', 'Découvrez nos châssis en aluminium pour un style contemporain et des performances supérieures.')
+@section('twitter_image', asset('assets/images/custom/default/chassis/fenetre_alu_first-.jpg'))
 
 @section('content')
     @php

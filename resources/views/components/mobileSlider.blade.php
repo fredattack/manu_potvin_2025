@@ -7,12 +7,12 @@
                     src="{{ asset('assets/images/custom/logo/logo_full.png') }}" alt="finbiz_logo"></a>
 
         <div class="body-mobile d-block d-xl-none">
-            @include('Frontend.Includes.mobileMenu')
+            @include('components.mobileMenu')
             <div class="social-wrapper-two menu mobile-menu">
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
-{{--                <a href="#"><i class="fab fa-twitter"></i></a>--}}
-{{--                <a href="#"><i class="fab fa-instagram"></i></a>--}}
-{{--                <a href="#"><i class="fab fa-whatsapp"></i></a>--}}
+                {{--                <a href="#"><i class="fab fa-twitter"></i></a>--}}
+                {{--                <a href="#"><i class="fab fa-instagram"></i></a>--}}
+                {{--                <a href="#"><i class="fab fa-whatsapp"></i></a>--}}
             </div>
             <a href="/contact" class="rts-btn btn-primary ml--20 ml_sm--5 header-one-btn quote-btnmenu">Contactez nous</a>
         </div>

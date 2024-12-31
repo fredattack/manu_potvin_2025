@@ -1,8 +1,16 @@
 @extends('Layouts.app')
 
 @section('title')
-    Boom Acceuil
+    Votre Expert en Châssis et Pergolas
 @endsection
+@section('meta_description', 'Bienvenue sur notre site dédié à la vente, installation et entretien de châssis, fenêtres, portes et pergolas.')
+@section('meta_keywords', 'châssis, portes, fenêtres, pergolas, moustiquaires, installations')
+@section('og_title', 'Accueil - Votre Expert en Châssis et Pergolas')
+@section('og_description', 'Découvrez nos solutions pour châssis, fenêtres, portes et pergolas sur mesure.')
+@section('og_image', asset('/assets/images/custom/default/home/new_main_home-2.jpg'))
+@section('twitter_title', 'Accueil - Solutions en Châssis et Pergolas')
+@section('twitter_description', 'Explorez nos services et produits pour vos besoins en châssis et pergolas.')
+@section('twitter_image', asset('/assets/images/custom/default/home/new_main_home-2.jpg'))
 
 @section('content')
     <!--#region  Header-->

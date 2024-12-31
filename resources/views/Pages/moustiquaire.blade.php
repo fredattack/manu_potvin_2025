@@ -3,6 +3,14 @@
 @section('title')
     Moustiquaires
 @endsection
+@section('meta_description', 'Protégez votre intérieur des insectes tout en laissant entrer la lumière avec nos moustiquaires sur mesure.')
+@section('meta_keywords', 'moustiquaires, protection insectes, lumière naturelle, sur mesure')
+@section('og_title', 'Moustiquaires sur mesure - Confort et protection')
+@section('og_description', 'Nos moustiquaires sont conçues pour offrir protection et confort tout en préservant la lumière naturelle.')
+@section('og_image', asset('/assets/images/custom/default/moustiquaire/moustiquaire_main.jpeg'))
+@section('twitter_title', 'Moustiquaires - Protection et Lumière')
+@section('twitter_description', 'Protégez-vous des insectes tout en profitant de la lumière naturelle avec nos moustiquaires.')
+@section('twitter_image', asset('/assets/images/custom/default/moustiquaire/moustiquaire_main.jpeg'))
 
 @section('content')
     @php
