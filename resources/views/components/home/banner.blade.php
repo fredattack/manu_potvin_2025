@@ -36,7 +36,7 @@
                                     <p class="disc">
                                         Des ouvertures où sécurité et style se rencontrent.
                                     </p>
-                                    @include('components.cta_home')
+{{--                                    @include('components.cta_home')--}}
                                 </div>
                             </div>
                         </div>
@@ -57,7 +57,7 @@
                                     <p class="disc">
                                         Des solutions lumineuses et élégantes pour votre confort.
                                     </p>
-                                    @include('components.cta_home')
+{{--                                    @include('components.cta_home')--}}
                                 </div>
                             </div>
                         </div>
