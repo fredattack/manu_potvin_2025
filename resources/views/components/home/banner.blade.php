@@ -15,7 +15,7 @@
                                     <p class="disc">
                                         Parce que chaque détail compte, jusqu’à la perfection.
                                     </p>
-                                    @include('components.cta_home')
+{{--                                    @include('components.cta_home')--}}
                                 </div>
                             </div>
                         </div>
