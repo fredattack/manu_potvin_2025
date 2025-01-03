@@ -15,8 +15,8 @@ Route::post('/contact', [ContactController::class,'sendForm'])->name('contact.se
 Route::get('contact', [ContactController::class,'index'])->name('contactPage');
 
 Route::get('/', HomeController::class)->name('home');
-Route::get('/products/{type}', [PageController::class,'render'])->name('pages');
-Route::get('/products/{type}/kind/{subType?}', [PageController::class,'render'])->name('pagesKinded');
+Route::get('/products/{type}', [PageController::class,'render'])->name('pages')->where('type', '^(?!index$).+');
+Route::get('/products/{type}/kind/{subType?}', [PageController::class,'render'])->name('pagesKinded')->where(['type' => '^(?!index$).+', 'subType' => '^(?!index$).+']);
 Route::get('/realisation/{realisation}/detail', RealisationController::class)->name('pages.details');
 
 //

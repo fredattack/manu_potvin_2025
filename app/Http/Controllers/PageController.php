@@ -14,7 +14,7 @@ class PageController extends Controller
     {
 
         if(!in_array( $subType, ['alu','pvc',null])){
-            abort( 404);
+            return redirect('/', 301);
         }
         if(!Categories::hasValue($type)){
             $view = "Pages.".$type;
