@@ -23,7 +23,7 @@
     @yield('content')
 
     <!-- start loader -->
-    @include('components.footer')
+    @vite('resources/js/app.js')
     @yield('script')
 
 </body>
