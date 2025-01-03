@@ -32792,9 +32792,9 @@ p.disc {
 .loader-wrapper {
   --line-width: 5px;
   --curtain-color: #ffffff;
-  --outer-line-color: #dca8a8;
-  --middle-line-color: #ff0000;
-  --inner-line-color: #cf1414;
+  --outer-line-color: #74b8c0; /* Darker shade */
+  --middle-line-color: #95D5DC; /* Base color */
+  --inner-line-color: #c2e7eb; /* Lighter shade */
   position: fixed;
   top: 0;
   left: 0;
