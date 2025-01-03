@@ -23,7 +23,7 @@
     @yield('content')
 
     <!-- start loader -->
-    @include('components.footer')
+    @include('components.footer-scripts')
     @yield('script')
 
 </body>
