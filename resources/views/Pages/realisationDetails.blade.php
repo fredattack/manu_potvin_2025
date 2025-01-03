@@ -4,7 +4,7 @@
 @extends('Layouts.app')
 
 @section('title')
-    Portfolio details (Business Consultant)
+{{$realisation->title . ' - ' . $realisation->id}}
 @endsection
 @section('content')
 

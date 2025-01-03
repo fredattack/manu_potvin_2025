@@ -57,6 +57,7 @@
                                     <p class="disc">
                                         Des solutions lumineuses et élégantes pour votre confort.
                                     </p>
+
 {{--                                    @include('components.cta_home')--}}
                                 </div>
                             </div>
