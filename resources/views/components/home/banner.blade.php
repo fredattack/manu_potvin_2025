@@ -31,7 +31,7 @@
                                     <span class="subtitle-banner">Des portes qui protègent.</span>
                                     <!-- type headline start-->
                                     <h1 class="title cd-headline clip is-full-width">
-                                        Des designs qui inspirent.
+                                        Des designs qui inspirent. +++
                                     </h1>
                                     <p class="disc">
                                         Des ouvertures où sécurité et style se rencontrent.
