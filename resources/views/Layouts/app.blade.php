@@ -12,6 +12,8 @@
 
         gtag('config', 'G-E7RV97D6SG');
     </script>
+    <script src="https://www.google.com/recaptcha/api.js?render={{ config('app.recaptcha.site_key') }}"></script>
+
     @include('components.meta_header')
     @yield('css')
 

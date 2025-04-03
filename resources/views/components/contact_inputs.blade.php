@@ -22,6 +22,7 @@
     <div class="col-12 mt--20">
         <textarea placeholder="Votre message" name="message" required></textarea>
     </div>
+    <input type="hidden" name="recaptcha_token" id="recaptcha_token">
     <div class="col-12 mt--35">
         <button class="rts-btn btn-primary-3 color-h-black" type="submit">{{$submitLabel}}
         </button>

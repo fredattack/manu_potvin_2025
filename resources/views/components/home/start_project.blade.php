@@ -63,21 +63,6 @@
     </div>
 </div>
 <script>
-    $('#contact-form').on('submit', function(e) {
-        e.preventDefault();
-        console.log("submit")
-        $.ajax({
-            url: $(this).attr('action'),
-            method: $(this).attr('method'),
-            data: $(this).serialize(),
-            success: function(response) {
-                alert('Message envoyé avec succès!');
-                $('#contact-form')[0].reset();
-            },
-            error: function(xhr) {
-                alert('Une erreur est survenue.');
-            }
-        });
-    });
+
 
 </script>

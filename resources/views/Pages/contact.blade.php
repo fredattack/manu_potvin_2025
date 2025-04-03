@@ -49,6 +49,9 @@
                                 <input type="text" placeholder="Votre téléphone" name="phone" required>
 
                                 <textarea placeholder="Entrez votre message" name="message" required></textarea>
+
+                                <input type="hidden" name="recaptcha_token" id="recaptcha_token">
+
                                 <button type="submit" class="rts-btn btn-primary">Envoyer votre message</button>
                             </form>
                             @endif
