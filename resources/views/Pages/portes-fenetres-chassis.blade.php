@@ -1,15 +1,17 @@
 @extends('Layouts.app')
 
 @section('title')
-    Service Details (Business Consultant)
+    {{ $seoPageTitle ?? 'Châssis, Portes et Fenêtres' }}
 @endsection
-@section('meta_description', 'Châssis de qualité en aluminium et PVC, adaptés à vos besoins en termes d’isolation et de design.')
-@section('meta_keywords', 'châssis aluminium, châssis PVC, isolation, design moderne')
-@section('og_title', 'Châssis Aluminium et PVC - Performance et Style')
-@section('og_description', 'Nos châssis en aluminium et PVC offrent performance énergétique et esthétique moderne.')
+@section('location_title', $seoLocation ?? 'Waremme et environs')
+@section('meta_description', $seoMetaDescription ?? 'Châssis de qualité en aluminium et PVC, adaptés à vos besoins en termes d\'isolation et de design.')
+@section('meta_keywords', $seoMetaKeywords ?? 'châssis aluminium, châssis PVC, isolation, design moderne')
+@section('geo_placename', $seoLocation ?? 'Waremme')
+@section('og_title', $seoPageTitle ? $seoPageTitle . ' | Manu Potvin' : 'Châssis Aluminium et PVC - Performance et Style')
+@section('og_description', $seoMetaDescription ?? 'Nos châssis en aluminium et PVC offrent performance énergétique et esthétique moderne.')
 @section('og_image', asset('assets/images/custom/default/chassis/fenetre_alu_first-.jpg'))
-@section('twitter_title', 'Châssis Aluminium et PVC - Performance garantie')
-@section('twitter_description', 'Découvrez nos châssis modernes en aluminium et PVC, alliant qualité et design.')
+@section('twitter_title', $seoPageTitle ? $seoPageTitle . ' | Manu Potvin' : 'Châssis Aluminium et PVC - Performance garantie')
+@section('twitter_description', $seoMetaDescription ?? 'Découvrez nos châssis modernes en aluminium et PVC, alliant qualité et design.')
 @section('twitter_image', asset('assets/images/custom/default/chassis/fenetre_alu_first-.jpg'))
 
 @section('content')
