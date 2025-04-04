@@ -7,6 +7,7 @@ use App\Models\CustomerData;
 use App\Models\Realisation;
 use App\Services\SeoService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Request as RequestFacade;
 use Illuminate\Support\Str;
 
 class PageController extends Controller
@@ -28,10 +29,10 @@ class PageController extends Controller
      *
      * @param string $type
      * @param string|null $subType
-     * @param Request $request
+     * @param Request|null $request
      * @return \Illuminate\Contracts\View\View|\Illuminate\Http\RedirectResponse
      */
-    public function render(string $type, string $subType = null, Request $request)
+    public function render(string $type, string $subType = null, Request $request = null)
     {
         if(!in_array($subType, ['alu','pvc',null])){
             return redirect('/', 301);
@@ -47,7 +48,7 @@ class PageController extends Controller
         }
         
         // Get location from request query parameter
-        $location = $request->query('location');
+        $location = $request ? $request->query('location') : RequestFacade::query('location');
         
         // Get SEO metadata for the page
         $pageType = $this->mapTypeToPageType($type);

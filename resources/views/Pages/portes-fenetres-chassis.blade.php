@@ -172,7 +172,6 @@
                 </div>
                 <!--rts blog wizered area -->
                 <div class="col-xl-4 col-md-12 col-sm-12 col-12 mt_lg--60 pl--50 pl_md--0 pl-lg-controler pl_sm--0">
-
                     <!-- single wizered start -->
                     <div class="rts-single-wized download service">
                         <div class="wized-header">
@@ -229,6 +228,11 @@
             </div>
         </div>
     </div>
+    <!-- end service details area -->
+    
+    <!-- Section des liens SEO locaux -->
+    <x-local-seo-links :pageType="'chassis'" :currentLocation="$seoLocation ?? null" />
+    
     @include('components.footer')
     <!-- End service details area -->
 @endsection

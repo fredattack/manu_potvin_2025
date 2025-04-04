@@ -101,27 +101,10 @@
                 </div>
             </div>
             <!-- footer three mid area ENd -->
-{{--            <div class="col-xl-3 col-lg-6">--}}
-{{--                <div class="footer-three-single-wized right">--}}
-{{--                    <h5 class="title">Instagram Posts</h5>--}}
-{{--                    <div class="body">--}}
-{{--                        <div class="footer-gallery-inner">--}}
-{{--                            <a href="#"><img src="{{ asset('assets/images/footer/three-gallery/01.png') }}"--}}
-{{--                                        alt="Footer-gallery"></a>--}}
-{{--                            <a href="#"><img src="{{ asset('assets/images/footer/three-gallery/02.png') }}"--}}
-{{--                                        alt="Footer-gallery"></a>--}}
-{{--                            <a href="#"><img src="{{ asset('assets/images/footer/three-gallery/03.png') }}"--}}
-{{--                                        alt="Footer-gallery"></a>--}}
-{{--                            <a href="#"><img src="{{ asset('assets/images/footer/three-gallery/04.png') }}"--}}
-{{--                                        alt="Footer-gallery"></a>--}}
-{{--                            <a href="#"><img src="{{ asset('assets/images/footer/three-gallery/05.png') }}"--}}
-{{--                                        alt="Footer-gallery"></a>--}}
-{{--                            <a href="#"><img src="{{ asset('assets/images/footer/three-gallery/06.png') }}"--}}
-{{--                                        alt="Footer-gallery"></a>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
+            
+            <!-- Intégration des liens SEO locaux -->
+            @include('components.footer-seo-links')
+            
         </div>
     </div>
     <div class="copyright-area ptb--20">

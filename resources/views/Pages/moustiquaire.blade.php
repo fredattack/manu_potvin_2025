@@ -318,6 +318,9 @@
 
     <div id="anywhere-home" class=""></div>
 
+    <!-- Section des liens SEO locaux -->
+    <x-local-seo-links :pageType="'fenetres'" :currentLocation="$seoLocation ?? null" />
+
     <!-- footer area start -->
     @include('components.footer')
     <!-- footer area end -->

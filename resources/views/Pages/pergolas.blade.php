@@ -388,6 +388,9 @@
 
 </div>
 
+<!-- Section des liens SEO locaux -->
+<x-local-seo-links :pageType="'pergolas'" :currentLocation="$seoLocation ?? null" />
+
 <!-- start footer area -->
  @include('components.footer')
 <!-- ENd footer Area -->
