@@ -25,5 +25,11 @@ class DatabaseSeeder extends Seeder
             'name' => 'Fred',
             'email' => 'fred@hddev.be',
         ]);
+
+        User::factory()->create([
+            'name' => 'manu potvin',
+            'email' => 'info@manupotvin.be',
+            'password' => bcrypt('P@ssw0rd'),
+        ]);
     }
 }

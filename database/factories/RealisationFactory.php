@@ -19,14 +19,21 @@ class RealisationFactory extends Factory
         return [
             'title' => $this->faker->word,
             'description' => $this->faker->paragraph,
-            'category' => json_encode(
-                [$this->faker->randomElement( ['home',
-            'chassis',
-            'porte_de_garage',
-            'pergolas',
-            'moustiquaires'])
-            ]),
+            'category' => [
+                $this->faker->randomElement([
+                    'home',
+                    'chassis',
+                    'porte_de_garage',
+                    'pergolas',
+                    'moustiquaires'
+                ])
+            ],
             'published' => $this->faker->boolean(30),
+            'favorite' => $this->faker->boolean(20),
+            'place' => $this->faker->city,
+            'customer' => $this->faker->name,
+            'date' => $this->faker->date(),
+            'ordre' => $this->faker->numberBetween(1, 100),
         ];
     }
 }

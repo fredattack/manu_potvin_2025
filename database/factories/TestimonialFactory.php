@@ -17,10 +17,13 @@ class TestimonialFactory extends Factory
     public function definition(): array
     {
         return [
+            'author' => $this->faker->name(),
             'content' => $this->faker->text(),
-            'author' => $this->faker->firstName(),
             'city' => $this->faker->city(),
-            'published'=> $this->faker->boolean(30),
+            'rating' => $this->faker->numberBetween(1, 5),
+            'published' => $this->faker->boolean(70),
+            'created_at' => now(),
+            'updated_at' => now(),
         ];
     }
 }

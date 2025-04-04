@@ -19,7 +19,7 @@ class PartnerSeeder extends Seeder
         // delete all partners
         Partner::truncate();
 
-        $achievements = [[
+        $partners = [[
             'name' => 'Hormann',
             'logo' => '/assets/images/custom/HormannLogo.jpg',
         ], [
@@ -39,7 +39,7 @@ class PartnerSeeder extends Seeder
             'logo' => '/assets/images/custom/SkyLux.png',
         ]];
 
-        foreach ($achievements as $data) {
+        foreach ($partners as $data) {
             $achievement =     Partner::create([
                 'name' => $data['name'],
             ]);

@@ -97,7 +97,7 @@ class Realisation extends Model implements HasMedia
     {
         return Attribute::make(
             get: function() {
-                if(is_null($this->category)) return null;
+                if(is_null($this->category) || empty($this->category)) return null;
                 return $this->category[0];
             },
         );

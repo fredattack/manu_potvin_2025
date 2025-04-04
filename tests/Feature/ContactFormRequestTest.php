@@ -31,7 +31,7 @@ class ContactFormRequestTest extends TestCase
         $this->assertEquals( $expectedValid, $validator->passes() );
     }
 
-    public function contactFormDataProvider()
+    public static function contactFormDataProvider()
     {
         return [
             [['name' => '', 'phone' => '', 'email' => '', 'message' => ''], false],

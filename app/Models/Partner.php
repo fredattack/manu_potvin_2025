@@ -39,6 +39,9 @@ class Partner extends Model implements HasMedia
 {
     use HasFactory, SoftDeletes, InteractsWithMedia;
 
+
+    protected $guarded = [];
+
     public function registerMediaCollections(): void
     {
         $this->addMediaCollection('illustration')->singleFile();
