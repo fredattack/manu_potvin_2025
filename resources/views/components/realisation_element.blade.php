@@ -52,6 +52,14 @@
         bottom: 20px;
         right: 20px;
         z-index: 2;
+        width: 45px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50% !important;
+        padding: 0;
+        font-size: 16px;
     }
     
     .rts-product-one .product-contact-wrapper {
