@@ -13,7 +13,7 @@ use Illuminate\Support\Str;
 class PageController extends Controller
 {
     protected $seoService;
-    
+
     /**
      * Create a new controller instance.
      *
@@ -23,7 +23,7 @@ class PageController extends Controller
     {
         $this->seoService = $seoService;
     }
-    
+
     /**
      * Render page with SEO metadata
      *
@@ -37,25 +37,25 @@ class PageController extends Controller
         if(!in_array($subType, ['alu','pvc',null])){
             return redirect('/', 301);
         }
-        
+
         if(!Categories::hasValue($type)){
-            $view = "Pages.".$type;
+            $view = "Pages.".str_replace(['/'], ['.'], $type);
         } else {
             $view = 'Pages.' . Categories::getUrlPath($type) . '.' . Str::lower($subType);
             if(!view()->exists($view)){
                 $view = 'Pages.' . Categories::getUrlPath($type);
             }
         }
-        
+
         // Get location from request query parameter
         $location = $request ? $request->query('location') : RequestFacade::query('location');
-        
+
         // Get SEO metadata for the page
         $pageType = $this->mapTypeToPageType($type);
         $metaKeywords = $this->seoService->getMetaKeywords($pageType, $location);
         $metaDescription = $this->seoService->getMetaDescription($pageType, $location);
         $pageTitle = $this->seoService->getPageTitle($pageType, $location);
-        
+
         return view($view, [
             "customerData" => CustomerData::first(),
             "modelData" => Realisation::with(['media'])->get(),
@@ -65,7 +65,7 @@ class PageController extends Controller
             "seoLocation" => $location
         ]);
     }
-    
+
     /**
      * Map route type to page type for SEO
      *
@@ -80,7 +80,7 @@ class PageController extends Controller
             'porte-de-garage' => 'portes',
             'moustiquaire' => 'fenetres'
         ];
-        
+
         return $mapping[$type] ?? 'home';
     }
 }
