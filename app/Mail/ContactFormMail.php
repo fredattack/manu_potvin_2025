@@ -20,11 +20,37 @@ class ContactFormMail extends Mailable
         $this->data = $data;
     }
 
-    public function build()
+    /**
+     * Get the message envelope.
+     */
+    public function envelope(): Envelope
     {
-        return $this->from( 'noreply@manupotvin.be' )
-            ->subject( 'Nouveau message de contact' )
-            ->view( 'emails.contact-form' )
-            ->with( 'data', $this->data );
+        return new Envelope(
+            from: config('mail.from.address', 'noreply@manupotvin.be'),
+            subject: 'Nouveau message de contact',
+        );
+    }
+
+    /**
+     * Get the message content definition.
+     */
+    public function content(): Content
+    {
+        return new Content(
+            markdown: 'emails.contact-form',
+            with: [
+                'data' => $this->data,
+            ],
+        );
+    }
+
+    /**
+     * Get the attachments for the message.
+     *
+     * @return array<int, \Illuminate\Mail\Mailables\Attachment>
+     */
+    public function attachments(): array
+    {
+        return [];
     }
 }
