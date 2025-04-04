@@ -1,13 +1,9 @@
 @props(['pageType' => 'chassis', 'currentLocation' => null])
 
 @php
-// Récupérer les localités depuis la base de données
-$locations = App\Models\SeoKeyword::whereNotNull('location')
-    ->where('location', '!=', '')
-    ->where('active', true)
-    ->distinct()
-    ->pluck('location')
-    ->take(6) // Limiter à 6 localités pour ne pas surcharger
+// Récupérer les localités depuis le modèle ServiceArea
+$locations = App\Models\ServiceArea::getActiveAreas(6)
+    ->pluck('name')
     ->toArray();
 
 // Définir les routes en fonction du type de page

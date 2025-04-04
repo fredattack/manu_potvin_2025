@@ -1,24 +1,24 @@
 @extends('Layouts.app')
 
 @section('title')
-    {{ $seoPageTitle ?? 'Châssis, Portes et Fenêtres' }}
+    {{ $seoPageTitle ?? 'Expert en châssis, portes et fenêtres à Hannut et Waremme' }}
 @endsection
-@section('location_title', $seoLocation ?? 'Waremme et environs')
-@section('meta_description', $seoMetaDescription ?? 'Châssis de qualité en aluminium et PVC, adaptés à vos besoins en termes d\'isolation et de design.')
-@section('meta_keywords', $seoMetaKeywords ?? 'châssis aluminium, châssis PVC, isolation, design moderne')
+@section('location_title', $seoLocation ?? 'Waremme, Hannut et environs')
+@section('meta_description', $seoMetaDescription ?? 'Spécialiste en installation et remplacement de châssis de qualité en aluminium et PVC à Hannut, Waremme et Jodoigne. Solutions sur mesure pour une isolation optimale.')
+@section('meta_keywords', $seoMetaKeywords ?? 'châssis aluminium Hannut, châssis PVC Waremme, remplacement fenêtres Jodoigne, installation portes Liège')
 @section('geo_placename', $seoLocation ?? 'Waremme')
-@section('og_title', $seoPageTitle ? $seoPageTitle . ' | Manu Potvin' : 'Châssis Aluminium et PVC - Performance et Style')
-@section('og_description', $seoMetaDescription ?? 'Nos châssis en aluminium et PVC offrent performance énergétique et esthétique moderne.')
+@section('og_title', $seoPageTitle ? $seoPageTitle . ' | Manu Potvin' : 'Expert en châssis aluminium et PVC à Hannut et Waremme')
+@section('og_description', $seoMetaDescription ?? 'Nos châssis en aluminium et PVC offrent performance énergétique et esthétique moderne. Installation professionnelle à Hannut, Waremme et dans toute la province de Liège.')
 @section('og_image', asset('assets/images/custom/default/chassis/fenetre_alu_first-.jpg'))
-@section('twitter_title', $seoPageTitle ? $seoPageTitle . ' | Manu Potvin' : 'Châssis Aluminium et PVC - Performance garantie')
-@section('twitter_description', $seoMetaDescription ?? 'Découvrez nos châssis modernes en aluminium et PVC, alliant qualité et design.')
+@section('twitter_title', $seoPageTitle ? $seoPageTitle . ' | Manu Potvin' : 'Châssis et fenêtres de qualité à Hannut et Waremme')
+@section('twitter_description', $seoMetaDescription ?? 'Découvrez nos châssis modernes en aluminium et PVC, installés par nos experts à Hannut, Waremme et Jodoigne.')
 @section('twitter_image', asset('assets/images/custom/default/chassis/fenetre_alu_first-.jpg'))
 
 @section('content')
     @include('components.header')
     <!-- start breadcrumb area -->
     <x-breadcrump
-            title="Portes, Fenêtres et chassis"
+            title="Installation de châssis, portes et fenêtres à {{ $seoLocation ?? 'Hannut et Waremme' }}"
             breadcrumbPath="Portes, Fenêtres et chassis"
     />
 
@@ -30,17 +30,16 @@
                     <!-- service details left area start -->
                     <div class="service-detials-step-1">
                         <div class="thumbnail">
-                            <img src="{{ asset('assets/images/custom/default/chassis/fenetre_alu_first-.jpg') }}" alt="business-area">
+                            <img src="{{ asset('assets/images/custom/default/chassis/fenetre_alu_first-.jpg') }}" alt="Installation de châssis en aluminium à {{ $seoLocation ?? 'Hannut' }} par Manu Potvin">
                         </div>
-                        <h4 class="title">Châssis en Aluminium et PVC : Performances, Durabilité et Design</h4>
+                        <h1 class="title">Installation et remplacement de châssis à {{ $seoLocation ?? 'Hannut et Waremme' }}</h1>
                         <p class="disc">
-                            Découvrez nos solutions de châssis sur mesure alliant qualité, esthétique et innovation.
-
+                            Basés à Hannut, nous sommes spécialisés dans le remplacement et la réparation de châssis en PVC et aluminium. Nos experts interviennent également à Waremme, Jodoigne, Orp-Jauche et dans toute la province de Liège pour améliorer le confort et l'esthétique de votre habitation.
                         </p>
                         <p class="disc">
-                            Notre société propose une gamme complète de châssis en aluminium et PVC pour répondre à tous vos besoins en matière d'installation, de réparation et de rénovation de vos portes et fenêtres. Que vous cherchiez à moderniser votre habitation ou améliorer ses performances énergétiques, nos solutions allient robustesse, esthétisme et durabilité.
+                            Notre entreprise propose une gamme complète de châssis en aluminium et PVC pour répondre à tous vos besoins en matière d'installation, de réparation et de rénovation de vos portes et fenêtres. Que vous cherchiez à moderniser votre habitation à Waremme ou améliorer ses performances énergétiques à Jodoigne, nos solutions allient robustesse, esthétisme et durabilité.
 
-                            Choisir nos châssis, c’est opter pour un confort optimal, une isolation thermique et acoustique efficace, et un design contemporain adapté à vos goûts.
+                            Choisir nos châssis, c'est opter pour un confort optimal, une isolation thermique et acoustique efficace, et un design contemporain adapté à vos goûts.
                         </p>
                         <div class="row g-5 mt--30 mb--40">
                             <div class="col-lg-6">

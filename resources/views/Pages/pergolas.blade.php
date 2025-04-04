@@ -1,19 +1,20 @@
 @extends('Layouts.app')
 
 @section('title')
-    Pergolas sur-mesure | Installation et Design
+    {{ $seoPageTitle ?? 'Installation de pergolas sur-mesure à Hannut et Waremme' }}
 @endsection
 @section('meta_description')
-    Découvrez nos pergolas sur-mesure à Hannut. Profitez d'un design élégant et d'une installation clé en main pour transformer vos extérieurs. Contactez Manu Potvin dès aujourd'hui !
+    {{ $seoMetaDescription ?? 'Spécialiste en installation de pergolas sur-mesure à Hannut, Waremme et Jodoigne. Profitez d\'un design élégant et d\'une installation professionnelle pour transformer vos extérieurs. Devis gratuit !' }}
 @endsection
 @section('meta_keywords')
-  pergolas sur-mesure, installation de pergolas, pergolas Hannut, pergolas Waremme, pergolas Braives, pergolas Lincent, pergolas Orp-Jauche, pergolas Jodoigne, design extérieur, pergolas aluminium, pergolas PVC
+  {{ $seoMetaKeywords ?? 'pergolas sur-mesure Hannut, installation pergolas Waremme, pergolas aluminium Jodoigne, pergolas bioclimatiques Liège, pergolas Braives, pergolas Lincent, pergolas Orp-Jauche, design extérieur' }}
 @endsection
-@section('og_title', 'Pergolas sur mesure - Style et confort pour votre extérieur')
-@section('og_description', 'Nos pergolas offrent style et confort pour vos espaces extérieurs. Découvrez nos modèles personnalisables.')
+@section('geo_placename', $seoLocation ?? 'Hannut')
+@section('og_title', $seoPageTitle ? $seoPageTitle . ' | Manu Potvin' : 'Installation de pergolas sur-mesure à Hannut et Waremme')
+@section('og_description', $seoMetaDescription ?? 'Nos pergolas sur-mesure offrent style et confort pour vos espaces extérieurs à Hannut, Waremme et dans toute la province de Liège. Installation professionnelle garantie.')
 @section('og_image', asset('/assets/images/custom/default/pergolas/pergolas_main2.jpg'))
-@section('twitter_title', 'Pergolas sur mesure - Style et confort')
-@section('twitter_description', 'Explorez nos pergolas modernes pour des espaces extérieurs élégants et fonctionnels.')
+@section('twitter_title', $seoPageTitle ? $seoPageTitle . ' | Manu Potvin' : 'Pergolas sur-mesure à Hannut et Waremme')
+@section('twitter_description', $seoMetaDescription ?? 'Explorez nos pergolas modernes installées par nos experts à Hannut, Waremme et Jodoigne pour des espaces extérieurs élégants et fonctionnels.')
 @section('twitter_image', asset('/assets/images/custom/default/pergolas/pergolas_main2.jpg'))
 
 
@@ -38,13 +39,13 @@
                 <!-- banner area inner six -->
                 <div class="banner-inner-six">
                     <h1 class="title mb--30">
-                        <span class="pre">Découvrez</span> <br>
-                        votre <span class="primary">espace d'ombre.</span>
+                        <span class="pre">Installation de pergolas</span> <br>
+                        à <span class="primary">{{ $seoLocation ?? 'Hannut et Waremme' }}</span>
                     </h1>
                     <p class="disc">
-                        Experts en création et installation de pergolas pour sublimer vos extérieurs.
+                        Experts en création et installation de pergolas sur-mesure à Hannut, Waremme, Jodoigne et dans toute la province de Liège pour sublimer vos extérieurs.
                     </p>
-                    <a href="#" class="rts-btn btn-primary-5 style-six rounded-2 seven">Créer votre projet</a>
+                    <a href="#" class="rts-btn btn-primary-5 style-six rounded-2 seven">Demander un devis gratuit</a>
                 </div>
 
                 <!-- banner area inner six end -->
@@ -67,7 +68,7 @@
                     <div class="title-area-style-six text-start">
                         <div class="pre-title">
                             <img src="{{ asset('assets/images/custom/shape/pre-title.png') }}" alt="pre-title">
-                            <span class="pre">Harmonie et Confort Extérieur</span>
+                            <span class="pre">Pergolas sur-mesure à {{ $seoLocation ?? 'Hannut et Waremme' }}</span>
                             <img class="two" src="{{ asset('assets/images/custom/shape/pre-title.png') }}" alt="pre-title">
                         </div>
                         <h2 class="title">
@@ -75,7 +76,7 @@
                             transformons vos extérieurs.
                         </h2>
                     </div>
-                    <a href="#" class="rts-btn btn-primary-5">Découvrez nos réalisations <i
+                    <a href="#" class="rts-btn btn-primary-5">Découvrez nos réalisations à {{ $seoLocation ?? 'Hannut' }} <i
                             class="fal fa-arrow-right"></i></a>
                 </div>
             </div>

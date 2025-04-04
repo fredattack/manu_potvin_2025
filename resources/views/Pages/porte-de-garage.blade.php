@@ -1,16 +1,17 @@
 @extends('Layouts.app')
 
 @section('title')
-    Portes de Garage
+    {{ $seoPageTitle ?? 'Installation de portes de garage à Hannut et Waremme' }}
 @endsection
 
-@section('meta_description', 'Optez pour des portes de garage fiables et esthétiques, adaptées à vos besoins spécifiques.')
-@section('meta_keywords', 'portes de garage, sécurité, design, portes motorisées')
-@section('og_title', 'Portes de Garage - Sécurité et style pour votre maison')
-@section('og_description', 'Découvrez nos portes de garage robustes et élégantes, conçues pour allier sécurité et design.')
+@section('meta_description', $seoMetaDescription ?? 'Spécialiste en installation et réparation de portes de garage à Hannut, Waremme et Jodoigne. Solutions motorisées sur mesure pour votre sécurité et confort. Devis gratuit !')
+@section('meta_keywords', $seoMetaKeywords ?? 'portes de garage Hannut, installation portes motorisées Waremme, réparation portes garage Jodoigne, portes sectionnelles Liège')
+@section('geo_placename', $seoLocation ?? 'Hannut')
+@section('og_title', $seoPageTitle ? $seoPageTitle . ' | Manu Potvin' : 'Installation de portes de garage à Hannut et Waremme')
+@section('og_description', $seoMetaDescription ?? 'Découvrez nos portes de garage robustes et élégantes, installées par nos experts à Hannut, Waremme et dans toute la province de Liège.')
 @section('og_image', asset('assets/images/custom/default/portes-de-garage/porte_garage_main_2.jpeg'))
-@section('twitter_title', 'Portes de Garage - Sécurité et Design')
-@section('twitter_description', 'Choisissez des portes de garage esthétiques et fiables pour votre confort et votre sécurité.')
+@section('twitter_title', $seoPageTitle ? $seoPageTitle . ' | Manu Potvin' : 'Portes de garage à Hannut et Waremme')
+@section('twitter_description', $seoMetaDescription ?? 'Choisissez des portes de garage esthétiques et fiables, installées par nos experts à Hannut, Waremme et Jodoigne.')
 @section('twitter_image', asset('assets/images/custom/default/portes-de-garage/porte_garage_main_2.jpeg'))
 
 @section('content')
@@ -33,7 +34,7 @@
                     <div class="col-12">
                         <div class="banner-three-inner banner-four-inner banner-five-inner">
                             <div class="banner-title">
-                                <span class="subtitle-banner"><strong>DES PORTES DE GARAGE </strong> ADAPTÉES À VOS BESOINS</span>
+                                <span class="subtitle-banner"><strong>INSTALLATION DE PORTES DE GARAGE À {{ $seoLocation ?? 'HANNUT ET WAREMME' }}</strong></span>
                                 <!-- type headline start-->
                                 <h1 class="title">
                                     Optimisez votre
@@ -47,12 +48,12 @@
                                         <span>sécurité</span><br>
                                     </div>
                                     avec nos
-                                    <br> portes de garage...
+                                    <br> portes de garage à {{ $seoLocation ?? 'Hannut' }}
                                 </h1>
                             </div>
                             <p class="disc" style="color: var(--color-primary-alta)">
-                                Offrez à votre garage une porte performante, sécurisée et esthétique,<br>
-                                conçue pour répondre à vos exigences et attentes
+                                Basés à Hannut, nous intervenons également à Waremme, Jodoigne et dans toute la province de Liège<br>
+                                pour vous offrir des portes de garage performantes, sécurisées et esthétiques
                             </p>
                             <div class="button-group">
                                 <a href="{{ route('contactPage') }}" class="rts-btn btn-primary-3 btn-primary-4">Devis gratuit</a>
@@ -73,21 +74,21 @@
                     <div class="rts-business-solution-right">
                         <div class="title-area">
                             <span class="sub">
-                                More About Us
+                                Nos services à {{ $seoLocation ?? 'Hannut et Waremme' }}
                             </span>
                             <h2 class="title">
-                                Voici votre solution parfaite pour portes de garage
+                                Votre solution parfaite pour portes de garage
                             </h2>
                         </div>
                         <div class="content-area">
                             <p class="disc">
-                                Nos portes de garage combinent sécurité, design et performance. Que ce soit pour votre maison ou votre entreprise, nous avons la solution idéale pour vous.
+                                Nos portes de garage combinent sécurité, design et performance. Que ce soit pour votre maison à Hannut ou votre entreprise à Waremme, nos experts vous proposent la solution idéale adaptée à vos besoins spécifiques.
                             </p>
                             <!-- single business solution -->
                             <div class="single-business-solution-2">
                                 <div class="content">
                                     <h6 class="title">
-                                        Avec plus de 20 ans d'expérience, nous proposons des portes de garage robustes, esthétiques et adaptées à tous vos besoins.
+                                        Avec plus de 20 ans d'expérience dans la région de Hannut et Waremme, nous installons des portes de garage robustes, esthétiques et parfaitement adaptées à votre habitation.
                                     </h6>
                                 </div>
                             </div>
@@ -99,7 +100,7 @@
                     <!-- business solution left -->
                     <div class="rts-business-solution-left">
                         <div class="thumbnail">
-                            <img src="{{ asset('assets/images/custom/default/portes-de-garage/porte_garage_main_2.jpeg') }}" alt="">
+                            <img src="{{ asset('assets/images/custom/default/portes-de-garage/porte_garage_main_2.jpeg') }}" alt="Installation de porte de garage à {{ $seoLocation ?? 'Hannut' }} par Manu Potvin">
                         </div>
                     </div>
                     <!-- business solution left End -->
