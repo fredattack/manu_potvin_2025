@@ -9,7 +9,7 @@ use Spatie\Sitemap\Tags\Url;
 
 class GenerateSitemap extends Command
 {
-    protected $signature = 'sitemap:generate';
+    protected $signature = 'sitemap:generate {--domain=https://www.manupotvin.be}';
     protected $description = 'Générer le sitemap XML pour le site avec les pages SEO locales';
 
     // Pages produits principales
@@ -24,16 +24,19 @@ class GenerateSitemap extends Command
 
     public function handle()
     {
+        // Récupérer le domaine depuis l'option ou utiliser la valeur par défaut
+        $domain = $this->option('domain');
+        
         $sitemap = Sitemap::create();
         
         // Ajouter les pages principales
-        $sitemap->add(Url::create('/')->setPriority(1.0)->setChangeFrequency('monthly'));
-        $sitemap->add(Url::create('/contact')->setPriority(0.8)->setChangeFrequency('monthly'));
+        $sitemap->add(Url::create($domain)->setPriority(1.0)->setChangeFrequency('monthly'));
+        $sitemap->add(Url::create($domain . '/contact')->setPriority(0.8)->setChangeFrequency('monthly'));
         
         // Ajouter les pages produits principales
         foreach ($this->productPages as $url => $title) {
             $sitemap->add(
-                Url::create($url)
+                Url::create($domain . $url)
                     ->setPriority(0.9)
                     ->setChangeFrequency('monthly')
             );
@@ -46,7 +49,7 @@ class GenerateSitemap extends Command
         foreach ($serviceAreas as $area) {
             foreach ($this->productPages as $url => $title) {
                 // Créer une URL SEO localisée (ex: /products/pergolas/hannut)
-                $localUrl = $url . '/' . $this->slugify($area->name);
+                $localUrl = $domain . $url . '/' . $this->slugify($area->name);
                 
                 $sitemap->add(
                     Url::create($localUrl)
@@ -59,7 +62,7 @@ class GenerateSitemap extends Command
         // Générer le fichier sitemap.xml
         $sitemap->writeToFile(public_path('sitemap.xml'));
         
-        $this->info('Sitemap généré avec succès, incluant ' . count($serviceAreas) * count($this->productPages) . ' pages SEO locales!');
+        $this->info('Sitemap généré avec succès pour le domaine ' . $domain . ', incluant ' . count($serviceAreas) * count($this->productPages) . ' pages SEO locales!');
     }
     
     /**
