@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Enums\Categories;
 use App\Models\CustomerData;
 use App\Models\Realisation;
+use App\Models\ServiceArea;
 use App\Services\SeoService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Request as RequestFacade;
@@ -53,9 +54,16 @@ class PageController extends Controller
         // Get SEO metadata for the page
         $pageType = $this->mapTypeToPageType($type);
         $metaKeywords = $this->seoService->getMetaKeywords($pageType, $location);
-        $metaDescription = $this->seoService->getMetaDescription($pageType, $location);
-        $pageTitle = $this->seoService->getPageTitle($pageType, $location);
+        $metaDescription = $this->seoService->getMetaDescription($pageType, $subType, $location);
+        $pageTitle = $this->seoService->getPageTitle($pageType, $subType, $location);
 
+        $view  = 'Pages.portes-fenetres-chassis.orp-jauche';
+        $result = Str::afterLast($view, '.');
+
+        $locations = ServiceArea::pluck('name')->map(fn($name) => strtolower($name));
+        if(in_array($result, $locations->toArray())){
+            $view = str_replace('.'.$result, '', $view);
+        }
         return view($view, [
             "customerData" => CustomerData::first(),
             "modelData" => Realisation::with(['media'])->get(),

@@ -3,8 +3,9 @@
 @section('title')
     {{ $seoPageTitle ?? 'Expert en châssis, portes et fenêtres à Hannut et Waremme' }}
 @endsection
+
 @section('location_title', $seoLocation ?? 'Waremme, Hannut et environs')
-@section('meta_description', $seoMetaDescription ?? 'Spécialiste en installation et remplacement de châssis de qualité en aluminium et PVC à Hannut, Waremme et Jodoigne. Solutions sur mesure pour une isolation optimale.')
+@section('meta_description', $seoMetaDescription ?? $pageTitle .  '| Spécialiste en installation et remplacement de châssis de qualité en aluminium et PVC à Hannut, Waremme et Jodoigne. Solutions sur mesure pour une isolation optimale.')
 @section('meta_keywords', $seoMetaKeywords ?? 'châssis aluminium Hannut, châssis PVC Waremme, remplacement fenêtres Jodoigne, installation portes Liège')
 @section('geo_placename', $seoLocation ?? 'Waremme')
 @section('og_title', $seoPageTitle ? $seoPageTitle . ' | Manu Potvin' : 'Expert en châssis aluminium et PVC à Hannut et Waremme')
@@ -228,10 +229,10 @@
         </div>
     </div>
     <!-- end service details area -->
-    
+
     <!-- Section des liens SEO locaux -->
     <x-local-seo-links :pageType="'chassis'" :currentLocation="$seoLocation ?? null" />
-    
+
     @include('components.footer')
     <!-- End service details area -->
 @endsection

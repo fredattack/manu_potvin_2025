@@ -18,6 +18,44 @@ Découvrez notre réalisation "{{$realisation->title}}" à {{$realisation->place
 @section('content')
 @include('components.header')
 
+<!-- Schema.org structured data for Article -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{$realisation->title}}",
+  "description": "{{$realisation->description}}",
+  "image": "{{$realisation->image_url}}",
+  "datePublished": "{{$realisation->created_at->toIso8601String()}}",
+  "dateModified": "{{$realisation->updated_at->toIso8601String()}}",
+  "author": {
+    "@type": "Organization",
+    "name": "Manu Potvin",
+    "url": "https://www.manupotvin.be"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Manu Potvin",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ asset('assets/images/custom/logo/logo_full.png') }}"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ url()->current() }}"
+  },
+  "locationCreated": {
+    "@type": "Place",
+    "name": "{{$realisation->place}}"
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "{{App\Enums\Categories::getCategoryLabels($realisation->category)}}"
+  }
+}
+</script>
+
 <!-- Breadcrumb section -->
 <div class="breadcrumb-area">
     <div class="container">

@@ -3,7 +3,7 @@
         <div class="row g-5">
             <div class="col-xl-3 col-lg-6">
                 <div class="footer-three-single-wized left">
-                    <a href="index" class="logo_footer">
+                    <a href="{{ route('home') }}" class="logo_footer">
                         <img src="{{ asset('assets/images/custom/logo/logo_full.png') }}" alt="Logo-image">
                     </a>
                     <p class="disc">N’attendez plus ! Contactez-nous dès aujourd’hui pour donner vie à vos projets et bénéficier de solutions sur mesure parfaitement adaptées à vos besoins.</p>
@@ -101,10 +101,10 @@
                 </div>
             </div>
             <!-- footer three mid area ENd -->
-            
+
             <!-- Intégration des liens SEO locaux -->
             @include('components.footer-seo-links')
-            
+
         </div>
     </div>
     <div class="copyright-area ptb--20">
