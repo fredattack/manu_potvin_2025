@@ -23,13 +23,55 @@
 <meta name="twitter:title" content="@yield('twitter_title', 'Titre par défaut pour Twitter')">
 <meta name="twitter:description" content="@yield('twitter_description', 'Description par défaut pour Twitter')">
 <meta name="twitter:image" content="@yield('twitter_image', asset('images/default-social.jpg'))">
-<meta name="twitter:site" content="@VotreCompteTwitter">
-<meta name="twitter:creator" content="@VotreCompteTwitter">
+<meta name="twitter:site" content="@yield('twitter_site', '@ManuPotvin')">
+<meta name="twitter:creator" content="@yield('twitter_creator', '@ManuPotvin')">
 
 <!-- Autres meta tags -->
 <link rel="canonical" href="{{ url()->current() }}">
 <meta name="google-site-verification" content="c5hfFXSFb7nsZGJVL4r4-ELtDr4zzQbnZIdQnrJdeNc">
 
+@isset($customerData)
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "name": "{{ $customerData->name }}",
+    "url": "{{ url('/') }}",
+    "logo": "{{ asset('assets/images/custom/logo/logo_full.png') }}",
+    "image": "{{ asset('assets/images/custom/logo/logo_full.png') }}",
+    "description": "Spécialiste en installation et remplacement de châssis, portes, fenêtres et pergolas à Waremme et environs.",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "{!! strip_tags($customerData->address) !!}",
+        "addressLocality": "Waremme",
+        "addressRegion": "Liège",
+        "postalCode": "4300",
+        "addressCountry": "BE"
+    },
+    @if($customerData->phone)
+    "telephone": "{{ $customerData->phone }}",
+    @endif
+    "email": "{{ $customerData->email }}",
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 50.6951,
+        "longitude": 5.2579
+    },
+    "areaServed": [
+        {"@type": "City", "name": "Waremme"},
+        {"@type": "City", "name": "Hannut"},
+        {"@type": "City", "name": "Jodoigne"},
+        {"@type": "City", "name": "Orp-Jauche"},
+        {"@type": "City", "name": "Braives"},
+        {"@type": "City", "name": "Hélécine"}
+    ],
+    "sameAs": [
+        "https://www.facebook.com/PotvinManu/"
+    ],
+    "priceRange": "€€"
+}
+</script>
+@endisset
 
 <title>Manu Potvin - @yield('title') | @yield('location_title', 'Waremme et environs')</title>
 <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/images/custom/logo/favicon_manu.png') }}">
