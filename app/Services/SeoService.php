@@ -116,18 +116,13 @@ class SeoService
             $baseDescription = $descriptions[$pageType]['base'] ?? $descriptions['home']['base'];
         }
 
-        // Add unique identifier based on URL path to ensure uniqueness
-        $urlPath = request()->path();
-        $uniqueId = substr(md5($urlPath), 0, 5);
-
-        // Add location-specific content if available
         if ($location) {
-            // Get location-specific details
             $locationDetails = $this->getLocationSpecificDetails($location);
-            return $baseDescription . ' à ' . $location . '. ' . $locationDetails . ' Devis gratuit et service de qualité. #' . $uniqueId;
+
+            return "{$baseDescription} à {$location}. {$locationDetails} Devis gratuit et service de qualité.";
         }
 
-        return $baseDescription . '. Intervention dans toute la région. Devis gratuit et service personnalisé. #' . $uniqueId;
+        return "{$baseDescription}. Intervention dans toute la région. Devis gratuit et service personnalisé.";
     }
 
     /**
@@ -199,14 +194,9 @@ class SeoService
             $baseTitle .= ' à ' . $location;
         }
 
-        // Add company name for branding and uniqueness
         $baseTitle .= ' | Manu Potvin';
 
-        // Add a unique identifier based on URL path for absolute uniqueness
-        $urlPath = request()->path();
-        $uniqueId = substr(md5($urlPath), 0, 3);
-
-        return $baseTitle . ' #' . $uniqueId;
+        return $baseTitle;
     }
 
     /**
