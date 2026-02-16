@@ -57,7 +57,6 @@ class PageController extends Controller
         $metaDescription = $this->seoService->getMetaDescription($pageType, $subType, $location);
         $pageTitle = $this->seoService->getPageTitle($pageType, $subType, $location);
 
-        $view  = 'Pages.portes-fenetres-chassis.orp-jauche';
         $result = Str::afterLast($view, '.');
 
         $locations = ServiceArea::pluck('name')->map(fn($name) => strtolower($name));
