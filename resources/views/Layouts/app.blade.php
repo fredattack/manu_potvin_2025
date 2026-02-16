@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr-BE">
 
 <head>
     <meta name="csrf-token" content="{{ csrf_token() }}">
