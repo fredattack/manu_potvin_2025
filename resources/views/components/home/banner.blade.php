@@ -7,13 +7,15 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="banner-three-inner" >
-                                    <span class="subtitle-banner">Nous construisons</span>
                                     <!-- type headline start-->
-                                    <h1 class="title cd-headline clip is-full-width">
-                                        Jusqu'au bout de vos rêves
+                                    <h1 style="margin: 0; font-size: inherit; font-weight: inherit;">
+                                        <span class="subtitle-banner">Expert en châssis et menuiserie à Hannut</span>
+                                        <span class="title cd-headline clip is-full-width">
+                                            Jusqu'au bout de vos rêves
+                                        </span>
                                     </h1>
                                     <p class="disc">
-                                        Parce que chaque détail compte, jusqu’à la perfection.
+                                        Parce que chaque détail compte, jusqu'à la perfection.
                                     </p>
 {{--                                    @include('components.cta_home')--}}
                                 </div>
@@ -30,9 +32,9 @@
                                 <div class="banner-three-inner">
                                     <span class="subtitle-banner">Des portes qui protègent.</span>
                                     <!-- type headline start-->
-                                    <h1 class="title cd-headline clip is-full-width">
+                                    <h2 class="title cd-headline clip is-full-width">
                                         Des designs qui inspirent.
-                                    </h1>
+                                    </h2>
                                     <p class="disc">
                                         Des ouvertures où sécurité et style se rencontrent.
                                     </p>
@@ -51,9 +53,9 @@
                                 <div class="banner-three-inner">
                                     <span class="subtitle-banner">Illuminez vos espaces.</span>
                                     <!-- type headline start-->
-                                    <h1 class="title cd-headline clip is-full-width">
+                                    <h2 class="title cd-headline clip is-full-width">
                                         Sublimez votre quotidien.
-                                    </h1>
+                                    </h2>
                                     <p class="disc">
                                         Des solutions lumineuses et élégantes pour votre confort.
                                     </p>

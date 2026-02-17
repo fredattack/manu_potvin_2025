@@ -29,8 +29,7 @@
                     </div>
                     <div class="inner-about-three">
                         <p class="disc">
-                            À la recherche de châssis, portes en PVC ou aluminium, vitrages, portes de garage, volets ou pergolas de qualité&nbsp;?
-                            Nous sommes spécialisés dans le remplacement et la réparation de ces installations pour améliorer le confort et l'esthétique de votre maison.
+                            Manu Potvin est une entreprise spécialisée en menuiserie extérieure basée à Hannut, en province de Liège (Belgique). Nous installons et remplaçons des châssis en PVC et aluminium, des portes, des fenêtres, des portes de garage, des pergolas et des moustiquaires. Nous intervenons à Hannut, Waremme, Jodoigne, Braives, Orp-Jauche et Hélécine.
                         </p>
                         <!-- start -->
                         <div class="row">

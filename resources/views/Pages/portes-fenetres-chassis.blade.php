@@ -21,6 +21,7 @@
     <x-breadcrump
             title="Installation de châssis, portes et fenêtres à {{ $seoLocation ?? 'Hannut et Waremme' }}"
             breadcrumbPath="Portes, Fenêtres et chassis"
+            headingTag="h2"
     />
 
     <!-- start service details area -->
@@ -106,12 +107,7 @@
                     <div class="service-detials-step-2 mt--40">
                         <h4 class="title">Nos gammes de châssis</h4>
                         <p class="disc mb--25">
-
-                        </p>
-                        <p class="disc">
-                            Phosfluorescently maintain wireless scenarios after intermandated applications. Conveniently
-                            predominate misslat revolutionary quality vectors through future-proof manufactured
-                            products.
+                            Nous proposons deux gammes de châssis adaptées à chaque projet : le PVC, reconnu pour son excellent rapport qualité-prix et ses performances isolantes, et l'aluminium, prisé pour ses lignes fines et sa robustesse. Chaque gamme est disponible dans un large choix de coloris et de configurations pour s'adapter à votre habitation.
                         </p>
                         <!-- stem-area start -->
                         <div class="row  mb--40 g-5 mb_md--20 mb_sm--20 single-service-step">

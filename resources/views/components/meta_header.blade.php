@@ -35,36 +35,57 @@
 {
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
+    "@id": "{{ url('/') }}/#organization",
     "name": "{{ $customerData->name }}",
     "url": "{{ url('/') }}",
     "logo": "{{ asset('assets/images/custom/logo/logo_full.png') }}",
     "image": "{{ asset('assets/images/custom/logo/logo_full.png') }}",
-    "description": "Spécialiste en installation et remplacement de châssis, portes, fenêtres et pergolas à Waremme et environs.",
+    "description": "Spécialiste en installation et remplacement de châssis, portes, fenêtres et pergolas à Hannut et environs.",
     "address": {
         "@type": "PostalAddress",
         "streetAddress": "{!! strip_tags($customerData->address) !!}",
-        "addressLocality": "Waremme",
+        "addressLocality": "Hannut",
         "addressRegion": "Liège",
-        "postalCode": "4300",
+        "postalCode": "4280",
         "addressCountry": "BE"
     },
     @if($customerData->phone)
     "telephone": "{{ $customerData->phone }}",
     @endif
     "email": "{{ $customerData->email }}",
+    "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        @if($customerData->phone)
+        "telephone": "{{ $customerData->phone }}",
+        @endif
+        "email": "{{ $customerData->email }}",
+        "availableLanguage": ["fr", "nl"]
+    },
     "geo": {
         "@type": "GeoCoordinates",
-        "latitude": 50.6951,
-        "longitude": 5.2579
+        "latitude": 50.6693,
+        "longitude": 5.0788
     },
     "areaServed": [
-        {"@type": "City", "name": "Waremme"},
-        {"@type": "City", "name": "Hannut"},
-        {"@type": "City", "name": "Jodoigne"},
-        {"@type": "City", "name": "Orp-Jauche"},
-        {"@type": "City", "name": "Braives"},
-        {"@type": "City", "name": "Hélécine"}
+        {"@type": "City", "name": "Hannut", "sameAs": "https://www.wikidata.org/wiki/Q191664"},
+        {"@type": "City", "name": "Waremme", "sameAs": "https://www.wikidata.org/wiki/Q207466"},
+        {"@type": "City", "name": "Jodoigne", "sameAs": "https://www.wikidata.org/wiki/Q155129"},
+        {"@type": "City", "name": "Orp-Jauche", "sameAs": "https://www.wikidata.org/wiki/Q643285"},
+        {"@type": "City", "name": "Braives", "sameAs": "https://www.wikidata.org/wiki/Q776082"},
+        {"@type": "City", "name": "Hélécine", "sameAs": "https://www.wikidata.org/wiki/Q1027738"}
     ],
+    "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Services de menuiserie extérieure",
+        "itemListElement": [
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Installation et remplacement de châssis PVC"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Installation et remplacement de châssis aluminium"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Installation de portes et fenêtres"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Installation de portes de garage"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Installation de pergolas et moustiquaires"}}
+        ]
+    },
     "sameAs": [
         "https://www.facebook.com/PotvinManu/"
     ],

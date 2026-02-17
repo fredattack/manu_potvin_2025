@@ -24,9 +24,9 @@
                 <div class="col-12">
                     <div class="rts-contact-fluid rts-section-gap">
                         <div class="rts-title-area contact-fluid text-center mb--50">
-                            <p class="pre-title">
-                               Manu POTVIN
-                            </p>
+                            <h1 class="pre-title" style="font-size: inherit; font-weight: inherit;">
+                               Contactez Manu Potvin – Menuiserie extérieure à Hannut
+                            </h1>
                             <h2 class="title">Besoin d'aide ? Prenons contact ... </h2>
                         </div>
                         <div class="form-wrapper">

@@ -1,3 +1,9 @@
+{{-- nginx: activer Cache-Control pour les assets statiques sur le serveur
+location ~* \.(css|js|jpg|jpeg|png|webp|woff2|woff|ttf|svg|ico)$ {
+    expires 1y;
+    add_header Cache-Control "public, max-age=31536000, immutable";
+}
+--}}
 <!DOCTYPE html>
 <html lang="fr-BE">
 
