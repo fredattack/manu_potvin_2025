@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(php artisan view:cache:*)",
+      "Bash(php artisan view:clear:*)"
+    ]
+  }
+}
