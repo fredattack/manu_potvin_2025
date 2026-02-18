@@ -17,6 +17,11 @@
 @section('twitter_image', asset('assets/images/custom/default/chassis/fenetre_alu_first-.jpg'))
 
 @section('content')
+    @include('components.service-schema', [
+        'serviceName' => 'Installation de châssis aluminium',
+        'serviceType' => 'Installation de châssis en aluminium',
+        'description' => 'Installation et remplacement de châssis en aluminium à Hannut et Waremme. Design moderne aux lignes fines, robustesse exceptionnelle et idéal pour les grandes baies vitrées.',
+    ])
     @php
         $category = \App\Enums\Categories::CHASSIS->value;
     @endphp
@@ -201,6 +206,15 @@
         </div>
     </div>
     <!-- rts blog mlist area End -->
+
+    @include('components.faq-section', ['faqs' => [
+        ['question' => 'Quels sont les avantages des châssis en aluminium ?', 'answer' => 'Les châssis aluminium offrent un design moderne avec des lignes très fines maximisant la surface vitrée, une robustesse exceptionnelle, une longévité supérieure à 40 ans et une résistance parfaite aux intempéries. Ils sont idéaux pour les grandes baies vitrées et les projets architecturaux contemporains.'],
+        ['question' => 'Les châssis aluminium sont-ils plus chers que le PVC ?', 'answer' => 'Oui, les châssis aluminium représentent un investissement supérieur au PVC, généralement de 20 à 40% plus élevé. Cependant, leur longévité exceptionnelle, leur robustesse et leur esthétique moderne en font un excellent investissement à long terme, particulièrement pour les grandes ouvertures.'],
+        ['question' => 'Les châssis aluminium conviennent-ils pour de grandes baies vitrées ?', 'answer' => 'Absolument, c\'est même l\'un de leurs principaux atouts. Grâce à sa rigidité, l\'aluminium permet de réaliser de très grandes ouvertures avec des profils fins, maximisant ainsi l\'apport de lumière naturelle. C\'est le matériau de prédilection pour les baies vitrées coulissantes de grande dimension.'],
+        ['question' => 'Les châssis aluminium sont-ils bien isolants ?', 'answer' => 'Les châssis aluminium modernes intègrent une technologie de rupture de pont thermique qui leur confère d\'excellentes performances d\'isolation thermique, comparables au PVC. Cette technologie empêche le transfert de froid entre l\'extérieur et l\'intérieur du profilé.'],
+        ['question' => 'Quelles finitions sont disponibles pour l\'aluminium ?', 'answer' => 'Les châssis aluminium sont disponibles dans un très large choix de couleurs RAL, en finition mate, satinée ou brillante. Des finitions texturées imitant le bois sont également proposées. La peinture est appliquée par thermolaquage, garantissant une tenue exceptionnelle dans le temps.'],
+    ]])
+
     <!-- start footer area -->
     @include('components.footer')
     <!-- ENd footer Area -->

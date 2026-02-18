@@ -14,10 +14,18 @@
 @section('twitter_description', $seoMetaDescription ?? 'Choisissez des portes de garage esthétiques et fiables, installées par nos experts à Hannut, Waremme et Jodoigne.')
 @section('twitter_image', asset('assets/images/custom/default/portes-de-garage/porte_garage_main_2.jpeg'))
 
+@section('preload')
+<link rel="preload" as="image" href="{{ asset('assets/images/custom/default/portes-de-garage/porte_garage_main.jpeg') }}">
+@endsection
+
 @section('content')
+    @include('components.service-schema', [
+        'serviceName' => 'Installation de portes de garage',
+        'serviceType' => 'Installation et réparation de portes de garage',
+        'description' => 'Installation, réparation et motorisation de portes de garage à Hannut, Waremme et Jodoigne. Portes sectionnelles, basculantes et enroulables sur mesure pour votre sécurité et confort.',
+    ])
     @php
         $category = \App\Enums\Categories::PORTE_DE_GARAGE->value;
-
     @endphp
 
     @include('components.header')
@@ -249,6 +257,15 @@
     </div>
     <!-- business case End -->
 
+
+    @include('components.faq-section', ['faqs' => [
+        ['question' => 'Quels types de portes de garage installez-vous ?', 'answer' => 'Nous installons des portes de garage sectionnelles, basculantes, enroulables et latérales. Les portes sectionnelles sont les plus populaires car elles n\'empiètent ni sur l\'allée ni sur l\'espace intérieur du garage. Chaque type est disponible en plusieurs matériaux et finitions.'],
+        ['question' => 'Peut-on motoriser une porte de garage existante ?', 'answer' => 'Oui, dans la plupart des cas, il est possible d\'ajouter une motorisation à une porte de garage existante. Nous évaluons l\'état de votre porte et son mécanisme pour vous proposer la solution de motorisation la plus adaptée, avec télécommande et système de sécurité intégré.'],
+        ['question' => 'Une porte de garage motorisée est-elle bien isolante ?', 'answer' => 'Nos portes de garage sectionnelles sont constituées de panneaux à double paroi avec mousse polyuréthane isolante, offrant d\'excellentes performances thermiques (coefficient U jusqu\'à 1,0 W/m²K). Cela contribue à réduire les pertes de chaleur, surtout si votre garage communique avec votre habitation.'],
+        ['question' => 'Quelles sont les mesures de sécurité des portes motorisées ?', 'answer' => 'Nos portes motorisées intègrent plusieurs dispositifs de sécurité : détection d\'obstacles par cellules photoélectriques, système anti-chute, verrouillage automatique et déverrouillage manuel en cas de panne de courant. Ces équipements sont conformes aux normes européennes de sécurité.'],
+        ['question' => 'Quelles dimensions de portes de garage proposez-vous ?', 'answer' => 'Nous proposons des portes de garage en dimensions standard (largeur de 2,40 m à 3 m, hauteur de 2 m à 2,50 m) ainsi que des fabrications sur-mesure pour s\'adapter à toutes les configurations de garage, y compris les ouvertures non standard.'],
+        ['question' => 'Quel est le délai d\'installation d\'une porte de garage ?', 'answer' => 'L\'installation d\'une porte de garage standard prend généralement une demi-journée à une journée complète. Le délai de livraison après commande est de 4 à 8 semaines selon le modèle et les options choisies.'],
+    ]])
 
     <!-- Section des liens SEO locaux -->
     <x-local-seo-links :pageType="'portes'" :currentLocation="$seoLocation ?? null" />

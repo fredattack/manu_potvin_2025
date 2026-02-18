@@ -16,6 +16,11 @@
 @section('twitter_image', asset('assets/images/custom/default/chassis/fenetre_alu_first-.jpg'))
 
 @section('content')
+    @include('components.service-schema', [
+        'serviceName' => 'Installation et remplacement de châssis, portes et fenêtres',
+        'serviceType' => 'Installation de châssis PVC et aluminium',
+        'description' => 'Spécialiste en installation et remplacement de châssis en PVC et aluminium, portes et fenêtres à Hannut, Waremme et Jodoigne. Solutions sur mesure pour une isolation thermique et acoustique optimale.',
+    ])
     @include('components.header')
     <!-- start breadcrumb area -->
     <x-breadcrump
@@ -225,6 +230,15 @@
         </div>
     </div>
     <!-- end service details area -->
+
+    @include('components.faq-section', ['faqs' => [
+        ['question' => 'Quel est le prix moyen pour remplacer des châssis à Hannut ?', 'answer' => 'Le prix de remplacement de châssis varie selon le matériau (PVC ou aluminium), les dimensions et le type d\'ouverture. En moyenne, comptez entre 300 et 800 euros par châssis pose comprise. Nous proposons des devis gratuits et personnalisés pour chaque projet à Hannut et environs.'],
+        ['question' => 'Combien de temps dure l\'installation de nouveaux châssis ?', 'answer' => 'L\'installation de châssis prend généralement entre 1 et 3 jours selon le nombre de fenêtres à remplacer et la complexité du chantier. Nous veillons à minimiser les désagréments et à laisser votre habitation propre après l\'intervention.'],
+        ['question' => 'Quelles sont les différences entre châssis PVC et aluminium ?', 'answer' => 'Les châssis PVC offrent un excellent rapport qualité-prix avec une isolation thermique performante et un entretien minimal. Les châssis aluminium se distinguent par leur design moderne aux lignes fines, leur robustesse exceptionnelle et leur capacité à réaliser de grandes ouvertures vitrées. Le choix dépend de vos priorités esthétiques et budgétaires.'],
+        ['question' => 'Les nouveaux châssis améliorent-ils vraiment l\'isolation de ma maison ?', 'answer' => 'Oui, le remplacement de châssis anciens par des modèles modernes en PVC ou aluminium à rupture de pont thermique peut réduire les pertes de chaleur de 10 à 15%. Vous constatez une amélioration immédiate du confort thermique et acoustique, ainsi qu\'une réduction de vos factures de chauffage.'],
+        ['question' => 'Existe-t-il des primes en Wallonie pour le remplacement de châssis ?', 'answer' => 'Oui, la Région wallonne propose des primes à la rénovation énergétique qui couvrent partiellement le remplacement de châssis. Le montant dépend de vos revenus et des performances énergétiques des nouveaux châssis. Nous pouvons vous orienter dans les démarches administratives pour obtenir ces aides.'],
+        ['question' => 'Intervenez-vous dans ma commune ?', 'answer' => 'Nous intervenons dans un large rayon autour de Hannut, couvrant Waremme, Jodoigne, Orp-Jauche, Braives, Hélécine et les communes voisines de la province de Liège et du Brabant wallon. Contactez-nous pour vérifier que nous couvrons votre localité.'],
+    ]])
 
     <!-- Section des liens SEO locaux -->
     <x-local-seo-links :pageType="'chassis'" :currentLocation="$seoLocation ?? null" />

@@ -15,8 +15,8 @@
     <script defer src="https://www.google.com/recaptcha/api.js?render={{ config('app.recaptcha.site_key') }}"></script>
 
     @include('components.meta_header')
+    @yield('preload')
     @yield('css')
-
 
 </head>
 

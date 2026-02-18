@@ -18,6 +18,11 @@
 @section('twitter_image', asset('assets/images/custom/default/chassis/chassis_alu_main.jpeg'))
 
 @section('content')
+    @include('components.service-schema', [
+        'serviceName' => 'Installation de châssis PVC',
+        'serviceType' => 'Installation de châssis en PVC',
+        'description' => 'Installation et remplacement de châssis en PVC à Hannut et Waremme. Excellent rapport qualité-prix, isolation thermique performante et entretien minimal pour votre habitation.',
+    ])
     @php
         $category = \App\Enums\Categories::CHASSIS->value;
     @endphp
@@ -213,6 +218,15 @@
         </div>
     </div>
     <!-- rts blog mlist area End -->
+
+    @include('components.faq-section', ['faqs' => [
+        ['question' => 'Quels sont les avantages des châssis PVC par rapport à d\'autres matériaux ?', 'answer' => 'Les châssis PVC offrent un excellent rapport qualité-prix, une isolation thermique et acoustique performante, un entretien très facile (un simple nettoyage à l\'eau savonneuse suffit) et une grande durabilité. Ils résistent naturellement à la corrosion et aux intempéries.'],
+        ['question' => 'Quelle est la durée de vie d\'un châssis en PVC ?', 'answer' => 'Un châssis en PVC de qualité a une durée de vie de 30 à 50 ans. Nos châssis sont fabriqués avec des matériaux de première qualité qui conservent leur couleur et leurs performances au fil des années, sans déformation ni jaunissement.'],
+        ['question' => 'Comment entretenir des châssis en PVC ?', 'answer' => 'L\'entretien des châssis PVC est très simple : un nettoyage régulier à l\'eau tiède et au savon doux suffit pour maintenir leur éclat. Évitez les produits abrasifs. Pensez à lubrifier les charnières et joints une fois par an pour garantir un fonctionnement optimal.'],
+        ['question' => 'Quelles couleurs sont disponibles pour les châssis PVC ?', 'answer' => 'Les châssis PVC sont disponibles dans une large palette de couleurs et de finitions, y compris des imitations bois très réalistes. Blanc, gris anthracite, crème, noir et de nombreuses teintes RAL sont proposées pour s\'adapter à tous les styles architecturaux.'],
+        ['question' => 'Les châssis PVC sont-ils recyclables ?', 'answer' => 'Oui, le PVC est un matériau 100% recyclable. En fin de vie, les châssis PVC peuvent être broyés et transformés en nouveaux produits. C\'est un choix écoresponsable qui contribue à réduire l\'empreinte environnementale de votre habitation.'],
+    ]])
+
     <!-- start footer area -->
     @include('components.footer')
     <!-- ENd footer Area -->

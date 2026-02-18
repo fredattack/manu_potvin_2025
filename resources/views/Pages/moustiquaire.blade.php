@@ -13,7 +13,16 @@
 @section('twitter_description', $seoMetaDescription ?? 'Protégez-vous des insectes tout en profitant de la lumière naturelle avec nos moustiquaires installées par nos experts à Hannut et Waremme.')
 @section('twitter_image', asset('/assets/images/custom/default/moustiquaire/moustiquaire_main.jpeg'))
 
+@section('preload')
+<link rel="preload" as="image" href="{{ asset('assets/images/custom/default/moustiquaire/moustiquaire_main.jpeg') }}">
+@endsection
+
 @section('content')
+    @include('components.service-schema', [
+        'serviceName' => 'Fabrication et installation de moustiquaires sur-mesure',
+        'serviceType' => 'Installation de moustiquaires',
+        'description' => 'Fabrication et installation de moustiquaires sur-mesure à Hannut, Waremme et Jodoigne. Moustiquaires fixes, enroulables et coulissantes pour protéger votre intérieur des insectes.',
+    ])
     @php
         $category = \App\Enums\Categories::MOUSTIQUAIRES->value;
     @endphp
@@ -318,6 +327,14 @@
 
 
     <div id="anywhere-home" class=""></div>
+
+    @include('components.faq-section', ['faqs' => [
+        ['question' => 'Quels types de moustiquaires proposez-vous ?', 'answer' => 'Nous proposons trois types de moustiquaires : les moustiquaires fixes (économiques, pour fenêtres standards), les moustiquaires enroulables (pratiques, se rétractent quand non utilisées) et les moustiquaires coulissantes (idéales pour baies vitrées et portes-fenêtres). Chaque type est disponible en différentes couleurs de cadre.'],
+        ['question' => 'Comment prendre les mesures pour une moustiquaire sur-mesure ?', 'answer' => 'Nous effectuons la prise de mesures gratuitement à votre domicile. Nos techniciens mesurent précisément l\'ouverture de vos fenêtres ou portes pour garantir un ajustement parfait. Il est important de mesurer la largeur et la hauteur à plusieurs endroits, car les ouvertures ne sont pas toujours parfaitement droites.'],
+        ['question' => 'Comment entretenir ses moustiquaires ?', 'answer' => 'L\'entretien est simple : nettoyez la toile avec une éponge douce et de l\'eau savonneuse, puis rincez à l\'eau claire. Pour les cadres en aluminium, un chiffon humide suffit. Évitez les produits abrasifs. Un entretien une à deux fois par an permet de conserver une toile en parfait état.'],
+        ['question' => 'Quelle est la durée de vie d\'une moustiquaire ?', 'answer' => 'Une moustiquaire de qualité a une durée de vie de 10 à 15 ans en utilisation normale. La toile en fibre de verre que nous utilisons est résistante aux UV et ne se déforme pas avec le temps. Les cadres en aluminium sont inaltérables et garantissent une longévité optimale.'],
+        ['question' => 'Les moustiquaires sont-elles compatibles avec tous les types de fenêtres ?', 'answer' => 'Oui, nos moustiquaires sur-mesure s\'adaptent à tous les types de fenêtres et portes : oscillo-battantes, coulissantes, à la française, velux, portes-fenêtres et baies vitrées. Nous trouvons une solution adaptée quelle que soit la configuration de vos ouvertures.'],
+    ]])
 
     <!-- Section des liens SEO locaux -->
     <x-local-seo-links :pageType="'fenetres'" :currentLocation="$seoLocation ?? null" />

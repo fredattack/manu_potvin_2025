@@ -17,8 +17,16 @@
 @section('twitter_description', $seoMetaDescription ?? 'Explorez nos pergolas modernes installées par nos experts à Hannut, Waremme et Jodoigne pour des espaces extérieurs élégants et fonctionnels.')
 @section('twitter_image', asset('/assets/images/custom/default/pergolas/pergolas_main2.jpg'))
 
+@section('preload')
+<link rel="preload" as="image" href="{{ asset('assets/images/custom/default/pergolas/pergolas_main2.jpg') }}">
+@endsection
 
 @section('content')
+    @include('components.service-schema', [
+        'serviceName' => 'Installation de pergolas sur-mesure',
+        'serviceType' => 'Installation de pergolas',
+        'description' => 'Conception et installation de pergolas sur-mesure à Hannut, Waremme et Jodoigne. Pergolas bioclimatiques, à toiture fixe ou adossées en aluminium pour sublimer vos espaces extérieurs.',
+    ])
     @php
         $category = \App\Enums\Categories::PERGOLAS->value;
     @endphp
@@ -388,6 +396,15 @@
     <!-- customers testimonials end -->
 
 </div>
+
+@include('components.faq-section', ['faqs' => [
+    ['question' => 'Quels types de pergolas proposez-vous ?', 'answer' => 'Nous proposons des pergolas à toiture fixe, des pergolas bioclimatiques à lames orientables et des pergolas adossées ou autoportées. Chaque modèle est personnalisable en termes de dimensions, de coloris et d\'options (éclairage LED, stores intégrés, chauffage).'],
+    ['question' => 'Qu\'est-ce qu\'une pergola bioclimatique ?', 'answer' => 'Une pergola bioclimatique est équipée de lames orientables motorisées qui permettent de réguler la ventilation et l\'ensoleillement. En position fermée, elles protègent de la pluie. En position ouverte, elles laissent passer l\'air et la lumière. C\'est la solution idéale pour profiter de votre terrasse en toute saison.'],
+    ['question' => 'Faut-il un permis d\'urbanisme pour installer une pergola ?', 'answer' => 'En Wallonie, une pergola adossée de moins de 40 m² ne nécessite généralement pas de permis d\'urbanisme si elle respecte certaines conditions (recul, hauteur). Cependant, les règles varient selon les communes. Nous vous conseillons de vérifier auprès de votre administration communale avant tout projet.'],
+    ['question' => 'Quels matériaux utilisez-vous pour les pergolas ?', 'answer' => 'Nos pergolas sont principalement en aluminium thermolaqué, un matériau léger, résistant à la corrosion et disponible dans de nombreux coloris RAL. L\'aluminium ne nécessite aucun entretien et offre une longévité exceptionnelle face aux conditions climatiques belges.'],
+    ['question' => 'Comment entretenir une pergola en aluminium ?', 'answer' => 'L\'entretien d\'une pergola en aluminium est minimal : un nettoyage à l\'eau claire et au savon doux une à deux fois par an suffit. Pour les lames orientables, vérifiez le bon fonctionnement du mécanisme et nettoyez les gouttières intégrées pour assurer un bon écoulement des eaux de pluie.'],
+    ['question' => 'Quel est le délai d\'installation d\'une pergola ?', 'answer' => 'Après validation de votre commande, le délai de fabrication est de 6 à 10 semaines. L\'installation sur site prend généralement 1 à 2 jours selon le modèle et la complexité du chantier. Nous assurons une pose propre et professionnelle.'],
+]])
 
 <!-- Section des liens SEO locaux -->
 <x-local-seo-links :pageType="'pergolas'" :currentLocation="$seoLocation ?? null" />

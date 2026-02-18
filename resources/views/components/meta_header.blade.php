@@ -96,6 +96,13 @@
 
 <title>Manu Potvin - @yield('title') | @yield('location_title', 'Waremme et environs')</title>
 <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/images/custom/logo/favicon_manu.png') }}">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<link rel="preconnect" href="https://www.google.com">
+<link rel="preconnect" href="https://s3-us-west-2.amazonaws.com">
+
 <link rel="stylesheet" href="{{ asset('assets/css/plugins/swiper.min.css') }}">
 <link rel="stylesheet" href="{{ asset('assets/css/plugins/fontawesome-5.css') }}">
 <link rel="stylesheet" href="{{ asset('assets/css/plugins/animate.min.css') }}">

@@ -16,7 +16,6 @@
 
 <!-- scripts start form hear -->
 <script src="{{ asset('assets/js/vendor/jquery.min.js') }}"></script>
-<script src="{{ asset('assets/js/vendor/jqueryui.js') }}"></script>
 <script src="{{ asset('assets/js/vendor/waypoint.js') }}"></script>
 <script src="{{ asset('assets/js/plugins/swiper.js') }}"></script>
 <script src="{{ asset('assets/js/plugins/counterup.js') }}"></script>

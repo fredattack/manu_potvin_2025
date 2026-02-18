@@ -36,6 +36,7 @@ class GenerateSitemap extends Command
         $sitemap->add(Url::create($domain . '/products/realisations')->setPriority(0.8)->setChangeFrequency('weekly')->setLastModificationDate(now()));
         $sitemap->add(Url::create($domain . '/politique-de-confidentialite')->setPriority(0.3)->setChangeFrequency('yearly')->setLastModificationDate(now()));
         $sitemap->add(Url::create($domain . '/mentions-legales')->setPriority(0.3)->setChangeFrequency('yearly')->setLastModificationDate(now()));
+        $sitemap->add(Url::create($domain . '/a-propos')->setPriority(0.7)->setChangeFrequency('monthly')->setLastModificationDate(now()));
 
         // Ajouter les pages produits principales
         foreach ($this->productPages as $url => $title) {
