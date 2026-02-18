@@ -6,9 +6,9 @@
 @section('meta_description', $article->meta_description ?? Str::limit($article->excerpt, 160))
 @section('og_title', ($article->meta_title ?? $article->title) . ' | Manu Potvin')
 @section('og_description', $article->meta_description ?? Str::limit($article->excerpt, 160))
-@if($article->featured_image)
-@section('og_image', asset('storage/' . $article->featured_image))
-@section('twitter_image', asset('storage/' . $article->featured_image))
+@if($article->hasMedia('featured_image'))
+@section('og_image', $article->getFirstMediaUrl('featured_image', 'webp') ?: $article->getFirstMediaUrl('featured_image'))
+@section('twitter_image', $article->getFirstMediaUrl('featured_image', 'webp') ?: $article->getFirstMediaUrl('featured_image'))
 @endif
 @section('twitter_title', ($article->meta_title ?? $article->title) . ' | Manu Potvin')
 @section('twitter_description', $article->meta_description ?? Str::limit($article->excerpt, 160))
@@ -28,7 +28,7 @@
         '@type' => 'Article',
         'headline' => $article->title,
         'description' => $article->meta_description ?? Str::limit($article->excerpt, 160),
-        'image' => $article->featured_image ? asset('storage/' . $article->featured_image) : null,
+        'image' => $article->hasMedia('featured_image') ? ($article->getFirstMediaUrl('featured_image', 'webp') ?: $article->getFirstMediaUrl('featured_image')) : null,
         'datePublished' => $article->published_at->toIso8601String(),
         'dateModified' => $article->updated_at->toIso8601String(),
         'author' => [
@@ -56,9 +56,9 @@
             <div class="row">
                 <div class="col-lg-10 mx-auto">
                     <div class="blog-single-post-listing details mb--0">
-                        @if($article->featured_image)
+                        @if($article->hasMedia('featured_image'))
                             <div class="thumbnail mb--30">
-                                <img src="{{ asset('storage/' . $article->featured_image) }}" alt="{{ $article->title }}">
+                                <img src="{{ $article->getFirstMediaUrl('featured_image', 'webp') ?: $article->getFirstMediaUrl('featured_image') }}" alt="{{ $article->title }}">
                             </div>
                         @endif
                         <div class="blog-listing-content">

@@ -10,6 +10,7 @@ class ArticleController extends Controller
     public function index()
     {
         $articles = Article::published()
+            ->with('media')
             ->orderByDesc('published_at')
             ->paginate(9);
 

@@ -32,10 +32,10 @@
                     @foreach($articles as $article)
                         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
                             <div class="blog-single-post-listing single-blog">
-                                @if($article->featured_image)
+                                @if($article->hasMedia('featured_image'))
                                     <div class="thumbnail">
                                         <a href="{{ route('blog.show', $article) }}">
-                                            <img src="{{ asset('storage/' . $article->featured_image) }}" alt="{{ $article->title }}" loading="lazy">
+                                            <img src="{{ $article->getFirstMediaUrl('featured_image', 'webp') ?: $article->getFirstMediaUrl('featured_image') }}" alt="{{ $article->title }}" loading="lazy">
                                         </a>
                                     </div>
                                 @endif

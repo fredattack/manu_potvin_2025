@@ -56,6 +56,19 @@ class Testimonial extends Model implements HasMedia
         $this->addMediaCollection('illustration')->withResponsiveImages()->singleFile();
     }
 
+    public function registerMediaConversions(?Media $media = null): void
+    {
+        $this->addMediaConversion('thumb')
+            ->width(300)
+            ->height(300)
+            ->withResponsiveImages();
+
+        $this->addMediaConversion('webp')
+            ->format('webp')
+            ->quality(80)
+            ->withResponsiveImages();
+    }
+
     public function image():Attribute
     {
         return Attribute::make(

@@ -85,11 +85,16 @@ class Realisation extends Model implements HasMedia
     }
 
 //
-    public function registerMediaConversions(Media $media = null): void
+    public function registerMediaConversions(?Media $media = null): void
     {
         $this->addMediaConversion('thumb')
             ->width(300)
             ->height(300)
+            ->withResponsiveImages();
+
+        $this->addMediaConversion('webp')
+            ->format('webp')
+            ->quality(80)
             ->withResponsiveImages();
     }
 

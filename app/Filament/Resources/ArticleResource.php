@@ -5,9 +5,11 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\ArticleResource\Pages;
 use App\Models\Article;
 use Filament\Forms;
+use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Columns\SpatieMediaLibraryImageColumn;
 use Filament\Tables\Table;
 use Illuminate\Support\Str;
 
@@ -53,10 +55,10 @@ class ArticleResource extends Resource
                             ->required()
                             ->columnSpan('full'),
 
-                        Forms\Components\FileUpload::make('featured_image')
+                        SpatieMediaLibraryFileUpload::make('featured_image')
                             ->label('Image mise en avant')
-                            ->image()
-                            ->directory('blog')
+                            ->collection('featured_image')
+                            ->responsiveImages()
                             ->columnSpan('full'),
 
                         Forms\Components\Grid::make()
@@ -94,8 +96,9 @@ class ArticleResource extends Resource
                     ->searchable()
                     ->toggleable(isToggledHiddenByDefault: true),
 
-                Tables\Columns\ImageColumn::make('featured_image')
+                SpatieMediaLibraryImageColumn::make('featured_image')
                     ->label('Image')
+                    ->collection('featured_image')
                     ->toggleable(),
 
                 Tables\Columns\TextColumn::make('published_at')
