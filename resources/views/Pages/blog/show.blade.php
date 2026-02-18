@@ -58,7 +58,7 @@
                     <div class="blog-single-post-listing details mb--0">
                         @if($article->hasMedia('featured_image'))
                             <div class="thumbnail mb--30">
-                                <img src="{{ $article->getFirstMediaUrl('featured_image', 'webp') ?: $article->getFirstMediaUrl('featured_image') }}" alt="{{ $article->title }}">
+                                <x-media-picture :model="$article" collection="featured_image" :alt="$article->title" loading="" />
                             </div>
                         @endif
                         <div class="blog-listing-content">

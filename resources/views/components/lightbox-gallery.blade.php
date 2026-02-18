@@ -1,9 +1,14 @@
 <div class="lightbox-gallery">
     <div class="gallery">
-@forelse ($images as $key => $imageUrl)
+@forelse ($images as $key => $image)
             <div class="col-lg-4 cursor-pointer">
                        <div class="thumbnail">
-    <img src="{{ $imageUrl }}" alt="Image {{ $key + 1 }}" onclick="openLightbox();showSlide({{ $key + 1 }});">
+    <picture>
+        @if(is_array($image) && ($image['webp'] ?? null))
+            <source srcset="{{ $image['webp'] }}" type="image/webp">
+        @endif
+        <img src="{{ is_array($image) ? $image['original'] : $image }}" alt="Image {{ $key + 1 }}" onclick="openLightbox();showSlide({{ $key + 1 }});">
+    </picture>
             </div>
     </div>
             @empty
@@ -14,9 +19,14 @@
     <div id="lightbox" class="lightbox">
         <span class="close" onclick="closeLightbox()">&times;</span>
         <div class="lightbox-content">
-            @foreach ($images as $key => $imageUrl)
+            @foreach ($images as $key => $image)
                 <div class="slide">
-                    <img src="{{ $imageUrl }}" alt="Image {{ $key + 1 }}">
+                    <picture>
+                        @if(is_array($image) && ($image['webp'] ?? null))
+                            <source srcset="{{ $image['webp'] }}" type="image/webp">
+                        @endif
+                        <img src="{{ is_array($image) ? $image['original'] : $image }}" alt="Image {{ $key + 1 }}">
+                    </picture>
                 </div>
             @endforeach
             @if(count($images) > 1)

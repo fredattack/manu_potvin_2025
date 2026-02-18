@@ -174,29 +174,35 @@ class Realisation extends Model implements HasMedia
     public function imageUrl(): Attribute
     {
         return Attribute::make(
-
             get: function() {
-                if ( $this->illustration ) {
-                    $args = $this->illustration;
-                    return $args?->getUrl();
+                if ($this->illustration) {
+                    $media = $this->illustration;
+
+                    if ($media->hasGeneratedConversion('webp')) {
+                        return $media->getUrl('webp');
+                    }
+
+                    return $media->getUrl();
                 }
+
                 return 'No Images';
             },
         );
-
     }
     public function imagesLightbox(): Attribute
     {
         return Attribute::make(
             get: function() {
-
                 if ($this->media) {
-                    return $this->media->map(fn(CustomMedia $media)=> $media->getUrl());
+                    return $this->media->map(fn(CustomMedia $media) => [
+                        'original' => $media->getUrl(),
+                        'webp' => $media->hasGeneratedConversion('webp') ? $media->getUrl('webp') : null,
+                    ]);
                 }
-               return [];
+
+                return [];
             },
         );
-
     }
 
 

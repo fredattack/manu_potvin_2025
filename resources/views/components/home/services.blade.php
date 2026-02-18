@@ -30,9 +30,6 @@
                                 <div class="service-one-inner-four">
                                     <div class="big-thumbnail-area">
                                         <a href="#" class="thumbnail">
-                                            @php
-                                                ray($service->image)
-                                            @endphp
                                             {!! $service->image !!}
                                         </a>
                                         <div class="content">

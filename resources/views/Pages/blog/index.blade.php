@@ -35,7 +35,7 @@
                                 @if($article->hasMedia('featured_image'))
                                     <div class="thumbnail">
                                         <a href="{{ route('blog.show', $article) }}">
-                                            <img src="{{ $article->getFirstMediaUrl('featured_image', 'webp') ?: $article->getFirstMediaUrl('featured_image') }}" alt="{{ $article->title }}" loading="lazy">
+                                            <x-media-picture :model="$article" collection="featured_image" :alt="$article->title" />
                                         </a>
                                     </div>
                                 @endif

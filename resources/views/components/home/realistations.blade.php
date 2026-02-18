@@ -23,7 +23,7 @@
 
 
                                 <a href="{{ route('pages.details',['realisation'=>$realisation]) }}" class="main-thumbnail" target="_blank" >
-                                    <img src="{{ $realisation->image_url }}" alt="Blog_image" width="100%" loading="lazy">
+                                    <x-media-picture :model="$realisation" collection="illustration" :alt="$realisation->title" img-class="w-100" />
                                     <span class="badge-blog">{{\App\Enums\Categories::getLabelByKey($category['key'])}}</span>
                                 </a>
 
