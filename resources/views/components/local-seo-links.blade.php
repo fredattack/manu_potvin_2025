@@ -1,28 +1,16 @@
-@props(['pageType' => 'chassis', 'currentLocation' => null])
+@props(['pageType' => 'chassis'])
 
 @php
-// Récupérer les localités depuis le modèle ServiceArea
 $locations = App\Models\ServiceArea::getActiveAreas(6)
     ->pluck('name')
     ->toArray();
 
-// Définir les routes en fonction du type de page
-$routes = [
-    'chassis' => '/products/portes-fenetres-chassis',
-    'fenetres' => '/products/portes-fenetres-chassis',
-    'portes' => '/products/porte-de-garage',
-    'pergolas' => '/products/pergolas',
-    'moustiquaire' => '/products/moustiquaire',
-];
-
-$route = $routes[$pageType] ?? $routes['chassis'];
-
-// Définir les titres en fonction du type de page
 $titles = [
     'chassis' => 'Châssis',
     'fenetres' => 'Fenêtres',
     'portes' => 'Portes',
     'pergolas' => 'Pergolas',
+    'moustiquaire' => 'Moustiquaires',
 ];
 
 $title = $titles[$pageType] ?? $titles['chassis'];
@@ -33,7 +21,7 @@ $title = $titles[$pageType] ?? $titles['chassis'];
         <div class="row">
             <div class="col-12">
                 <div class="title-area text-center">
-                    <span class="pre-title">Nos services près de chez vous</span>
+                    <span class="pre-title">Nos zones d'intervention</span>
                     <h4 class="title">{{ $title }} dans votre région</h4>
                 </div>
             </div>
@@ -42,10 +30,9 @@ $title = $titles[$pageType] ?? $titles['chassis'];
             <div class="col-12">
                 <div class="local-links-container d-flex flex-wrap justify-content-center">
                     @foreach($locations as $location)
-                        <a href="{{ $route }}/{{ Str::slug($location) }}"
-                           class="rts-btn btn-secondary-3 mr--20 mb--20 {{ $currentLocation == $location ? 'active' : '' }}">
+                        <span class="rts-btn btn-secondary-3 mr--20 mb--20">
                             {{ $title }} à {{ $location }}
-                        </a>
+                        </span>
                     @endforeach
                 </div>
             </div>
@@ -65,11 +52,6 @@ $title = $titles[$pageType] ?? $titles['chassis'];
         font-size: 14px;
         padding: 12px 20px;
         border-radius: 5px;
-        transition: all 0.3s ease;
-    }
-    .local-links-container .rts-btn.active {
-        background-color: var(--color-primary-0);
-        color: white;
     }
     .local-seo-section .pre-title {
         color: var(--color-primary-0);

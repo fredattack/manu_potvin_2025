@@ -9,11 +9,11 @@
 @section('meta_keywords')
   {{ $seoMetaKeywords ?? 'pergolas sur-mesure Hannut, installation pergolas Waremme, pergolas aluminium Jodoigne, pergolas bioclimatiques Liège, pergolas Braives, pergolas Lincent, pergolas Orp-Jauche, design extérieur' }}
 @endsection
-@section('geo_placename', $seoLocation ?? 'Hannut')
-@section('og_title', $seoPageTitle ? $seoPageTitle . ' | Manu Potvin' : 'Installation de pergolas sur-mesure à Hannut et Waremme')
+@section('geo_placename', 'Hannut')
+@section('og_title', $seoPageTitle ?? 'Installation de pergolas sur-mesure à Hannut et Waremme')
 @section('og_description', $seoMetaDescription ?? 'Nos pergolas sur-mesure offrent style et confort pour vos espaces extérieurs à Hannut, Waremme et dans toute la province de Liège. Installation professionnelle garantie.')
 @section('og_image', asset('/assets/images/custom/default/pergolas/pergolas_main2.jpg'))
-@section('twitter_title', $seoPageTitle ? $seoPageTitle . ' | Manu Potvin' : 'Pergolas sur-mesure à Hannut et Waremme')
+@section('twitter_title', $seoPageTitle ?? 'Pergolas sur-mesure à Hannut et Waremme')
 @section('twitter_description', $seoMetaDescription ?? 'Explorez nos pergolas modernes installées par nos experts à Hannut, Waremme et Jodoigne pour des espaces extérieurs élégants et fonctionnels.')
 @section('twitter_image', asset('/assets/images/custom/default/pergolas/pergolas_main2.jpg'))
 
@@ -48,7 +48,7 @@
                 <div class="banner-inner-six">
                     <h1 class="title mb--30">
                         <span class="pre">Installation de pergolas</span> <br>
-                        à <span class="primary">{{ $seoLocation ?? 'Hannut et Waremme' }}</span>
+                        à <span class="primary">Hannut et environs</span>
                     </h1>
                     <p class="disc">
                         Experts en création et installation de pergolas sur-mesure à Hannut, Waremme, Jodoigne et dans toute la province de Liège pour sublimer vos extérieurs.
@@ -76,7 +76,7 @@
                     <div class="title-area-style-six text-start">
                         <div class="pre-title">
                             <img src="{{ asset('assets/images/custom/shape/pre-title.png') }}" alt="pre-title">
-                            <span class="pre">Pergolas sur-mesure à {{ $seoLocation ?? 'Hannut et Waremme' }}</span>
+                            <span class="pre">Pergolas sur-mesure à Hannut et environs</span>
                             <img class="two" src="{{ asset('assets/images/custom/shape/pre-title.png') }}" alt="pre-title">
                         </div>
                         <h2 class="title">
@@ -84,7 +84,7 @@
                             transformons vos extérieurs.
                         </h2>
                     </div>
-                    <a href="#" class="rts-btn btn-primary-5">Découvrez nos réalisations à {{ $seoLocation ?? 'Hannut' }} <i
+                    <a href="#" class="rts-btn btn-primary-5">Découvrez nos réalisations à Hannut <i
                             class="fal fa-arrow-right"></i></a>
                 </div>
             </div>
@@ -406,10 +406,8 @@
     ['question' => 'Quel est le délai d\'installation d\'une pergola ?', 'answer' => 'Après validation de votre commande, le délai de fabrication est de 6 à 10 semaines. L\'installation sur site prend généralement 1 à 2 jours selon le modèle et la complexité du chantier. Nous assurons une pose propre et professionnelle.'],
 ]])
 
-@include('components.local-content', ['serviceArea' => $serviceArea ?? null])
-
-<!-- Section des liens SEO locaux -->
-<x-local-seo-links :pageType="'pergolas'" :currentLocation="$seoLocation ?? null" />
+<!-- Section des zones d'intervention -->
+<x-local-seo-links :pageType="'pergolas'" />
 
 <!-- start footer area -->
  @include('components.footer')

@@ -4,14 +4,14 @@
     {{ $seoPageTitle ?? 'Expert en châssis, portes et fenêtres à Hannut et Waremme' }}
 @endsection
 
-@section('location_title', $seoLocation ?? 'Waremme, Hannut et environs')
+@section('location_title', 'Waremme, Hannut et environs')
 @section('meta_description', $seoMetaDescription ?? $pageTitle .  '| Spécialiste en installation et remplacement de châssis de qualité en aluminium et PVC à Hannut, Waremme et Jodoigne. Solutions sur mesure pour une isolation optimale.')
 @section('meta_keywords', $seoMetaKeywords ?? 'châssis aluminium Hannut, châssis PVC Waremme, remplacement fenêtres Jodoigne, installation portes Liège')
-@section('geo_placename', $seoLocation ?? 'Waremme')
-@section('og_title', $seoPageTitle ? $seoPageTitle . ' | Manu Potvin' : 'Expert en châssis aluminium et PVC à Hannut et Waremme')
+@section('geo_placename', 'Waremme')
+@section('og_title', $seoPageTitle ?? 'Expert en châssis aluminium et PVC à Hannut et Waremme')
 @section('og_description', $seoMetaDescription ?? 'Nos châssis en aluminium et PVC offrent performance énergétique et esthétique moderne. Installation professionnelle à Hannut, Waremme et dans toute la province de Liège.')
 @section('og_image', asset('assets/images/custom/default/chassis/fenetre_alu_first-.jpg'))
-@section('twitter_title', $seoPageTitle ? $seoPageTitle . ' | Manu Potvin' : 'Châssis et fenêtres de qualité à Hannut et Waremme')
+@section('twitter_title', $seoPageTitle ?? 'Châssis et fenêtres de qualité à Hannut et Waremme')
 @section('twitter_description', $seoMetaDescription ?? 'Découvrez nos châssis modernes en aluminium et PVC, installés par nos experts à Hannut, Waremme et Jodoigne.')
 @section('twitter_image', asset('assets/images/custom/default/chassis/fenetre_alu_first-.jpg'))
 
@@ -24,7 +24,7 @@
     @include('components.header')
     <!-- start breadcrumb area -->
     <x-breadcrump
-            title="Installation de châssis, portes et fenêtres à {{ $seoLocation ?? 'Hannut et Waremme' }}"
+            title="Installation de châssis, portes et fenêtres à Hannut et environs"
             breadcrumbPath="Portes, Fenêtres et chassis"
             headingTag="h2"
     />
@@ -37,9 +37,9 @@
                     <!-- service details left area start -->
                     <div class="service-detials-step-1">
                         <div class="thumbnail">
-                            <img src="{{ asset('assets/images/custom/default/chassis/fenetre_alu_first-.jpg') }}" alt="Installation de châssis en aluminium à {{ $seoLocation ?? 'Hannut' }} par Manu Potvin">
+                            <img src="{{ asset('assets/images/custom/default/chassis/fenetre_alu_first-.jpg') }}" alt="Installation de châssis en aluminium à Hannut par Manu Potvin">
                         </div>
-                        <h1 class="title">Installation et remplacement de châssis à {{ $seoLocation ?? 'Hannut et Waremme' }}</h1>
+                        <h1 class="title">Installation et remplacement de châssis à Hannut et environs</h1>
                         <p class="disc">
                             Basés à Hannut, nous sommes spécialisés dans le remplacement et la réparation de châssis en PVC et aluminium. Nos experts interviennent également à Waremme, Jodoigne, Orp-Jauche et dans toute la province de Liège pour améliorer le confort et l'esthétique de votre habitation.
                         </p>
@@ -240,10 +240,8 @@
         ['question' => 'Intervenez-vous dans ma commune ?', 'answer' => 'Nous intervenons dans un large rayon autour de Hannut, couvrant Waremme, Jodoigne, Orp-Jauche, Braives, Hélécine et les communes voisines de la province de Liège et du Brabant wallon. Contactez-nous pour vérifier que nous couvrons votre localité.'],
     ]])
 
-    @include('components.local-content', ['serviceArea' => $serviceArea ?? null])
-
-    <!-- Section des liens SEO locaux -->
-    <x-local-seo-links :pageType="'chassis'" :currentLocation="$seoLocation ?? null" />
+    <!-- Section des zones d'intervention -->
+    <x-local-seo-links :pageType="'chassis'" />
 
     @include('components.footer')
     <!-- End service details area -->

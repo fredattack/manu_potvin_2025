@@ -5,7 +5,6 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\RealisationController;
-use App\Http\Controllers\SeoController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware(['recaptcha'])->group(function () {
@@ -29,14 +28,11 @@ Route::get('/products/{type}/kind/{subType?}', [PageController::class, 'render']
     ['type' => '^(?!index$).+', 'subType' => '^(?!index$).+']
 );
 
-// Route pour les pages SEO locales
-Route::get('/products/{type}/{location}', [SeoController::class, 'renderLocalPage'])
-    ->name('pages.local')
+// Redirections 301 des anciennes pages SEO locales (doorway pages supprimées)
+Route::get('/products/{type}/{location}', fn (string $type) => redirect("/products/{$type}", 301))
     ->where(['type' => '^(?!index$).+', 'location' => '^(?!kind$).+']);
 
-// Route pour les pages SEO locales avec sous-type
-Route::get('/products/{type}/kind/{subType}/{location}', [SeoController::class, 'renderLocalPage'])
-    ->name('pagesKinded.local')
+Route::get('/products/{type}/kind/{subType}/{location}', fn (string $type, string $subType) => redirect("/products/{$type}/kind/{$subType}", 301))
     ->where(['type' => '^(?!index$).+', 'subType' => '^(?!index$).+', 'location' => '.+']);
 
 Route::get('/realisation/{realisation}/detail', RealisationController::class)->name('pages.details');

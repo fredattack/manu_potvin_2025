@@ -1,31 +1,7 @@
 @php
-// Récupérer les localités depuis le modèle ServiceArea
 $locations = App\Models\ServiceArea::getActiveAreas(6)
     ->pluck('name')
     ->toArray();
-
-// Définir les services principaux
-$services = [
-    'chassis' => [
-        'title' => 'Châssis',
-        'route' => '/products/portes-fenetres-chassis'
-    ],
-    'fenetres' => [
-        'title' => 'Fenêtres',
-        'route' => '/products/portes-fenetres-chassis'
-    ],
-    'portes' => [
-        'title' => 'Portes',
-        'route' => '/products/porte-de-garage'
-    ],
-    'pergolas' => [
-        'title' => 'Pergolas',
-        'route' => '/products/pergolas'
-    ]
-];
-
-// Sélectionner 2 services aléatoires pour éviter la surcharge
-$selectedServices = array_slice($services, 0, 2);
 @endphp
 
 <div class="col-xl-3 col-lg-6">
@@ -34,9 +10,9 @@ $selectedServices = array_slice($services, 0, 2);
         <div class="body">
             <div class="footer-location-grid">
                 @foreach($locations as $location)
-                    <a href="/products/portes-fenetres-chassis/{{ Str::slug($location) }}" class="location-link">
+                    <span class="location-item">
                         {{ $location }}
-                    </a>
+                    </span>
                 @endforeach
             </div>
         </div>
@@ -49,17 +25,13 @@ $selectedServices = array_slice($services, 0, 2);
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
     }
-    .location-link {
+    .location-item {
         color: #5d666f;
         font-size: 14px;
-        transition: all 0.3s;
         display: flex;
         align-items: center;
     }
-    .location-link:hover {
-        color: var(--color-primary-0);
-    }
-    .location-link::before {
+    .location-item::before {
         content: "";
         display: inline-block;
         width: 6px;

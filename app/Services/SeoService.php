@@ -3,7 +3,6 @@
 namespace App\Services;
 
 use App\Models\SeoKeyword;
-use Illuminate\Support\Facades\Request;
 
 /**
  * Service for managing SEO-related functionality
@@ -199,21 +198,4 @@ class SeoService
         return $baseTitle;
     }
 
-    /**
-     * Get current location from request
-     *
-     * @return string|null
-     */
-    public function getCurrentLocation(): ?string
-    {
-        // Check if location is in the URL parameters
-        $location = Request::query('location');
-
-        if ($location) {
-            return $location;
-        }
-
-        // Default location if none specified
-        return null;
-    }
 }

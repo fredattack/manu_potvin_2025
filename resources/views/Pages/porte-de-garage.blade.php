@@ -6,11 +6,11 @@
 
 @section('meta_description', $seoMetaDescription ?? 'Spécialiste en installation et réparation de portes de garage à Hannut, Waremme et Jodoigne. Solutions motorisées sur mesure pour votre sécurité et confort. Devis gratuit !')
 @section('meta_keywords', $seoMetaKeywords ?? 'portes de garage Hannut, installation portes motorisées Waremme, réparation portes garage Jodoigne, portes sectionnelles Liège')
-@section('geo_placename', $seoLocation ?? 'Hannut')
-@section('og_title', $seoPageTitle ? $seoPageTitle . ' | Manu Potvin' : 'Installation de portes de garage à Hannut et Waremme')
+@section('geo_placename', 'Hannut')
+@section('og_title', $seoPageTitle ?? 'Installation de portes de garage à Hannut et Waremme')
 @section('og_description', $seoMetaDescription ?? 'Découvrez nos portes de garage robustes et élégantes, installées par nos experts à Hannut, Waremme et dans toute la province de Liège.')
 @section('og_image', asset('assets/images/custom/default/portes-de-garage/porte_garage_main_2.jpeg'))
-@section('twitter_title', $seoPageTitle ? $seoPageTitle . ' | Manu Potvin' : 'Portes de garage à Hannut et Waremme')
+@section('twitter_title', $seoPageTitle ?? 'Portes de garage à Hannut et Waremme')
 @section('twitter_description', $seoMetaDescription ?? 'Choisissez des portes de garage esthétiques et fiables, installées par nos experts à Hannut, Waremme et Jodoigne.')
 @section('twitter_image', asset('assets/images/custom/default/portes-de-garage/porte_garage_main_2.jpeg'))
 
@@ -42,7 +42,7 @@
                     <div class="col-12">
                         <div class="banner-three-inner banner-four-inner banner-five-inner">
                             <div class="banner-title">
-                                <span class="subtitle-banner"><strong>INSTALLATION DE PORTES DE GARAGE À {{ $seoLocation ?? 'HANNUT ET WAREMME' }}</strong></span>
+                                <span class="subtitle-banner"><strong>INSTALLATION DE PORTES DE GARAGE À HANNUT ET ENVIRONS</strong></span>
                                 <!-- type headline start-->
                                 <h1 class="title">
                                     Optimisez votre
@@ -56,7 +56,7 @@
                                         <span>sécurité</span><br>
                                     </div>
                                     avec nos
-                                    <br> portes de garage à {{ $seoLocation ?? 'Hannut' }}
+                                    <br> portes de garage à Hannut
                                 </h1>
                             </div>
                             <p class="disc" style="color: var(--color-primary-alta)">
@@ -82,7 +82,7 @@
                     <div class="rts-business-solution-right">
                         <div class="title-area">
                             <span class="sub">
-                                Nos services à {{ $seoLocation ?? 'Hannut et Waremme' }}
+                                Nos services à Hannut et environs
                             </span>
                             <h2 class="title">
                                 Votre solution parfaite pour portes de garage
@@ -108,7 +108,7 @@
                     <!-- business solution left -->
                     <div class="rts-business-solution-left">
                         <div class="thumbnail">
-                            <img src="{{ asset('assets/images/custom/default/portes-de-garage/porte_garage_main_2.jpeg') }}" alt="Installation de porte de garage à {{ $seoLocation ?? 'Hannut' }} par Manu Potvin" loading="lazy">
+                            <img src="{{ asset('assets/images/custom/default/portes-de-garage/porte_garage_main_2.jpeg') }}" alt="Installation de porte de garage à Hannut par Manu Potvin" loading="lazy">
                         </div>
                     </div>
                     <!-- business solution left End -->
@@ -267,10 +267,8 @@
         ['question' => 'Quel est le délai d\'installation d\'une porte de garage ?', 'answer' => 'L\'installation d\'une porte de garage standard prend généralement une demi-journée à une journée complète. Le délai de livraison après commande est de 4 à 8 semaines selon le modèle et les options choisies.'],
     ]])
 
-    @include('components.local-content', ['serviceArea' => $serviceArea ?? null])
-
-    <!-- Section des liens SEO locaux -->
-    <x-local-seo-links :pageType="'portes'" :currentLocation="$seoLocation ?? null" />
+    <!-- Section des zones d'intervention -->
+    <x-local-seo-links :pageType="'portes'" />
 
     <!-- start footer area -->
     @include('components.footer')

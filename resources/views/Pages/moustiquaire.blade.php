@@ -5,11 +5,11 @@
 @endsection
 @section('meta_description', $seoMetaDescription ?? 'Spécialiste en fabrication et installation de moustiquaires sur-mesure à Hannut, Waremme et Jodoigne. Protégez votre intérieur des insectes tout en préservant la lumière naturelle.')
 @section('meta_keywords', $seoMetaKeywords ?? 'moustiquaires Hannut, installation moustiquaires Waremme, moustiquaires sur-mesure Jodoigne, protection insectes Liège')
-@section('geo_placename', $seoLocation ?? 'Hannut')
-@section('og_title', $seoPageTitle ? $seoPageTitle . ' | Manu Potvin' : 'Moustiquaires sur-mesure à Hannut et Waremme')
+@section('geo_placename', 'Hannut')
+@section('og_title', $seoPageTitle ?? 'Moustiquaires sur-mesure à Hannut et Waremme')
 @section('og_description', $seoMetaDescription ?? 'Nos moustiquaires sur-mesure sont conçues pour offrir protection et confort à Hannut, Waremme et dans toute la province de Liège.')
 @section('og_image', asset('/assets/images/custom/default/moustiquaire/moustiquaire_main.jpeg'))
-@section('twitter_title', $seoPageTitle ? $seoPageTitle . ' | Manu Potvin' : 'Moustiquaires sur-mesure à Hannut et Waremme')
+@section('twitter_title', $seoPageTitle ?? 'Moustiquaires sur-mesure à Hannut et Waremme')
 @section('twitter_description', $seoMetaDescription ?? 'Protégez-vous des insectes tout en profitant de la lumière naturelle avec nos moustiquaires installées par nos experts à Hannut et Waremme.')
 @section('twitter_image', asset('/assets/images/custom/default/moustiquaire/moustiquaire_main.jpeg'))
 
@@ -45,7 +45,7 @@
 
                                         <h1 class="title-main">
                                             Fabrication et Installation de
-                                            <br> Moustiquaires Sur-Mesure à {{ $seoLocation ?? 'Hannut et Waremme' }}
+                                            <br> Moustiquaires Sur-Mesure à Hannut et environs
                                         </h1>
                                         <p class="disc">
                                             Basés à Hannut, nous intervenons également à Waremme, Jodoigne et dans toute la province de Liège pour vous protéger des insectes avec nos moustiquaires robustes, durables et élégantes. </p>
@@ -77,7 +77,7 @@
                     <div class="about-left-content-area-12">
                         <div class="title-wrapper-twelve center">
                             <h2 class="title">
-                                Nos services de moustiquaires à {{ $seoLocation ?? 'Hannut et Waremme' }}
+                                Nos services de moustiquaires à Hannut et environs
                             </h2>
                         </div>
                         <p class="disc">
@@ -336,10 +336,8 @@
         ['question' => 'Les moustiquaires sont-elles compatibles avec tous les types de fenêtres ?', 'answer' => 'Oui, nos moustiquaires sur-mesure s\'adaptent à tous les types de fenêtres et portes : oscillo-battantes, coulissantes, à la française, velux, portes-fenêtres et baies vitrées. Nous trouvons une solution adaptée quelle que soit la configuration de vos ouvertures.'],
     ]])
 
-    @include('components.local-content', ['serviceArea' => $serviceArea ?? null])
-
-    <!-- Section des liens SEO locaux -->
-    <x-local-seo-links :pageType="'fenetres'" :currentLocation="$seoLocation ?? null" />
+    <!-- Section des zones d'intervention -->
+    <x-local-seo-links :pageType="'moustiquaire'" />
 
     <!-- footer area start -->
     @include('components.footer')
