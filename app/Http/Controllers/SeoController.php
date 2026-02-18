@@ -46,6 +46,7 @@ class SeoController extends Controller
         // Préparer les variables SEO pour la vue en utilisant le SeoService
         $seoData = [
             'seoLocation' => $serviceArea->name,
+            'serviceArea' => $serviceArea,
             'seoPageTitle' => $this->seoService->getPageTitle($pageType, $subType, $serviceArea->name),
             'seoMetaDescription' => $this->seoService->getMetaDescription($pageType, $subType, $serviceArea->name),
             'seoMetaKeywords' => $this->seoService->getMetaKeywords($pageType, $serviceArea->name),

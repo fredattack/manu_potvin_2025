@@ -240,6 +240,8 @@
         ['question' => 'Intervenez-vous dans ma commune ?', 'answer' => 'Nous intervenons dans un large rayon autour de Hannut, couvrant Waremme, Jodoigne, Orp-Jauche, Braives, Hélécine et les communes voisines de la province de Liège et du Brabant wallon. Contactez-nous pour vérifier que nous couvrons votre localité.'],
     ]])
 
+    @include('components.local-content', ['serviceArea' => $serviceArea ?? null])
+
     <!-- Section des liens SEO locaux -->
     <x-local-seo-links :pageType="'chassis'" :currentLocation="$seoLocation ?? null" />
 

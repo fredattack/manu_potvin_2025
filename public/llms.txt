@@ -2,7 +2,7 @@
 
 ## Identité
 - Nom : Manu Potvin
-- Secteur : Menuiserie extérieure (châssis, portes, fenêtres)
+- Secteur : Menuiserie extérieure (châssis, portes, fenêtres, pergolas, moustiquaires)
 - Localisation : Hannut, province de Liège, Belgique
 - Site web : https://www.manupotvin.be
 
@@ -11,7 +11,8 @@
 - Installation et remplacement de châssis en aluminium
 - Installation de portes et fenêtres
 - Installation de portes de garage
-- Installation de pergolas et moustiquaires
+- Installation de pergolas sur-mesure et bioclimatiques
+- Installation de moustiquaires sur-mesure
 - Réparation et rénovation de menuiserie extérieure
 
 ## Zone d'intervention
@@ -24,9 +25,14 @@ Hannut, Waremme, Jodoigne, Braives, Orp-Jauche, Hélécine et toute la province 
 
 ## Pages principales
 - Accueil : https://www.manupotvin.be/
-- Châssis, portes et fenêtres : https://www.manupotvin.be/portes-fenetres-chassis
-- Châssis PVC : https://www.manupotvin.be/chassis/pvc
-- Châssis aluminium : https://www.manupotvin.be/chassis/alu
+- Châssis, portes et fenêtres : https://www.manupotvin.be/products/portes-fenetres-chassis
+- Châssis PVC : https://www.manupotvin.be/products/portes-fenetres-chassis/kind/pvc
+- Châssis aluminium : https://www.manupotvin.be/products/portes-fenetres-chassis/kind/alu
+- Pergolas : https://www.manupotvin.be/products/pergolas
+- Portes de garage : https://www.manupotvin.be/products/porte-de-garage
+- Moustiquaires : https://www.manupotvin.be/products/moustiquaire
+- À propos : https://www.manupotvin.be/a-propos
+- Blog : https://www.manupotvin.be/blog
 - Contact : https://www.manupotvin.be/contact
 
 ## Langue

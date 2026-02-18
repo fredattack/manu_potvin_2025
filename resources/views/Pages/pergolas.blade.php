@@ -406,6 +406,8 @@
     ['question' => 'Quel est le délai d\'installation d\'une pergola ?', 'answer' => 'Après validation de votre commande, le délai de fabrication est de 6 à 10 semaines. L\'installation sur site prend généralement 1 à 2 jours selon le modèle et la complexité du chantier. Nous assurons une pose propre et professionnelle.'],
 ]])
 
+@include('components.local-content', ['serviceArea' => $serviceArea ?? null])
+
 <!-- Section des liens SEO locaux -->
 <x-local-seo-links :pageType="'pergolas'" :currentLocation="$seoLocation ?? null" />
 

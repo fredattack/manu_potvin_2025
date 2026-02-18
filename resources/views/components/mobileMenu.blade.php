@@ -18,6 +18,7 @@
         <li class="menu-item menu-item"><a class="menu-link" href="{{ route('pages',['type'=>\App\Enums\Categories::PERGOLAS->value]) }}">Pergolas</a></li>
         <li class="menu-item menu-item"><a class="menu-link" href="{{ route('pages',['type'=>\App\Enums\Categories::MOUSTIQUAIRES->value]) }}">Moustiquaires</a></li>
         <li class="menu-item menu-item"><a class="menu-link" href="{{ route('pages',['type'=>'realisations'])}}">Nos Réalisations</a></li>
+        <li class="menu-item menu-item"><a class="menu-link" href="{{ route('blog.index') }}">Blog</a></li>
         <li class="menu-item menu-item"><a class="menu-link" href="{{ route('about') }}">À propos</a></li>
         <li class="menu-item menu-item"><a class="menu-link" href="{{ route('contactPage') }}">Contact</a></li>
     </ul>

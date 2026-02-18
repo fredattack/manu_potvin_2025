@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use App\Models\Article;
 use App\Models\Realisation;
 use App\Models\ServiceArea;
 use Illuminate\Console\Command;
@@ -64,6 +65,22 @@ class GenerateSitemap extends Command
                         ->setLastModificationDate(now())
                 );
             }
+        }
+
+        // Ajouter la page blog
+        $sitemap->add(Url::create($domain . '/blog')->setPriority(0.7)->setChangeFrequency('weekly')->setLastModificationDate(now()));
+
+        // Ajouter les articles publiés
+        $articles = Article::published()->get();
+        $this->info("Ajout de {$articles->count()} articles de blog au sitemap...");
+
+        foreach ($articles as $article) {
+            $sitemap->add(
+                Url::create("{$domain}/blog/{$article->slug}")
+                    ->setPriority(0.6)
+                    ->setChangeFrequency('monthly')
+                    ->setLastModificationDate($article->updated_at)
+            );
         }
 
         // Ajouter les pages de détail des réalisations

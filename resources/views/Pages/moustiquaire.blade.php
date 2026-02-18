@@ -336,6 +336,8 @@
         ['question' => 'Les moustiquaires sont-elles compatibles avec tous les types de fenêtres ?', 'answer' => 'Oui, nos moustiquaires sur-mesure s\'adaptent à tous les types de fenêtres et portes : oscillo-battantes, coulissantes, à la française, velux, portes-fenêtres et baies vitrées. Nous trouvons une solution adaptée quelle que soit la configuration de vos ouvertures.'],
     ]])
 
+    @include('components.local-content', ['serviceArea' => $serviceArea ?? null])
+
     <!-- Section des liens SEO locaux -->
     <x-local-seo-links :pageType="'fenetres'" :currentLocation="$seoLocation ?? null" />
 

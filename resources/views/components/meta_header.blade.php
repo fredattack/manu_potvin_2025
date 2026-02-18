@@ -28,6 +28,8 @@
 
 <!-- Autres meta tags -->
 <link rel="canonical" href="{{ strtok(url()->current(), '?') }}">
+<link rel="alternate" hreflang="fr-BE" href="{{ strtok(url()->current(), '?') }}">
+<link rel="alternate" hreflang="x-default" href="{{ strtok(url()->current(), '?') }}">
 <meta name="google-site-verification" content="c5hfFXSFb7nsZGJVL4r4-ELtDr4zzQbnZIdQnrJdeNc">
 
 @isset($customerData)

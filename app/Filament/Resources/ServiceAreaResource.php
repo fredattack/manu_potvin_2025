@@ -102,6 +102,11 @@ class ServiceAreaResource extends Resource
                             ->label('Notes')
                             ->maxLength(65535)
                             ->columnSpan('full'),
+
+                        Forms\Components\RichEditor::make('description')
+                            ->label('Description SEO locale')
+                            ->helperText('Contenu unique affiché sur les pages produit pour cette localité. Min. 200 caractères recommandé.')
+                            ->columnSpan('full'),
                     ]),
             ]);
     }

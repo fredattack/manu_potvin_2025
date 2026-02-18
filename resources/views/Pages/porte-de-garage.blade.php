@@ -267,6 +267,8 @@
         ['question' => 'Quel est le délai d\'installation d\'une porte de garage ?', 'answer' => 'L\'installation d\'une porte de garage standard prend généralement une demi-journée à une journée complète. Le délai de livraison après commande est de 4 à 8 semaines selon le modèle et les options choisies.'],
     ]])
 
+    @include('components.local-content', ['serviceArea' => $serviceArea ?? null])
+
     <!-- Section des liens SEO locaux -->
     <x-local-seo-links :pageType="'portes'" :currentLocation="$seoLocation ?? null" />
 

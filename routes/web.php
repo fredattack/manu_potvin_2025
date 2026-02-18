@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PageController;
@@ -19,6 +20,9 @@ Route::get('mentions-legales', fn() => view('Pages.mentions-legales', ['customer
 Route::get('a-propos', fn() => view('Pages.a-propos', ['customerData' => \App\Models\CustomerData::first()]))->name('about');
 
 Route::get('/', HomeController::class)->name('home');
+
+Route::get('/blog', [ArticleController::class, 'index'])->name('blog.index');
+Route::get('/blog/{article}', [ArticleController::class, 'show'])->name('blog.show');
 Route::get('/products/{type}', [PageController::class, 'render'])->name('pages')->where('type', '^(?!index$).+');
 
 Route::get('/products/{type}/kind/{subType?}', [PageController::class, 'render'])->name('pagesKinded')->where(

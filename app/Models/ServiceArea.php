@@ -26,6 +26,7 @@ class ServiceArea extends Model
         'is_primary',
         'active',
         'notes',
+        'description',
     ];
     
     /**

@@ -60,6 +60,36 @@ location ~* \.(css|js|jpg|jpeg|png|webp|woff2|woff|ttf|svg|ico)$ {
 }
 ```
 
+## 6. Compression Brotli (Action 40)
+
+Activer la compression Brotli pour reduire la taille des reponses HTTP. Brotli offre 15-25% de compression supplementaire par rapport a gzip.
+
+Prerequis : installer le module `ngx_brotli` (non inclus par defaut dans nginx).
+
+```nginx
+# Dans le bloc http
+brotli on;
+brotli_comp_level 6;
+brotli_types text/plain text/css application/json application/javascript text/xml application/xml application/xml+rss text/javascript image/svg+xml;
+
+# Garder gzip en fallback pour les navigateurs sans support Brotli
+gzip on;
+gzip_vary on;
+gzip_proxied any;
+gzip_comp_level 6;
+gzip_types text/plain text/css application/json application/javascript text/xml application/xml application/xml+rss text/javascript image/svg+xml;
+```
+
+## 7. Headers de securite (Action 42)
+
+Ajouter Referrer-Policy et Permissions-Policy pour ameliorer la securite et le score SEO technique.
+
+```nginx
+# Dans le bloc server SSL principal (www.manupotvin.be)
+add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+add_header Permissions-Policy "camera=(), microphone=(), geolocation=(self), payment=()" always;
+```
+
 ## Application
 
 Ces snippets doivent etre ajoutes dans la configuration nginx du serveur de production.
