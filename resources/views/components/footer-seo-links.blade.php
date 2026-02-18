@@ -34,7 +34,7 @@ $selectedServices = array_slice($services, 0, 2);
         <div class="body">
             <div class="footer-location-grid">
                 @foreach($locations as $location)
-                    <a href="/products/portes-fenetres-chassis?location={{ urlencode($location) }}" class="location-link">
+                    <a href="/products/portes-fenetres-chassis/{{ Str::slug($location) }}" class="location-link">
                         {{ $location }}
                     </a>
                 @endforeach

@@ -1,4 +1,4 @@
-@props(['headingTag' => 'h1'])
+@props(['headingTag' => 'h1', 'breadcrumbUrls' => []])
 
 <div {{ $attributes->class(['rts-breadcrumb-area breadcrumb-bg bg_image']) }}>
     <div class="container">
@@ -26,3 +26,41 @@
         </div>
     </div>
 </div>
+
+@php
+    $breadcrumbItems = [];
+    $position = 1;
+    $totalParts = count($breadcrumbParts);
+
+    $breadcrumbItems[] = [
+        '@type' => 'ListItem',
+        'position' => $position++,
+        'name' => 'Accueil',
+        'item' => url('/'),
+    ];
+
+    foreach ($breadcrumbParts as $index => $part) {
+        $isLast = ($index === $totalParts - 1);
+        $entry = [
+            '@type' => 'ListItem',
+            'position' => $position++,
+            'name' => $part,
+        ];
+
+        if (isset($breadcrumbUrls[$part])) {
+            $entry['item'] = url($breadcrumbUrls[$part]);
+        } elseif ($isLast) {
+            $entry['item'] = strtok(url()->current(), '?');
+        }
+
+        $breadcrumbItems[] = $entry;
+    }
+@endphp
+
+<script type="application/ld+json">
+{!! json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'BreadcrumbList',
+    'itemListElement' => $breadcrumbItems,
+], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
+</script>

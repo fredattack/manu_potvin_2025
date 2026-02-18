@@ -70,11 +70,11 @@
                 <div class="col-sm-6 col-12">
                     <div class="single-contact-one-inner">
                         <div class="thumbnail">
-                            <img src="{{ asset('assets/images/contact/01.png') }}" alt="">
+                            <img src="{{ asset('assets/images/contact/01.png') }}" alt="" loading="lazy">
                         </div>
                         <div class="content">
                             <div class="icone">
-                                <img src="{{ asset('assets/images/contact/shape/01.svg') }}" alt="">
+                                <img src="{{ asset('assets/images/contact/shape/01.svg') }}" alt="" loading="lazy">
                             </div>
                             <div class="info">
                                 <span>Appelez-nous... </span>
@@ -90,11 +90,11 @@
                 <div class="col-sm-6 col-12">
                     <div class="single-contact-one-inner">
                         <div class="thumbnail">
-                            <img src="{{ asset('assets/images/contact/02.png') }}" alt="">
+                            <img src="{{ asset('assets/images/contact/02.png') }}" alt="" loading="lazy">
                         </div>
                         <div class="content">
                             <div class="icone">
-                                <img src="{{ asset('assets/images/contact/shape/02.svg') }}" alt="">
+                                <img src="{{ asset('assets/images/contact/shape/02.svg') }}" alt="" loading="lazy">
                             </div>
                             <div class="info">
                                 <span>Ecrivez-nous...</span>

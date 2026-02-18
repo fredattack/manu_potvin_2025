@@ -100,7 +100,7 @@
                     <!-- business solution left -->
                     <div class="rts-business-solution-left">
                         <div class="thumbnail">
-                            <img src="{{ asset('assets/images/custom/default/portes-de-garage/porte_garage_main_2.jpeg') }}" alt="Installation de porte de garage à {{ $seoLocation ?? 'Hannut' }} par Manu Potvin">
+                            <img src="{{ asset('assets/images/custom/default/portes-de-garage/porte_garage_main_2.jpeg') }}" alt="Installation de porte de garage à {{ $seoLocation ?? 'Hannut' }} par Manu Potvin" loading="lazy">
                         </div>
                     </div>
                     <!-- business solution left End -->
@@ -166,7 +166,7 @@
                 </div>
                 <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 text-center">
                     <div class="business-goal-one">
-                        <img src="{{ asset('assets/images/custom/default/portes-de-garage/porte_garage_second.jpeg') }}" alt="Business_Goal">
+                        <img src="{{ asset('assets/images/custom/default/portes-de-garage/porte_garage_second.jpeg') }}" alt="Business_Goal" loading="lazy">
                         <div class="shape">
                             <img src="{{ asset('assets/images/business-goal/icon/line.png') }}"
                                     alt="">

@@ -28,10 +28,11 @@
 <script src="{{ asset('assets/js/main.js') }}"></script>
 <script>
     grecaptcha.ready(function () {
+        var tokenField = document.getElementById('recaptcha_token');
+        if (!tokenField) return;
         grecaptcha.execute('{{ config('app.recaptcha.site_key') }}', {action: 'contact_form'})
             .then(function (token) {
-                console.log('recaptcha token', token);
-                document.getElementById('recaptcha_token').value = token;
+                tokenField.value = token;
             });
     });
 </script>

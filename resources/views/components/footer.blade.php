@@ -113,6 +113,10 @@
                 <div class="col-12">
                     <p class="disc text-center">
                         Manu potvin - Copyright {{now()->format('Y')}}. All rights reserved.
+                        <span class="mx-2">|</span>
+                        <a href="{{ route('privacy') }}" class="text-muted">Politique de confidentialité</a>
+                        <span class="mx-2">|</span>
+                        <a href="{{ route('legal') }}" class="text-muted">Mentions légales</a>
                     </p>
                 </div>
             </div>

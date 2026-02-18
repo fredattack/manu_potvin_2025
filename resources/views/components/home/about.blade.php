@@ -3,7 +3,7 @@
         <div class="row g-5">
             <div class="col-lg-5">
                 <div class="about-three-thumbnail-left">
-                    <img src="{{ asset('/assets/images/custom/default/home/paralallax.jpeg') }}" alt="Business-about">
+                    <img src="{{ asset('/assets/images/custom/default/home/paralallax.jpeg') }}" alt="Business-about" loading="lazy">
 {{--                    <div class="about-sm-thumb">--}}
 {{--                        <img src="{{ asset('assets/images/about/main/about-01-sm.jpg') }}" alt="business_about-sm">--}}
 {{--                    </div>--}}

@@ -14,6 +14,9 @@ Route::middleware(['recaptcha'])->group(function () {
 
 Route::get('contact', [ContactController::class, 'index'])->name('contactPage');
 
+Route::get('politique-de-confidentialite', fn() => view('Pages.politique-de-confidentialite', ['customerData' => \App\Models\CustomerData::first()]))->name('privacy');
+Route::get('mentions-legales', fn() => view('Pages.mentions-legales', ['customerData' => \App\Models\CustomerData::first()]))->name('legal');
+
 Route::get('/', HomeController::class)->name('home');
 Route::get('/products/{type}', [PageController::class, 'render'])->name('pages')->where('type', '^(?!index$).+');
 

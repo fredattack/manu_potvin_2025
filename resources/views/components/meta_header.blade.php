@@ -27,7 +27,7 @@
 <meta name="twitter:creator" content="@yield('twitter_creator', '@ManuPotvin')">
 
 <!-- Autres meta tags -->
-<link rel="canonical" href="{{ url()->current() }}">
+<link rel="canonical" href="{{ strtok(url()->current(), '?') }}">
 <meta name="google-site-verification" content="c5hfFXSFb7nsZGJVL4r4-ELtDr4zzQbnZIdQnrJdeNc">
 
 @isset($customerData)

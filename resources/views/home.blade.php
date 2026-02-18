@@ -3,7 +3,7 @@
 @section('title')
     Votre Expert en Châssis et Pergolas
 @endsection
-@section('meta_description', 'Bienvenue sur notre site dédié à la vente, installation et entretien de châssis, fenêtres, portes et pergolas.')
+@section('meta_description', 'Installation et remplacement de châssis PVC et aluminium, portes, fenêtres, pergolas et moustiquaires à Hannut, Waremme et environs. Devis gratuit.')
 @section('meta_keywords', 'châssis, portes, fenêtres, pergolas, moustiquaires, installations')
 @section('og_title', 'Accueil - Votre Expert en Châssis et Pergolas')
 @section('og_description', 'Découvrez nos solutions pour châssis, fenêtres, portes et pergolas sur mesure.')

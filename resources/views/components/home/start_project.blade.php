@@ -20,7 +20,7 @@
                             <!-- single-contact info -->
                             <div class="contact-info">
                                 <div class="icon">
-                                    <img src="{{ asset('assets/images/custom/shape/01-phone.png') }}" alt="Product_icon">
+                                    <img src="{{ asset('assets/images/custom/shape/01-phone.png') }}" alt="Product_icon" loading="lazy">
                                 </div>
                                 <div class="discription">
                                     <span>Besoin d'aide ?</span>
@@ -31,7 +31,7 @@
                             <!-- single-contact info -->
                             <div class="contact-info">
                                 <div class="icon">
-                                    <img src="{{ asset('assets/images/custom/shape/02-mail.png') }}" alt="Product_icon">
+                                    <img src="{{ asset('assets/images/custom/shape/02-mail.png') }}" alt="Product_icon" loading="lazy">
                                 </div>
                                 <div class="discription">
                                     <span>Envoyez-nous un email à tout moment</span>

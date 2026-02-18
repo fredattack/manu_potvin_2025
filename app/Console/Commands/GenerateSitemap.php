@@ -31,8 +31,11 @@ class GenerateSitemap extends Command
         $sitemap = Sitemap::create();
 
         // Ajouter les pages principales
-        $sitemap->add(Url::create($domain)->setPriority(1.0)->setChangeFrequency('monthly'));
-        $sitemap->add(Url::create($domain . '/contact')->setPriority(0.8)->setChangeFrequency('monthly'));
+        $sitemap->add(Url::create($domain)->setPriority(1.0)->setChangeFrequency('monthly')->setLastModificationDate(now()));
+        $sitemap->add(Url::create($domain . '/contact')->setPriority(0.8)->setChangeFrequency('monthly')->setLastModificationDate(now()));
+        $sitemap->add(Url::create($domain . '/products/realisations')->setPriority(0.8)->setChangeFrequency('weekly')->setLastModificationDate(now()));
+        $sitemap->add(Url::create($domain . '/politique-de-confidentialite')->setPriority(0.3)->setChangeFrequency('yearly')->setLastModificationDate(now()));
+        $sitemap->add(Url::create($domain . '/mentions-legales')->setPriority(0.3)->setChangeFrequency('yearly')->setLastModificationDate(now()));
 
         // Ajouter les pages produits principales
         foreach ($this->productPages as $url => $title) {
@@ -40,6 +43,7 @@ class GenerateSitemap extends Command
                 Url::create($domain . $url)
                     ->setPriority(0.9)
                     ->setChangeFrequency('monthly')
+                    ->setLastModificationDate(now())
             );
         }
 
@@ -56,6 +60,7 @@ class GenerateSitemap extends Command
                     Url::create($localUrl)
                         ->setPriority(0.8)
                         ->setChangeFrequency('monthly')
+                        ->setLastModificationDate(now())
                 );
             }
         }

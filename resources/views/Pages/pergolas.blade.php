@@ -204,7 +204,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div>
-                        <img src="{{ asset('assets/images/custom/default/pergolas/pergolas_second.jpeg') }}" alt="about-image" style="width: 40vw"  >
+                        <img src="{{ asset('assets/images/custom/default/pergolas/pergolas_second.jpeg') }}" alt="about-image" style="width: 40vw" loading="lazy">
                     </div>
                 </div>
             </div>

@@ -49,7 +49,7 @@
                                 <div class="service-details-card">
                                     <div class="thumbnail">
                                         <img src="{{ asset('assets/images/service/icon/09.svg') }}" alt=""
-                                                class="icon">
+                                                class="icon" loading="lazy">
                                     </div>
                                     <div class="details">
                                         <h6 class="title">Durabilité & Robustesse</h6>
@@ -63,7 +63,7 @@
                                 <div class="service-details-card">
                                     <div class="thumbnail">
                                         <img src="{{ asset('assets/images/service/icon/10.svg') }}" alt=""
-                                                class="icon">
+                                                class="icon" loading="lazy">
                                     </div>
                                     <div class="details">
                                         <h6 class="title">Performance énergétique</h6>
@@ -78,7 +78,7 @@
                                 <div class="service-details-card">
                                     <div class="thumbnail">
                                         <img src="{{ asset('assets/images/service/icon/11.svg') }}" alt=""
-                                                class="icon">
+                                                class="icon" loading="lazy">
                                     </div>
                                     <div class="details">
                                         <h6 class="title">Facilité d’entretien</h6>
@@ -92,7 +92,7 @@
                                 <div class="service-details-card">
                                     <div class="thumbnail">
                                         <img src="{{ asset('assets/images/service/icon/12.svg') }}" alt=""
-                                                class="icon">
+                                                class="icon" loading="lazy">
                                     </div>
                                     <div class="details">
                                         <h6 class="title">Design sur mesure</h6>

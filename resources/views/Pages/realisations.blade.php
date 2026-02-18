@@ -3,7 +3,7 @@
 @section('title')
 Nos Réalisations
 @endsection
-@section('meta_description', 'Découvrez nos réalisations en châssis, portes, fenêtres et pergolas pour vous inspirer.')
+@section('meta_description', 'Découvrez nos réalisations en châssis PVC et aluminium, portes, fenêtres et pergolas à Hannut et Waremme. Photos de projets réels par Manu Potvin.')
 @section('meta_keywords', 'réalisations, exemples travaux, châssis, portes, pergolas')
 @section('og_title', 'Nos Réalisations - Inspiration pour vos projets')
 @section('og_description', 'Explorez nos projets achevés et inspirez-vous pour vos châssis, fenêtres ou pergolas.')

@@ -12,6 +12,7 @@ $routes = [
     'fenetres' => '/products/portes-fenetres-chassis',
     'portes' => '/products/porte-de-garage',
     'pergolas' => '/products/pergolas',
+    'moustiquaire' => '/products/moustiquaire',
 ];
 
 $route = $routes[$pageType] ?? $routes['chassis'];
@@ -41,7 +42,7 @@ $title = $titles[$pageType] ?? $titles['chassis'];
             <div class="col-12">
                 <div class="local-links-container d-flex flex-wrap justify-content-center">
                     @foreach($locations as $location)
-                        <a href="{{ $route }}?location={{ urlencode($location) }}"
+                        <a href="{{ $route }}/{{ Str::slug($location) }}"
                            class="rts-btn btn-secondary-3 mr--20 mb--20 {{ $currentLocation == $location ? 'active' : '' }}">
                             {{ $title }} à {{ $location }}
                         </a>

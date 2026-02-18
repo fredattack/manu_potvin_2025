@@ -112,7 +112,7 @@
                 <div class="col-lg-7">
                     <div class="image-area-about-12">
                         <div class="thumbnail-large">
-                            <img src="{{ asset('assets/images/custom/default/moustiquaire/moustiquaire_second.jpeg') }}" alt="">
+                            <img src="{{ asset('assets/images/custom/default/moustiquaire/moustiquaire_second.jpeg') }}" alt="" loading="lazy">
                         </div>
 
                     </div>
@@ -298,7 +298,7 @@
             <div class="row align-items-center g-0">
                 <div class="col-lg-4 col-md-12 col-sm-12 col-12">
                     <div class="contact-image-one" style="min-height: 500px;">
-                        <img src="{{ asset('assets/images/custom/default/moustiquaire/moustiquaire_7_last.jpg') }}" alt="">
+                        <img src="{{ asset('assets/images/custom/default/moustiquaire/moustiquaire_7_last.jpg') }}" alt="" loading="lazy">
                     </div>
                 </div>
                 <div class="col-lg-8 col-md-12 col-sm-12 col-12">

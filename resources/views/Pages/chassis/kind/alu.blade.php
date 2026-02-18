@@ -6,7 +6,7 @@
 @endsection
 
 @section('meta_description')
-    Découvrez les avantages des châssis en Alu : durabilité, faible entretien, esthétique moderne, et performance énergétique. Contactez-nous pour une solution sur-mesure adaptée à vos besoins.
+    Châssis aluminium à Hannut et Waremme : design moderne, lignes fines et robustesse exceptionnelle. Installation et remplacement par Manu Potvin.
 @endsection
 @section('meta_keywords', 'châssis aluminium, design moderne, durabilité, performance')
 @section('og_title', 'Châssis Aluminium - Élégance et Durabilité')
@@ -126,10 +126,10 @@
                                         </div>
                                         <div class="col-lg-6 col-md-6 mx-auto text-center">
                                             <div class="thumbnail details mb-4">
-                                                <img src="{{ asset('assets/images/custom/default/chassis/chassis_alu_main.jpeg') }}" alt="finbiz_buseness" class="img-fluid">
+                                                <img src="{{ asset('assets/images/custom/default/chassis/chassis_alu_main.jpeg') }}" alt="finbiz_buseness" class="img-fluid" loading="lazy">
                                             </div>
                                             <div class="thumbnail details">
-                                                <img src="{{ asset('assets/images/custom/default/chassis/chassis_alu_second.jpeg') }}" alt="finbiz_buseness" class="img-fluid">
+                                                <img src="{{ asset('assets/images/custom/default/chassis/chassis_alu_second.jpeg') }}" alt="finbiz_buseness" class="img-fluid" loading="lazy">
                                             </div>
                                         </div>
 
