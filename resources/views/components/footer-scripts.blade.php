@@ -26,12 +26,22 @@
 <!-- main Js -->
 <script src="{{ asset('assets/js/main.js') }}"></script>
 <script>
-    grecaptcha.ready(function () {
-        var tokenField = document.getElementById('recaptcha_token');
+    // Forms submitted natively (full page reload) still need a fresh
+    // reCAPTCHA token fetched at submit time. #contact-form is excluded
+    // because contact.form.js already handles its token + AJAX submit.
+    document.querySelectorAll('form:not(#contact-form)').forEach(function (form) {
+        var tokenField = form.querySelector('input[name="recaptcha_token"]');
         if (!tokenField) return;
-        grecaptcha.execute('{{ config('app.recaptcha.site_key') }}', {action: 'contact_form'})
-            .then(function (token) {
-                tokenField.value = token;
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            grecaptcha.ready(function () {
+                grecaptcha.execute(window.recaptchaSiteKey, {action: 'contact_form'})
+                    .then(function (token) {
+                        tokenField.value = token;
+                        form.submit();
+                    });
             });
+        });
     });
 </script>

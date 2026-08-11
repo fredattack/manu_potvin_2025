@@ -23,38 +23,48 @@
         // Stop the browser from submitting the form.
         e.preventDefault();
 
-        // Serialize the form data.
-        var formData = $(form).serialize();
+        // Generate a fresh reCAPTCHA token at submit time (v3 tokens expire
+        // after 2 minutes and are single-use, so a token fetched on page
+        // load is stale by the time a real visitor finishes the form).
+        grecaptcha.ready(function () {
+            grecaptcha.execute(window.recaptchaSiteKey, {action: 'contact_form'})
+                .then(function (token) {
+                    $('#recaptcha_token').val(token);
 
-        // Submit the form using AJAX.
-        $.ajax({
-                type: 'POST',
-                url: $(form).attr('action'),
-                data: formData
-            })
-            .done(function (response) {
-                // Make sure that the formMessages div has the 'success' class.
-                $(formMessages).removeClass('error');
-                $(formMessages).addClass('success');
+                    // Serialize the form data.
+                    var formData = $(form).serialize();
 
-                // Set the message text.
-                $(formMessages).text(response);
+                    // Submit the form using AJAX.
+                    $.ajax({
+                            type: 'POST',
+                            url: $(form).attr('action'),
+                            data: formData
+                        })
+                        .done(function (response) {
+                            // Make sure that the formMessages div has the 'success' class.
+                            $(formMessages).removeClass('error');
+                            $(formMessages).addClass('success');
 
-                // Clear the form.
-                $('#name, #email,  #subject, #message').val('');
-            })
-            .fail(function (data) {
-                // Make sure that the formMessages div has the 'error' class.
-                $(formMessages).removeClass('success');
-                $(formMessages).addClass('error');
+                            // Set the message text.
+                            $(formMessages).text(response);
 
-                // Set the message text.
-                if (data.responseText !== '') {
-                    $(formMessages).text(data.responseText);
-                } else {
-                    $(formMessages).text('Oops! An error occured and your message could not be sent.');
-                }
-            });
+                            // Clear the form.
+                            $('#name, #email,  #subject, #message').val('');
+                        })
+                        .fail(function (data) {
+                            // Make sure that the formMessages div has the 'error' class.
+                            $(formMessages).removeClass('success');
+                            $(formMessages).addClass('error');
+
+                            // Set the message text.
+                            if (data.responseText !== '') {
+                                $(formMessages).text(data.responseText);
+                            } else {
+                                $(formMessages).text('Oops! An error occured and your message could not be sent.');
+                            }
+                        });
+                });
+        });
     });
 
 })(jQuery);
